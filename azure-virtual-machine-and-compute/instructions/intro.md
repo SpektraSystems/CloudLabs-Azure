@@ -18,6 +18,5 @@ During the creation of the virtual machine, additional properties will be review
 - Review and monitor key parameters associated with the VM
 
 **Capabilities or Components Used in this Story:** 
-
 **Azure:** Azure Resource Manager Portal, Windows Server 2019 Virtual Machine, Azure Virtual Networking, Azure Availability Sets, Azure Network Security Groups, Azure Backup, Data disk.
 
