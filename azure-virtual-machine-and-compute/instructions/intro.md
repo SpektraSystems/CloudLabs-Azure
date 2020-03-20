@@ -1,6 +1,6 @@
 ﻿## **Virtual Machines & Compute** 
 
-_Introduction to Azure Virtual Machines_
+Introduction to Azure Virtual Machines
 
 ### **Overview**
 
