@@ -10,15 +10,15 @@
 * Challenge 6a: Workbooks
 
 ## Workshop Setup
-• Deploy Infra using Bash Cloud Shell and Azure CLI with an ARM Template<br/>
-• Setup Azure CLI<br/>
+* Deploy Infra using Bash Cloud Shell and Azure CLI with an ARM Template<br/>
+* Setup Azure CLI<br/>
 https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest<br/>
-• Install Visual Studio Code and Extensions (depending on your tool of choice)<br/>
-• Azure Resource Manager Tools - https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools<br/>
-• Azure Account and Sign-In (adds the Azure Cloud Shell for Bash) - https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account
+* Install Visual Studio Code and Extensions (depending on your tool of choice)<br/>
+* Azure Resource Manager Tools - https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools<br/>
+* Azure Account and Sign-In (adds the Azure Cloud Shell for Bash) - https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account
 Azure CLI Tools –
 https://marketplace.visualstudio.com/items?itemName=ms-vscode.azurecli<br/>
-• Download Azure Monitoring Workshop Setup Guide and follow the instructions to deploy.<br/>
+* Download Azure Monitoring Workshop Setup Guide and follow the instructions to deploy.<br/>
 https://github.com/rkuehfus/pre-ready-2019-H1/blob/master/Student/Guides/Deployment%20Setup%20Guide.docx?raw=true<br/>
 
 ## Guidance
@@ -27,28 +27,28 @@ I highly recommend your students make sure they have an Azure Subscription they 
 
 ## Challenge 1: Monitoring and Alert Rule
 1. Login to Azure Protal with your credention given in environment details.<br/>
-2. Connect (RDP) to the Visual Studio Server (xxxxxVSSrv17) using its public IP address which is given in your pre-provisioned environment.
+2. Connect (RDP) to the Visual Studio Server (xxxxxVSSrv17) using its public IP address which is given in your pre-provisioned environment.<br/>
 3. Open Visual Studio.<br/>
 4. Visual Studio has view called **SQL Server Object Explorer** that can be used to add and delete SQL databases on the SQL server.<br/>
    <img src="images/sql.jpg"/><br/>
 5. Add SQL Server from **SQL Server Object Explorer**<br/>
    <img src="images/sqlsrv1.jpg"/><br/>
 Note: Use SQL Auth with the username being sqladmin and password being whatever you used during deployment<br/>
-6. Connect to the database server VM (xxxxxSqlSrv16) make sure to use below username and password to connect your SQL Server Virtual Manchine:
-• Username: **sqladmin**<br/>
-• Password: **demo@pass123**<br/>
+6. Connect to the database server VM (xxxxxSqlSrv16) make sure to use below username and password to connect your SQL Server Virtual Manchine:<br/>
+* Username: **sqladmin**<br/>
+* Password: **demo@pass123**<br/>
    <img src="images/sqlconnect.jpg"/><br/>
 7. Once connected create a new database called **tpcc**<br/>
    <img src="images/sqlsrv.jpg"/><br/>
 8. From the ARM template, send the below guest OS metric to Azure Monitor for the SQL Server<br/>
 9. Add a Performance Counter Metric for:<br/>
-•	Object: SQLServer:Databases<br/>
-•	Counter: Active Transactions<br/>
-•	Instance:tpcc<br/>
+Object: SQLServer:Databases<br/>
+Counter: Active Transactions<br/>
+Instance: tpcc<br/>
 ``
 Hint: https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/metrics-store-custom-guestos-resource-manager-vm<br/>
 ``
-10. First, figure out the correct format for the counter use the run command on the SQL Server in the Azure portal and run<br/>
+10. First, figure out the correct format for the counter use the run command on the SQL Server in the Azure portal<br/>
 **Run the command**<br/>
 `
 (Get-Counter -ListSet SQLServer:Databases).Paths
@@ -58,31 +58,26 @@ Hint: https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/metrics-
 `\SQLServer:Databases(*)\Active Transactions<br/>`
    <img src="images/output.jpg"/><br/>
 Then change it to target just your specific database<br/>
-`\SQLServer:Databases(tpcc)\Active Transactions<br/>`
-``
-Tip: Share the following link to help lead them to how to find the counter
-https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.diagnostics/get-counter?view=powershell-5.1
-``
+`\SQLServer:Databases(tpcc)\Active Transactions`<br/>
+``Tip: Share the following link to help lead them to how to find the counter<br/>
+https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.diagnostics/get-counter?view=powershell-5.1``<br/>
 12. Next, Run the below command to add the collection of this counter that sends it to Azure Monitor using the Azure monitor data sink for SQL Server.<br/>
 ``
-az vm extension set \
---resource-group myResourceGroup \
---vm-name myVMname \
---name IaaSDiagnostics \
---publisher Microsoft.Azure.Diagnostics \
---settings PublicConfig.json
-``
-<br/>
+az vm extension set \<br/>
+--resource-group myResourceGroup \<br/>
+--vm-name myVMname \<br/>
+--name IaaSDiagnostics \<br/>
+--publisher Microsoft.Azure.Diagnostics \<br/>
+--settings PublicConfig.json<br/>
+``<br/>
    <img src="images/monitor.jpg"/><br/>
 13. Once the command shows output, go to metrics and check to make sure you are seeing the new metrics.<br/>
    <img src="images/monitor1.jpg"/><br/>
    <img src="images/monitor2.jpg"/><br/>
    <img src="images/monitor3.jpg"/><br/>
 **Tip**: A bunch of OS metrics are configured already under the scale set as a sample.<br/>
-
 14. Download and Install HammerDB tool on the Visual Studio VM from below link:<br/>
-www.hammerdb.com
-<br/>
+www.hammerdb.com<br/>
 **Note:** HammerDB does not have native support for Windows Display Scaling. This may result in a smaller than usual UI that is difficult to read over high resolution RDP sessions. If you run into this issue later, close and re-open your RDP session to the VSServer with a lower display resolution. After the RDP session connects, you can zoom into to adjust the size.<br/>
    <img src="images/rdp.jpg"/><br/>
    <img src="images/zoom.jpg"/><br/>
