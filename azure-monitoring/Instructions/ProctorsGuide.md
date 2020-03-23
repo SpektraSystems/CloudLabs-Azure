@@ -634,8 +634,12 @@ requests
 8. Use **Add Metric** to create a metric chart<br/>
       <img src="images/book5.jpg"/><br/>
 9. Change your Resource Type to **Virtual Machine** and check all **aks** virtual machine<br/>
+      <img src="images/book6.jpg"/><br/>
+      <img src="images/book7.jpg"/><br/>
 10. Change the Resource Type to **Log Analytics**<br/>
+      <img src="images/book8.jpg"/><br/>
 11. Change your workspace to the **Log Analytics workspace** with your AKS container logs<br/>
+      <img src="images/book9.jpg"/><br/>
  * Query used for section Disk Used Percentage<br/>
 ```
 InsightsMetrics
