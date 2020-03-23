@@ -113,9 +113,10 @@ www.hammerdb.com<br/>
    <img src="images/matrix2.jpg"/><br/>
 25. From **Azure Monitor**, create an Action group, to send email to your address<br/>
    <img src="images/ag.jpg"/><br/>
+  * For creating Action Group, Click on **Add Action Group**
    <img src="images/ag1.jpg"/><br/>
-26. Give values as shown below:
-   <img src="images/ag1.jpg"/><br/>
+26. Give values as shown below and Click **OK**:
+   <img src="images/ag3.jpg"/><br/>
 27. Create an Alert if Active Transactions goes over 40 on the SQL Server **tpcc** database.<br/>
    <img src="images/alert.jpg"/><br/>
   * Select SQL Server as Resource
@@ -136,22 +137,7 @@ www.hammerdb.com<br/>
 This may be a bit of a challenge to those not used to working with a scale set.  If your student just grabs the public IP address and then RDP to it.  They will end up on one of the instances but because they are going through the Load Balancer, they cannot control which one.  Or can they?😊
 ``<br/>
 29. If you look at the configuration of the LB it is configured with an inbound NAT rule that will map starting at port 50000 to each instance in the Scale Set.  So if they RDP using the PIP:50000 for instance 1 and PIP:50001 for instance 2.<br/>
-``
-"inboundNatPools":[
-   {
-      "name":"natpool",
-      "properties":{
-         "frontendIPConfiguration":{
-            "id":"[concat(variables('webLbId'), '/frontendIPConfigurations/loadBalancerFrontEnd')]"
-         },
-         "protocol":"Tcp",
-         "frontendPortRangeStart":50000,
-         "frontendPortRangeEnd":50119,
-         "backendPort":3389
-      }
-   }
-],
-``<br/>
+   <img src="images/temp0.jpg"/><br/>
 * For Example:<br/>
    <img src="images/vm.jpg"/><br/>
 30. Jump on to both VMs in the Scale Set, Open the PowerShell ISE, Copy the script in the window and run it. You may need to run it more then once to really add the pressure. This script will pin each core on the VM no matter how many you have.<br/>
@@ -173,18 +159,18 @@ This may be a bit of a challenge to those not used to working with a scale set. 
    <img src="images/temp3.jpg"/><br/>
 6. Save the parameters file and update the **deployAlertRulesTemplate.ps1** file with the name of your **Resource Group** (and save it).<br/>
 7. Deploy the **GenerateAlertRules.json** template using the **PowerShell** script (deployAlertRulesTemplate.ps1).<br/>
-``
+```
 #Update Path to files as needed<br/>
 $template=".\AlertsTemplate\GenerateAlertRules.json"<br/>
 $para=".\AlertsTemplate\deployAlertRules.parameters.json"<br/>
 
 $job = 'job.' + ((Get-Date).ToUniversalTime()).tostring("MMddyy.HHmm")<br/>
 New-AzureRmResourceGroupDeployment `<br/>
-  -Name $job `<br/>
-  -ResourceGroupName $rg.ResourceGroupName `<br/>
-  -TemplateFile $template `<br/>
-  -TemplateParameterFile $para<br/>
-``<br/>
+-Name $job `<br/>
+-ResourceGroupName $rg.ResourceGroupName `<br/>
+-TemplateFile $template `<br/>
+-TemplateParameterFile $para<br/>
+```<br/>
    <img src="images/temp4.jpg"/><br/> 
 8. Verify you have new Monitor Alert Rules in the Portal or from the command line (sample command is in the deployment script)<br/>
    <img src="images/temp5.jpg"/><br/>
