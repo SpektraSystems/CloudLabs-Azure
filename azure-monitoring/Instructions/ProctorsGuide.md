@@ -192,84 +192,69 @@ New-AzureRmResourceGroupDeployment `
    <img src="images/ag7.jpg"/><br/>
 16. Under **Suppression Config**, click on **Configure Suppression** and configure the screen like the screen shot below.<br/>
    <img src="images/ag8.jpg"/><br/>
-18. Add an Action Rule Name and Description, check off enable action Rule.<br/>
+17. Add an Action Rule Name and Description, check off enable action Rule.<br/>
    <img src="images/ag9.jpg"/><br/>
-19. First team to me a screenshot of the new Alert Rules and New Action Rule wins the challenge!!<br/>
-20. Good luck!<br/>
+18. First team to me a screenshot of the new Alert Rules and New Action Rule wins the challenge!!<br/>
+19. Good luck!<br/>
 
 ## Challenge 3: Azure Monitor for Containers
 
-•	From your Visual Studio Server, deploy the eShoponWeb application to AKS using Dev Spaces
-•	Hint: https://docs.microsoft.com/en-us/azure/dev-spaces/get-started-netcore-visualstudio
-Make sure that Http Application Routing is enabled.
- 
-Note
-To enable Http Application Routing on an existing cluster, use the command: az aks enable-addons --resource-group myResourceGroup --name myAKSCluster --addons http_application_routing
+1. From your Visual Studio Server, deploy the eShoponWeb application to AKS using Dev Spaces<br/>
+**Hint:** https://docs.microsoft.com/en-us/azure/dev-spaces/get-started-netcore-visualstudio<br/>
+2. Make sure that Http Application Routing is enabled.<br/>
+**Note:**
+- To enable Http Application Routing on an existing cluster, use the command: az aks enable-addons -n {cluster_name} -g {rg_name} --addons http_application_routing<br/>
+``
 Sample Output:
-az aks enable-addons --resource-group mws02-AKS --name mws02aksdemo --addons http_application_routing
+az aks enable-addons -n 169844aksdemo -g ODL-monitor-169844 --addons http_application_routing
+``
+   <img src="images/aks.jpg"/><br/>
+3. Connect to your Visual Studio Server. Install Visual Studio Tools for **Kubernetes** if you are using VS 2017. This is not needed if you are using VS 2019.<br/>
+4. Navigate to **c:\eshoponweb\eShopOnWeb-master**<br/>
+   <img src="images/eshop.jpg"/><br/>
+5. Double-click on **eShopOnWeb.sln** solution file and select Visual Studio 2019 when prompted.<br/>
+6. Sign in to **Visual Studio**<br/>
+7. Once Visual Studio opens and settles down. Change the project over to **Web** and select **Azure Dev Spaces**.<br/>
+   <img src="images/1.jpg"/><br/>
+8. The Azure Dev Spaces login screen will appear. Make sure to select your **Subscription** and **Azure Kubernetes Service** cluster that was created during the setup.<br/>
+   <img src="images/eshop2.jpg"/><br/>
+9. It’s important you check off the **Publicly Accessible** checkbox.<br/>
+10. Click OK.<br/>
+   <img src="images/eshop1.jpg"/><br/>
+11. Click OK.<br/>
+   <img src="images/eshop3.jpg"/><br/>
+12. Click in the lower left to see the progress.<br/>
+   <img src="images/eshop4.jpg"/><br/>
+13. Don’t worry about seeing the message about the unreachable code.<br/>
+   <img src="images/eshop5.jpg"/><br/>
+**Note:** The initial creation of the container takes a while.<br/>
+14. When its complete Visual Studio will open the URL for you in the default browser.<br/>
+15. Copy the URL and test it from your local machine.<br/>
+   <img src="images/eshop7.jpg"/><br/>
+**Note:** The URL can also be found in the Output section if you scroll up.<br/>
+17. You can stop the project running in Visual Studio (Shift+F5). The container will stay deployed.<br/>
+18. From Azure Monitor, locate the container running the eShoponWeb application<br/>
+   <img src="images/eshop8.jpg"/><br/>
+19. From the Kubernetes service you created click on Insights or you can navigate to Azure Monitor, click on Containers, and select your cluster. Or generate an exception in the eShoponWeb application<br/>
+   <img src="images/eshop9.jpg"/><br/>
+ **OR**<br/>
+   <img src="images/eshop10.jpg"/><br/>
+(Hint: Try to change your password)<br/>
+20. Login into your webapp. Enter the user and password provided on the page.<br/>
+   <img src="images/eshop11.jpg"/><br/>
+21. Click on My account<br/>
+   <img src="images/eshop12.jpg"/><br/>
+22. Click on Password<br/>
+   <img src="images/eshop13.jpg"/><br/>
+``Notice an exception is thrown``<br/>
+23. Frome Azure go to Kubernetes Service, under Insight Click on the Web container and View container live logs.<br/>
+   <img src="images/eshop14.jpg"/><br/>
+24. Trip the password exception again once the Status has gone from Unk to Ok.<br/>
+   <img src="images/eshop15.jpg"/><br/>
+25. First person to send me a screen shot of the live log with the exception message wins the challenge<br/>
+   <img src="images/eshop17.jpg"/><br/>
 
- 
- 
-Connect to your Visual Studio Server.
-Install Visual Studio Tools for Kubernetes if you are using VS 2017. This is not needed if you are using VS 2019. 
-
-
-
-Navigate to c:\eshoponweb\eShopOnWeb-master
- 
-Double-click on eShopOnWeb.sln solution file and select Visual Studio 2017 when prompted.
-Sign in to Visual Studio
-Once Visual Studio opens and settles down.  Change the project over to Web and select Azure Dev Spaces.
- 
-The Azure Dev Spaces login screen will appear.  Make sure to select your Subscription and Azure Kubernetes Service cluster that was created during the setup.
- 
-It’s important you check off the Publicly Accessible checkbox.
- 
-Click OK
- 
-Click OK
- 
-Click in the lower left to see the progress.
- 
-To run the project (build and deploy to the AKS cluster) and view live logs in Container Insights, the app must be running on container without VS debugging by performing a (Crtl +F5).
-
-Don’t worry about seeing the message about the unreachable code.
- 
-I placed that there on purpose for the Monitoring Workshop.
-Note: The initial creation of the container takes awhile.
- 
-When its complete Visual Studio will open the URL for you in the default browser.
- 
-Copy the URL and test it from your local machine.  Note: The URL can also be found in the Output section if you scroll up.
-You can stop the project running in Visual Studio (Shift+F5).  The container will stay deployed.
-Sample:
-http://web.651ee2722f0c40738d33.eastus.aksapp.io/
-•	From Azure Monitor, locate the container running the eShoponWeb application
-From the Kubernetes service you created click on Insights or you can navigate to Azure Monitor, click on Containers, and select your cluster.
- 
- 
-Or
- 
-•	Generate an exception in the eShoponWeb application
-(Hint: Try to change your password)
-Login
- 
-Enter the user and password provided on the page.
- 
-Click on My account
- 
-Click on Password
-Notice an exception is thrown
- 
-Click on the Web container and View container live logs.
- 
-Trip the password exception again once the Status has gone from Unk to Ok.
- 
-
-•	First person to send me a screen shot of the live log with the exception message wins the challenge 
- 
-
-Challenge 4: Application Insights 
+## Challenge 4: Application Insights 
 
 Note: User Access Administrator role is required to complete the Container Insights Challenge
 In Visual Studio, Install the Application Insights SDK in the eShopOnWeb Web Project in the Solution
