@@ -160,17 +160,18 @@ This may be a bit of a challenge to those not used to working with a scale set. 
 6. Save the parameters file and update the **deployAlertRulesTemplate.ps1** file with the name of your **Resource Group** (and save it).<br/>
 7. Deploy the **GenerateAlertRules.json** template using the **PowerShell** script (deployAlertRulesTemplate.ps1).<br/>
 ```
-#Update Path to files as needed<br/>
-$template=".\AlertsTemplate\GenerateAlertRules.json"<br/>
-$para=".\AlertsTemplate\deployAlertRules.parameters.json"<br/>
+#Update Path to files as needed
+$template=".\AlertsTemplate\GenerateAlertRules.json"
+$para=".\AlertsTemplate\deployAlertRules.parameters.json"
 
-$job = 'job.' + ((Get-Date).ToUniversalTime()).tostring("MMddyy.HHmm")<br/>
-New-AzureRmResourceGroupDeployment `<br/>
--Name $job `<br/>
--ResourceGroupName $rg.ResourceGroupName `<br/>
--TemplateFile $template `<br/>
--TemplateParameterFile $para<br/>
-```<br/>
+$job = 'job.' + ((Get-Date).ToUniversalTime()).tostring("MMddyy.HHmm")
+New-AzureRmResourceGroupDeployment `
+-Name $job `
+-ResourceGroupName $rg.ResourceGroupName `
+-TemplateFile $template `
+-TemplateParameterFile $para
+```
+<br/>
    <img src="images/temp4.jpg"/><br/> 
 8. Verify you have new Monitor Alert Rules in the Portal or from the command line (sample command is in the deployment script)<br/>
    <img src="images/temp5.jpg"/><br/>
