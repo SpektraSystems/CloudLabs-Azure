@@ -483,41 +483,65 @@ Percent
 * Deploy Grafana using Web App for Container
 https://github.com/grafana/azure-monitor-datasource/blob/master/README.md
 * Hint: http://docs.grafana.org/installation/docker/
-1. Create a Web App for Linux and configure as recommended below:
- * Create a new App service plan and select B1 Basic.  It’s under Dev / Test. 
- * Select Container and specify Docker Hub, Public and Grafana/Grafana for the image (this should deploy the latest version by default)
- * Should look like this when complete:
- * Click Create
-2. After the Web App deploys, we need to configure some settings to enable Azure Monitor Plugin.
-3. From the Azure Portal navigate to your newly created App Service, Settings, Application Settings<br/>
-4. Under Always On, change the value to On.<br/>
-5. Under Application Settings, click on Show Values<br/>
-6. Change the value for WEBSITES_ENABLE_APP_SERVICE_STORAGE to true (from false)<br/>
-7. Click Add new Setting and add the following:<br/>
-8. Click Save<br/>
+
+1. Create a Web App for Linux and configure as recommended below:<br/>
+    <img src="images/web.jpg"/><br/>
+ * Create a new App service plan and select B1 Basic. It’s under Dev / Test.<br/>
+    <img src="images/web1.jpg"/><br/>
+ * Select Container and specify Docker Hub, Public and Grafana/Grafana for the image tags (this should deploy the latest version by default)<br/>
+     <img src="images/web3.jpg"/><br/>
+ * Should look like this when complete:<br/>
+     <img src="images/web4.jpg"/><br/>
+ * Click Create<br/>
+2. After the Web App deploys, we need to configure some settings to enable Azure Monitor Plugin.<br/>
+3. From the Azure Portal navigate to your newly created App Service, Configurstions, Application Settings<br/>
+4. Under **Always On**, change the value to On.<br/>
+     <img src="images/app.jpg"/><br/>
+5. Under **Application Settings**, click on **Show Values**<br/>
+     <img src="images/app1.jpg"/><br/>
+6. Change the value for **WEBSITES_ENABLE_APP_SERVICE_STORAGE** to true (from false)<br/>
+     <img src="images/app2.jpg"/><br/>
+7. Click **Add** new Setting and add the following:<br/>
+     <img src="images/app3.jpg"/><br/>
+     <img src="images/app4.jpg"/><br/>
+8. Click **Save**<br/>
+     <img src="images/app5.jpg"/><br/>
 **Note:** For the Application settings to take effect you may need to restart your Web App<br/>
-9. To Login to Grafana<br/>
-10. Click on Overview and copy the URL for your Web App<br/>
-11. Navigate to the URL in your browser. The username is “admin” lowercase and the password is whatever you configured in Application Settings. Notice the version of Grafana as you need 5.2.0 or newer if you are querying Azure Log Analytics.<br/>
-12. Once logged into Grafana you should notice Azure Monitor is installed<br/>
-13. Configure the Azure Monitor Data Source for Azure Monitor, Log Analytics and Application Insights<br/>
+9. To **Login** to Grafana<br/>
+10. Click on **Overview** and copy the **URL** for your Web App<br/>
+     <img src="images/app6.jpg"/><br/>
+11. Navigate to the URL in your browser. The username is **admin** lowercase and the password is whatever you configured in Application Settings. Notice the version of Grafana as you need 5.2.0 or newer if you are querying **Azure Log Analytics**.<br/>
+     <img src="images/app7.jpg"/><br/>
+12. Once logged into **Grafana** you should notice Azure Monitor is installed<br/>
+13. Configure the **Azure Monitor Data Source** for Azure Monitor, Log Analytics and Application Insights<br/>
+     <img src="images/app8.jpg"/><br/>
 14. Configure Azure Monitor data source.<br/>
+     <img src="images/app9.jpg"/><br/>
 15. Fill out the Azure Monitor API Details<br/>
-16. For Tenant Id, go to Azure AD, properties to find the Directory ID.<br/>
-17. For Client Id, use the same client Id (Service Principal) you used in the AKS deployment for terraform.  Note: Azure best practices would be to generate a new service principal and only grant the required permissions.<br/>
-Sample: ready-mws02-aks-preday Client Id = 0bd13b1d-2ddb-41e9-a286-d81328e9a72d<br/>
-For Client Secret, use the same password you set in the Azure Key Vault during the deployment<br/>
-Note: Make sure to add the service principal created during the deployment to your Log Analytics as a reader<br/>
-18. Click Save & Test and you should see a message like below.<br/>
-19. To configure Application Insights, find your API Id and generate a key<br/>
-20. Copy the Application ID and paste in Grafana. Click on Create API Key<br/>
-21. Copy the key and paste in the Grafana Application Insights Details. **Note:** you cannot retrieve this key again.<br/>
-22. Click Save & Test. Should like this now.<br/>
-23. Create a CPU Chart with a Grafana variable used to select Computer Name<br/>
-24. Create a new dashboard. Add Graph<br/>
-25. Edit the Panel Title<br/>
-26. Under General change to the name to something like Computer CPU<br/>
-27. Under Metrics, make sure service is Azure Log Analytics, your workspace is selected, and build out a Log Analytics query (answer query below for your reference).<br/>
+     <img src="images/app10.jpg"/><br/>
+16. From your Environment Details copy the **Tenant Id**, **Application/Client Id**, **Application Secret Key** properties to find the Directory ID.<br/>
+     <img src="images/app11.jpg"/><br/>
+18. Click **Save & Test** and you should see a message like below.<br/>
+     <img src="images/app12.jpg"/><br/>
+19. To configure **Application Insights**, find your **API Id** and generate a key<br/>
+     <img src="images/app13.jpg"/><br/>
+20. Copy the **Application ID** and paste in Grafana. Click on **Create API Key**<br/>
+     <img src="images/app14.jpg"/><br/>
+     <img src="images/app15.jpg"/><br/>
+21. Copy the key and paste in the **Grafana Application Insights Details**. **Note:** You cannot retrieve this key again.<br/>
+     <img src="images/app16.jpg"/><br/>
+22. Click **Save & Test**. Should like this now.<br/>
+23. Create a **CPU Chart** with a Grafana variable used to select Computer Name<br/>
+24. Create a new dashboard.<br/>
+     <img src="images/app17.jpg"/><br/>
+25. Add **Graph**<br/>
+     <img src="images/app18.jpg"/><br/>
+     <img src="images/app19.jpg"/><br/>
+26. Edit the **Panel Title**<br/>
+     <img src="images/app21.jpg"/><br/>
+27. Under General change to the name to something like **Computer CPU**.<br/>
+     <img src="images/app20.jpg"/><br/>
+28. Under Metrics, make sure service is Azure Log Analytics, your workspace is selected, and build out a Log Analytics query (answer query below for your reference).<br/>
 ```
 Sample query: 
 Perf                                                             
@@ -526,20 +550,32 @@ Perf
 | summarize percentile(CounterValue,50) by bin(TimeGenerated, $__interval), Computer 
 | order by TimeGenerated asc
 ```
-28. Click Run to test<br/>
-29. Now let’s make a few changes.  Click on Axes and change the Unit to percent and Y-Max to 100. Run it <br/>
-30. Let’s save it by click on the disk in the upper right side. Should look something like this:<br/>
- * Advanced features:<br/>
- * Variables<br/>
- * Some query values can be selected through UI dropdowns, and updated in the query.<br/>
- * For example, a “Computer” variable can be defined, and then a dropdown will appear on the dashboard, showing a list of possible values:<br/>
+     <img src="images/grfa17.jpg"/><br/>
+28. Click **Run** to test<br/>
+29. Now let’s make a few changes. Click on **Axes** and change the Unit to percent and **Y-Max** to 100. Run it <br/>
+     <img src="images/grfa16.jpg"/><br/>
+30. Let’s save it by click on the disk in the upper right side.<br/>
+     <img src="images/grfa13.jpg"/><br/>
+     <img src="images/grfa12.jpg"/><br/>
+31. Should look something like this:<br/>
+     <img src="images/grfa11.jpg"/><br/>
+ #### Advanced features:<br/>
+ * **Variables**<br/>
+ * Some query values can be selected through **UI** dropdowns, and updated in the query.<br/>
+ * For example, a **Computer** variable can be defined, and then a dropdown will appear on the dashboard, showing a list of possible values:<br/>
+      <img src="images/grfa10.jpg"/><br/>
 * Now let’s add a variable that lets us select computers in the chart. Click on the gear in the upper right corner.<br/>
-* Click on Add Variable<br/>
-31. Configure the Variable to look like the screen below.<br/>
+     <img src="images/grfa9.jpg"/><br/>
+* Click on **Add** Variable<br/>
+     <img src="images/grfa8.jpg"/><br/>
+31. Configure the **Variable** to look like the screen below.<br/>
+     <img src="images/grfa9.jpg"/><br/>
 **Note:** In my case I make sure to specify the Workspace name as I have many workspaces and wanted to make sure we only returned values that would work in our chart. Click Add.<br/>
-32. Make sure to Save your dashboard<br/>
-33. Now go back and edit your Computer CPU chart to update the query to use the new variable.<br/>
-34. Sample update Computer CPU query to support variable $ComputerName<br/>
+32. Make sure to **Save** your dashboard<br/>
+     <img src="images/grfa5.jpg"/><br/>
+33. Now go back and edit your **Computer CPU** chart to update the query to use the new variable.<br/>
+     <img src="images/grfa4.jpg"/><br/>
+34. Sample update Computer CPU query to support variable **$ComputerName**<br/>
 ```
 Perf                                                       
 | where $__timeFilter(TimeGenerated) and Computer in ($ComputerName)
@@ -547,32 +583,42 @@ Perf
 | summarize AVGPROCESSOR = avg(CounterValue) by bin(TimeGenerated, $__interval), Computer 
 | order by TimeGenerated asc
 ```
+     <img src="images/grfa3.jpg"/><br/>
 35. Make sure to **Save**<br/>
+     <img src="images/grfa2.jpg"/><br/>
 36. Try it out!<br/>
+     <img src="images/grfa.jpg"/><br/>
 37. Try creating a variable that accepts percentiles (50, 90 and 95).<br/>
-38. Annotations:<br/>
+ #### Annotations:<br/>
  * Another cool Grafana feature is annotations – which marks points in time that you can overlay on top of charts.
- * Below, you can see the same chart shown above, with an annotation of Heartbeats. Hovering on a specific annotation shows informative text about it.<br/>
- * Configuration is very similar to Variables:<br/>
- * Click the dashboard Settings button (on the top right area), select “Annotations”, and then “+New”.<br/>
+ * Below, you can see the same chart shown above, with an annotation of **Heartbeats**. Hovering on a specific annotation shows informative text about it.<br/>
+ * **Configuration** is very similar to Variables:<br/>
+ * Click the dashboard **Settings** button (on the top right area), select **Annotations**, and then **+New**.<br/>
  * This page shows up, where you can define the data source (aka “Service”) and query to run in order to get the list of values (in this case a list of computer heartbeats).<br/>
-Note that the output of the query should include a date-time value, a Text field with interesting info (in this case we used the computer name) and possibly tags (here we just used “test”).<br/>
+**Note:** that the output of the query should include a date-time value, a Text field with interesting info (in this case we used the computer name) and possibly tags (here we just used “test”).<br/>
  * Add an Annotation to your chart overlaying Computer Heartbeat<br/>
+      <img src="images/grfa1.jpg"/><br/>
  * FYI… Annotations provide a way to mark points on the graph with rich events. When you hover over an annotation you can get event description and event tags. The text field can include links to other systems with more detail.<br/>
- * Navigate to settings from your dashboard (the gear in the upper right), click on Annotations, Add Annotation Query
+ * Navigate to settings from your dashboard (the gear in the upper right), click on Annotations, Add Annotation Query<br/>
+      <img src="images/grfa.jpg"/><br/>
 **HINT:** Use the sample Kusto/Data explorer queries to create more dashboard scenarios.<br/>
  * First Team to email me a screenshot with your chart wins the challenge. Good luck!<br/>
 
 ## Challenge 6a: Workbooks
 
 Workbook documentation is available here: https://docs.microsoft.com/en-us/azure/azure-monitor/app/usage-workbooks<br/>
-1. Navigate to your Application Insights resource in the Portal<br/>
-2. Click on Workbooks  New<br/>
-3. Click Edit in the New Workbook section to describe the upcoming content in the workbook. Text is edited using Markdown syntax.<br/>
-4. Use Add text to describe the upcoming table<br/>
-5. Use Add parameters to create the time selector<br/>
-6. Use Add query to retrieve data from pageViews<br/>
-7. Use Column Settings to change labels of column headers and use Bar and Threshold visualizations.
+1. Navigate to your **Application Insights** resource in the Azure Portal<br/>
+2. Click on Workbooks **New**<br/>
+      <img src="images/book.jpg"/><br/>
+3. Click **Edit** in the New Workbook section to describe the upcoming content in the workbook. Text is edited using Markdown syntax.<br/>
+      <img src="images/book2.jpg"/><br/>
+4. Use **Add text** to describe the upcoming table<br/>
+      <img src="images/book3.jpg"/><br/>
+5. Use **Add parameters** to create the time selector<br/>
+      <img src="images/book1.jpg"/><br/>
+6. Use **Add query** to retrieve data from pageViews<br/>
+      <img src="images/book4.jpg"/><br/>
+7. Use **Column** Settings to change labels of column headers and use Bar and Threshold visualizations.
  * Query used for section Browser Statistics
 ```
 pageViews
@@ -585,10 +631,11 @@ requests
 | where success == false
 | summarize total_count=sum(itemCount), pageDurationAvg=avg(duration) by name, resultCode
 ```
-8. Use Add Metric to create a metric chart<br/>
-9. Change your Resource Type to Virtual Machine<br/>
-10. Change the Resource Type to Log Analytics<br/>
-11. Change your workspace to the LA workspace with your AKS container logs<br/>
+8. Use **Add Metric** to create a metric chart<br/>
+      <img src="images/book5.jpg"/><br/>
+9. Change your Resource Type to **Virtual Machine** and check all **aks** virtual machine<br/>
+10. Change the Resource Type to **Log Analytics**<br/>
+11. Change your workspace to the **Log Analytics workspace** with your AKS container logs<br/>
  * Query used for section Disk Used Percentage<br/>
 ```
 InsightsMetrics
@@ -598,4 +645,4 @@ InsightsMetrics
 | summarize avg(Val) by Computer, bin(TimeGenerated, 1m)
 | render timechart
 ```
-12 Save your workbook<br/>
+12. **Save** your workbook<br/>
