@@ -251,81 +251,75 @@ az aks enable-addons -n 169844aksdemo -g ODL-monitor-169844 --addons http_applic
    <img src="images/eshop14.jpg"/><br/>
 24. Trip the password exception again once the Status has gone from Unk to Ok.<br/>
    <img src="images/eshop15.jpg"/><br/>
-25. First person to send me a screen shot of the live log with the exception message wins the challenge<br/>
+25. First person to send me a screen shot of the live log with the exception message wins the challenge
    <img src="images/eshop17.jpg"/><br/>
 
 ## Challenge 4: Application Insights 
 
-Note: User Access Administrator role is required to complete the Container Insights Challenge
-In Visual Studio, Install the Application Insights SDK in the eShopOnWeb Web Project in the Solution
-From the Visual Studio Server, navigate to C:\eshoponweb\eShopOnWeb-master and double-click on eShopOnWeb.sln
- 
- 
-Select Visual Studio 2017 and click OK.  
-If this is the first time you are opening Visual Studio please log in or create an account and log in.
- 
-Select Web
- 
-Right-click on Web in Solutions Explorer and select properties.  Under Debug unselect the checkbox for Enable SSL.
- 
-Click Save.  
-Click on IIS Express to test the eShopOnWeb application
- 
-You should see the eShop app open locally.  Close it and let’s add the Application Insights SDK
- 
-On the right hand side, find Web and right click, go to Add and select Application Insights Telemetry
- 
-Click get Started
- 
-Select your subscription, Resource (name of your App Insights) and click Register.
-If prompted make sure to Add the SDK.
- 
- 
-•	Run the eShopOnWeb Web project and check out the App Insights tooling
-
-Test the application by running it and verify it’s working.
- 
-While its running you can navigate to Application Insights and view the telemetry while you are interacting with eShop running on the local machine.  Add something to the shopping cart, log in and check out.  
- 
-		
-•	Add the updated Application Insights NuGet package to v2.5.1
-Note: make sure to only at this package.  Do not update everything.
- 
-Go to Tools, NuGet Package Manager, Manage NuGet Packages for Solution
- 
-Check off the Microsoft.ApplicationInsights package and click Update
- 
-Click OK
- 
-Click I Accept.  When finished run the eShopOnWeb application again to make sure it’s working.
-•	Publish eShopOnWeb Web project to AKS
-Change over to Azure Dev Spaces from IIS Express and run the Web project (F5)
-You can always edit some text in the site to verify that indeed the container is being update.  Make sure when you run the project the browser is pointing to your URL for the container not the local host.  You may need to stop it again, save the project and run it again if this happens.
-•	Generate some load and check out the results
-From your laptop or the Visual Studio Server copy the code in the LoadScripts folder and modify it to your URL
-
+**Note:** User Access Administrator role is required to complete the Container Insights Challenge<br/>
+1. In Visual Studio, Install the Application Insights SDK in the eShopOnWeb Web Project in the Solution<br/>
+2. From the Visual Studio Server, navigate to **C:\eshoponweb\eShopOnWeb-master** and double-click on eShopOnWeb.sln
+   <img src="images/vs.jpg"/><br/>
+3. If this is the first time you are opening Visual Studio please log in or create an account and log in.<br/>
+4. Select Web<br/>
+   <img src="images/vs1.jpg"/><br/>
+5. Right-click on **Web** in **Solutions Explorer** and select properties. Under Debug unselect the checkbox for **Enable SSL**.<br/>
+   <img src="images/vs3.jpg"/><br/>
+6. Click Save.<br/>
+7. Click on **IIS Express** to test the eShopOnWeb application<br/>
+   <img src="images/vs2.jpg"/><br/>
+8. You should see the **eShop** app open locally. Close it and let’s add the Application Insights SDK<br/>
+   <img src="images/vs4.jpg"/><br/>
+9. On the right hand side, find Web and right click, go to Add and select Application Insights Telemetry<br/>
+   <img src="images/vs5.jpg"/><br/>
+10. Click get Started<br/>
+   <img src="images/vs6.jpg"/><br/>
+11. Select your subscription, Resource (name of your App Insights) and click Register.<br/>
+   <img src="images/vs7.jpg"/><br/>
+12. If prompted make sure to Add the SDK.<br/>
+   <img src="images/vs8.jpg"/><br/>
+13. Run the **eShopOnWeb** Web project and check out the App Insights tooling<br/>
+   <img src="images/vs9.jpg"/><br/>
+   <img src="images/vs10.jpg"/><br/>
+14. Test the application by running it and verify it’s working.<br/>
+   <img src="images/vs11.jpg"/><br/>
+15. While its running you can navigate to Application Insights and view the telemetry while you are interacting with eShop running on the local machine. Add something to the shopping cart, log in and check out.<br/>
+16. Stop the app and add the updated **Application Insights NuGet package to v2.5.1**<br/>
+**Note:** make sure to only at this package.  Do not update everything.<br/>
+17. Go to Tools, NuGet Package Manager, Manage NuGet Packages for Solution<br/>
+   <img src="images/vs12.jpg"/><br/>
+18. Check off the Microsoft.ApplicationInsights package and click Update<br/>
+   <img src="images/vs13.jpg"/><br/>
+19. Click OK<br/>
+   <img src="images/vs14.jpg"/><br/>
+20. Click I Accept. When finished run the eShopOnWeb application again to make sure it’s working.<br/>
+   <img src="images/vs15.jpg"/><br/>
+21. Publish eShopOnWeb Web project to AKS<br/>
+22. Change over to Azure Dev Spaces from IIS Express and run the Web project (F5)<br/>
+   <img src="images/1.jpg"/><br/>
+23. You can always edit some text in the site to verify that indeed the container is being update. Make sure when you run the project the browser is pointing to your URL for the container not the local host. You may need to stop it again, save the project and run it again if this happens.<br/>
+24. Generate some load and check out the results<br/>
+25. From your laptop or the Visual Studio Server copy the code in the **LoadScripts** folder and modify it to your URL<br/>
+``
 for ($i = 0 ; $i -lt 100; $i++)
 {
- Invoke-WebRequest -uri http:// mon19webscalesetlb.eastus.cloudapp.azure.com/
+Invoke-WebRequest -uri http:// mon19webscalesetlb.eastus.cloudapp.azure.com/
 }
+``
+26. Run the code to generate some load on your **eShopOnWeb** site<br/>
+   <img src="images/vs16.jpg"/><br/>
+27. To trip the exception,
+* Open your eShop site in your browser and login to the site<br/>
+   <img src="images/vs17.jpg"/><br/>
+* Try to change your password<br/>
+   <img src="images/vs18.jpg"/><br/>
+* Find the exception in App Insights<br/>
+   <img src="images/vs19.jpg"/><br/>
+28. Create Alerts based on Availability and exceptions<br/>
+   <img src="images/vs20.jpg"/><br/>
+29. First Team to email me an alert of the exception and a screenshot with your scaleset scale out based on the App Insights metric wins the challenge. Good luck
 
-Run the code to generate some load on your eShopOnWeb site
-To trip the exception, 
-1.	Open your eShop site in your browser and login to the site
- 
- 
-2.	Try to change your password
- 
- 
- 
-•	Find the exception in App Insights
- 
- 
-
-•	 Create Alerts based on Availability and exceptions
- 
-•	First Team to email me an alert of the exception and a screenshot with your scaleset scale out based on the App Insights metric wins the challenge.  Good luck
-Challenge 5: Log Analytics Query
+## Challenge 5: Log Analytics Query
 Write a performance query that renders a time chart for the last 4 hours for both of the Web Servers and the SQL Server for the following perf metrics. Save each query to your favorites.
 •	Processor Utilization: Processor / % Processor Time
 Perf  
