@@ -258,7 +258,7 @@ az aks enable-addons -n 169844aksdemo -g ODL-monitor-169844 --addons http_applic
 
 **Note:** User Access Administrator role is required to complete the Container Insights Challenge<br/>
 1. In Visual Studio, Install the Application Insights SDK in the eShopOnWeb Web Project in the Solution<br/>
-2. From the Visual Studio Server, navigate to **C:\eshoponweb\eShopOnWeb-master** and double-click on eShopOnWeb.sln
+2. From the Visual Studio Server, navigate to **C:\eshoponweb\eShopOnWeb-master** and double-click on eShopOnWeb.sln<br/>
    <img src="images/vs.jpg"/><br/>
 3. If this is the first time you are opening Visual Studio please log in or create an account and log in.<br/>
 4. Select Web<br/>
@@ -301,10 +301,15 @@ az aks enable-addons -n 169844aksdemo -g ODL-monitor-169844 --addons http_applic
 24. Generate some load and check out the results<br/>
 25. From your laptop or the Visual Studio Server copy the code in the **LoadScripts** folder and modify it to your URL<br/>
 ``
+
 for ($i = 0 ; $i -lt 100; $i++)
+
 {
+
 Invoke-WebRequest -uri http:// mon19webscalesetlb.eastus.cloudapp.azure.com/
+
 }
+
 ``
 26. Run the code to generate some load on your **eShopOnWeb** site<br/>
    <img src="images/vs16.jpg"/><br/>
@@ -313,10 +318,12 @@ Invoke-WebRequest -uri http:// mon19webscalesetlb.eastus.cloudapp.azure.com/
    <img src="images/vs17.jpg"/><br/>
 * Try to change your password<br/>
    <img src="images/vs18.jpg"/><br/>
-* Find the exception in App Insights<br/>
    <img src="images/vs19.jpg"/><br/>
-28. Create Alerts based on Availability and exceptions<br/>
+* Find the exception in App Insights<br/>
    <img src="images/vs20.jpg"/><br/>
+   <img src="images/vs21.jpg"/><br/>
+28. Create Alerts based on Availability and exceptions<br/>
+   <img src="images/vs22.jpg"/><br/>
 29. First Team to email me an alert of the exception and a screenshot with your scaleset scale out based on the App Insights metric wins the challenge. Good luck
 
 ## Challenge 5: Log Analytics Query
