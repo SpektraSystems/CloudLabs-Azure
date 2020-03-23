@@ -551,13 +551,13 @@ Perf
 | order by TimeGenerated asc
 ```
      <img src="images/grfa17.jpg"/><br/>
-28. Click **Run** to test<br/>
-29. Now let’s make a few changes. Click on **Axes** and change the Unit to percent and **Y-Max** to 100. Run it <br/>
+29. Click **Run** to test<br/>
+30. Now let’s make a few changes. Click on **Axes** and change the Unit to percent and **Y-Max** to 100. Run it <br/>
      <img src="images/grfa16.jpg"/><br/>
-30. Let’s save it by click on the disk in the upper right side.<br/>
+31. Let’s save it by click on the disk in the upper right side.<br/>
      <img src="images/grfa13.jpg"/><br/>
      <img src="images/grfa12.jpg"/><br/>
-31. Should look something like this:<br/>
+32. Should look something like this:<br/>
      <img src="images/grfa11.jpg"/><br/>
  #### Advanced features:<br/>
  * **Variables**<br/>
@@ -568,14 +568,14 @@ Perf
      <img src="images/grfa9.jpg"/><br/>
 * Click on **Add** Variable<br/>
      <img src="images/grfa8.jpg"/><br/>
-31. Configure the **Variable** to look like the screen below.<br/>
-     <img src="images/grfa9.jpg"/><br/>
+33. Configure the **Variable** to look like the screen below.<br/>
+     <img src="images/grfa7.jpg"/><br/>
 **Note:** In my case I make sure to specify the Workspace name as I have many workspaces and wanted to make sure we only returned values that would work in our chart. Click Add.<br/>
-32. Make sure to **Save** your dashboard<br/>
+34. Make sure to **Save** your dashboard<br/>
      <img src="images/grfa5.jpg"/><br/>
-33. Now go back and edit your **Computer CPU** chart to update the query to use the new variable.<br/>
+35. Now go back and edit your **Computer CPU** chart to update the query to use the new variable.<br/>
      <img src="images/grfa4.jpg"/><br/>
-34. Sample update Computer CPU query to support variable **$ComputerName**<br/>
+36. Sample update Computer CPU query to support variable **$ComputerName**<br/>
 ```
 Perf                                                       
 | where $__timeFilter(TimeGenerated) and Computer in ($ComputerName)
@@ -584,11 +584,11 @@ Perf
 | order by TimeGenerated asc
 ```
      <img src="images/grfa3.jpg"/><br/>
-35. Make sure to **Save**<br/>
+38. Make sure to **Save**<br/>
      <img src="images/grfa2.jpg"/><br/>
-36. Try it out!<br/>
+39. Try it out!<br/>
      <img src="images/grfa.jpg"/><br/>
-37. Try creating a variable that accepts percentiles (50, 90 and 95).<br/>
+40. Try creating a variable that accepts percentiles (50, 90 and 95).<br/>
  #### Annotations:<br/>
  * Another cool Grafana feature is annotations – which marks points in time that you can overlay on top of charts.
  * Below, you can see the same chart shown above, with an annotation of **Heartbeats**. Hovering on a specific annotation shows informative text about it.<br/>
