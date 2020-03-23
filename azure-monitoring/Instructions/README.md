@@ -4,7 +4,7 @@
 
 ## Contents
 * [Challenge 1: Monitoring and Alert Rule](https://github.com/SpektraSystems/CloudLabs-Azure/tree/master/azure-monitoring/Instructions/Challenge%201:%20Monitoring%20and%20Alert%20Rule.md)<br/>
-* [Challenge 2: Monitoring and Alert Rule Automation](https://github.com/SpektraSystems/CloudLabs-Azure/tree/master/azure-monitoring/Instructions/Challenge%201:%20Monitoring%20and%20Alert%20Rule.md)<br/>
+* [Challenge 2: Monitoring and Alert Rule Automation](https://github.com/SpektraSystems/CloudLabs-Azure/blob/master/azure-monitoring/Instructions/Challenge%202:%20Monitoring%20and%20Alert%20Rule%20Automation.md)<br/>
 * [Challenge 3: Azure Monitor for Containers](https://github.com/SpektraSystems/CloudLabs-Azure/tree/master/azure-monitoring/Instructions/Challenge%203:%20Azure%20Monitor%20for%20Containers.md)<br/>
 * [Challenge 4: Application Insights](https://github.com/SpektraSystems/CloudLabs-Azure/tree/master/azure-monitoring/Instructions/Challenge%204:%20Application%20Insights%20.md)<br/>
 * [Challenge 5: Log Analytics Query](https://github.com/SpektraSystems/CloudLabs-Azure/tree/master/azure-monitoring/Instructions/Challenge%205:%20Log%20Analytics%20Query.md
