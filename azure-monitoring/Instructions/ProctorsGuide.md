@@ -300,17 +300,14 @@ az aks enable-addons -n 169844aksdemo -g ODL-monitor-169844 --addons http_applic
 23. You can always edit some text in the site to verify that indeed the container is being update. Make sure when you run the project the browser is pointing to your URL for the container not the local host. You may need to stop it again, save the project and run it again if this happens.<br/>
 24. Generate some load and check out the results<br/>
 25. From your laptop or the Visual Studio Server copy the code in the **LoadScripts** folder and modify it to your URL<br/>
-``
 
+``
 for ($i = 0 ; $i -lt 100; $i++)
-
 {
-
-Invoke-WebRequest -uri http:// mon19webscalesetlb.eastus.cloudapp.azure.com/
-
+Invoke-WebRequest -uri http:// mon19webscalesetlb.eastus.cloudapp.azure.com/<br/>
 }
-
 ``
+<br/>
 26. Run the code to generate some load on your **eShopOnWeb** site<br/>
    <img src="images/vs16.jpg"/><br/>
 27. To trip the exception,
