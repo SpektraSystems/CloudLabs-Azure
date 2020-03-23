@@ -171,7 +171,6 @@ New-AzureRmResourceGroupDeployment `
 -TemplateFile $template `
 -TemplateParameterFile $para
 ```
-<br/>
    <img src="images/temp4.jpg"/><br/> 
 8. Verify you have new Monitor Alert Rules in the Portal or from the command line (sample command is in the deployment script)<br/>
    <img src="images/temp5.jpg"/><br/>
@@ -184,7 +183,7 @@ New-AzureRmResourceGroupDeployment `
 11. Create a new Action Rule that suppress alerts from the scale set and virtual machines on **Saturday** and **Sunday**.<br/>
 12. In Azure Monitor, Click on Manage actions under Alert<br/>
    <img src="images/ag.jpg"/><br/>
-13. Navigate to Action rules (preview)
+13. Navigate to Action rules (preview)<br/>
    <img src="images/ag5.jpg"/><br/>
    <img src="images/ag6.jpg"/><br/>
 14. Under Scope, click on Select a resource and make sure you have your subscription selected. Then search for the name of the resource group that was created in the deployment of the workshop. Select your resource group when it comes up. Click Done<br/>
