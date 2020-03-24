@@ -6,11 +6,12 @@
    <img src="images/downlaods1.jpg"/><br/>
 3. Navigate to the location where you unzipped the files and open the **.\AzureMonitorHackathon-master\Student\Resources** folder in Visual Studio or Visual Studio code<br/>
 ```
-Download Visual Studio Code: https://code.visualstudio.com/download (If you don't have visual studio code and visual studio in you locl disk)
+Download Visual Studio Code: https://code.visualstudio.com/download (If you don't have visual studio code and visual studio in you local disk)
 ```
    <img src="images/downlaods2.jpg"/><br/>
-4. Login to Azure Protal with your credention given in environment details.<br/>
-5. Connect (RDP) to the Visual Studio Server (xxxxxVSSrv17) using its public IP address which is given in your pre-provisioned environment. Use given username and password to connect visual studio server:<br/>
+4. Login to **Azure Protal** with your credention given in environment details.<br/>
+   <img src="images/cred.jpg"/><br/>
+5. Connect (RDP) to the **Visual Studio Server** (xxxxxVSSrv17) using its public IP address which is given in your pre-provisioned environment. Use given username and password to connect visual studio server:<br/>
  * Username: **vmadmin**
  * Password: **demo@pass123**
 6. Open Visual Studio.<br/>
