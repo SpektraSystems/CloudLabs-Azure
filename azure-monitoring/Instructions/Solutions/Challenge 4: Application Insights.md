@@ -1,55 +1,66 @@
-## Challenge 3: Azure Monitor for Containers
+## Challenge 4: Application Insights 
 
-1. From your Visual Studio Server, deploy the eShoponWeb application to AKS using Dev Spaces<br/>
-**Hint:** https://docs.microsoft.com/en-us/azure/dev-spaces/get-started-netcore-visualstudio<br/>
-2. Make sure that Http Application Routing is enabled.<br/>
-**Note:**
-- To enable Http Application Routing on an existing cluster, use the command: az aks enable-addons -n {cluster_name} -g {rg_name} --addons http_application_routing<br/>
-```
-az aks enable-addons -n 169844aksdemo -g ODL-monitor-169844 --addons http_application_routing
-```
-   <img src="images/aks.jpg"/><br/>
-3. Connect to your Visual Studio Server.<br/>
-4. Navigate to **c:\eshoponweb\eShopOnWeb-master**<br/>
-   <img src="images/eshop.jpg"/><br/>
-5. Double-click on **eShopOnWeb.sln** solution file and select Visual Studio 2019 when prompted.<br/>
-6. Sign in to **Visual Studio**<br/>
-7. Once Visual Studio opens and settles down. Change the project over to **Web** and select **Azure Dev Spaces**.<br/>
+**Note:** User Access Administrator role is required to complete the Container Insights Challenge<br/>
+1. In Visual Studio, Install the Application Insights SDK in the eShopOnWeb Web Project in the Solution<br/>
+2. From the Visual Studio Server, navigate to **C:\eshoponweb\eShopOnWeb-master** and double-click on eShopOnWeb.sln<br/>
+   <img src="images/vs.jpg"/><br/>
+3. If this is the first time you are opening Visual Studio please log in or create an account and log in.<br/>
+4. Select Web<br/>
+   <img src="images/vs1.jpg"/><br/>
+5. Right-click on **Web** in **Solutions Explorer** and select properties. Under Debug unselect the checkbox for **Enable SSL**.<br/>
+   <img src="images/vs3.jpg"/><br/>
+6. Click Save.<br/>
+7. Click on **IIS Express** to test the eShopOnWeb application<br/>
+   <img src="images/vs2.jpg"/><br/>
+8. You should see the **eShop** app open locally. Close it and let’s add the **Application Insights SDK**<br/>
+   <img src="images/vs4.jpg"/><br/>
+9. Stop the app and add the updated **Application Insights NuGet package** with latest version<br/>
+**Note:** make sure to only at this package.  Do not update everything.<br/>
+11. Go to **Tools**, **NuGet Package Manager**, **Manage NuGet Packages for Solution**<br/>
+   <img src="images/vs12.jpg"/><br/>
+12. Check off the **Microsoft.ApplicationInsights** package and click **Update**<br/>
+   <img src="images/vs13.jpg"/><br/>
+13. Click **OK**<br/>
+   <img src="images/vs14.jpg"/><br/>
+14. Click **I Accept**. When finished run the **eShopOnWeb** application again to make sure it’s working.<br/>
+   <img src="images/vs15.jpg"/><br/>
+15. On the right hand side, find Web and right click, go to **Add** and select **Application Insights Telemetry**<br/>
+   <img src="images/vs5.jpg"/><br/>
+16. Click get Started<br/>
+   <img src="images/vs6.jpg"/><br/>
+17. Select your **subscription**, **Resource** (name of your App Insights) and click **Register**.<br/>
+   <img src="images/vs7.jpg"/><br/>
+18. If prompted make sure to Add the SDK.<br/>
+   <img src="images/vs8.jpg"/><br/>
+19. Run the **eShopOnWeb** Web project and check out the App Insights tooling<br/>
+   <img src="images/vs9.jpg"/><br/>
+   <img src="images/vs10.jpg"/><br/>
+20. Test the application by running it and verify it’s working.<br/>
+   <img src="images/vs11.jpg"/><br/>
+21. While its running you can navigate to Application Insights and view the telemetry while you are interacting with eShop running on the local machine. Add something to the shopping cart, log in and check out.<br/>
+22. Publish eShopOnWeb Web project to AKS<br/>
+23. Change over to **Azure Dev Spaces** from **IIS Express** and run the **Web project (F5)**<br/>
    <img src="images/1.jpg"/><br/>
-8. The Azure Dev Spaces login screen will appear. Make sure to select your **Subscription** and **Azure Kubernetes Service** cluster that was created during the setup.<br/>
-   <img src="images/eshop2.jpg"/><br/>
-9. It’s important you check off the **Publicly Accessible** checkbox.<br/>
-10. Click **OK**.<br/>
-   <img src="images/eshop1.jpg"/><br/>
-11. Click **OK**.<br/>
-   <img src="images/eshop3.jpg"/><br/>
-12. Click in the lower left to see the progress.<br/>
-   <img src="images/eshop4.jpg"/><br/>
-13. Don’t worry about seeing the message about the unreachable code.<br/>
-   <img src="images/eshop5.jpg"/><br/>
-**Note:** The initial creation of the container takes a while.<br/>
-14. When its complete Visual Studio will open the URL for you in the default browser.<br/>
-15. Copy the URL and test it from your local machine.<br/>
-   <img src="images/eshop7.jpg"/><br/>
-**Note:** The URL can also be found in the Output section if you scroll up.<br/>
-17. You can stop the project running in **Visual Studio (Shift+F5)**. The container will stay deployed.<br/>
-18. From Azure Monitor, locate the container running the eShoponWeb application<br/>
-   <img src="images/eshop8.jpg"/><br/>
-19. From the **Kubernetes** service you created click on **Insights** or you can navigate to Azure Monitor, click on Containers, and select your cluster. Or generate an exception in the eShoponWeb application<br/>
-   <img src="images/eshop9.jpg"/><br/>
- **OR**<br/>
-   <img src="images/eshop10.jpg"/><br/>
-(Hint: Try to change your password)<br/>
-20. **Login** into your webapp. Enter the user and password provided on the page.<br/>
-   <img src="images/eshop11.jpg"/><br/>
-21. Click on **My account**<br/>
-   <img src="images/eshop12.jpg"/><br/>
-22. Click on **Password**<br/>
-   <img src="images/eshop13.jpg"/><br/>
-``Notice an exception is thrown``<br/>
-23. Frome Azure go to **Kubernetes Service**, under **Insight** Click on the **Web** container and View container live logs.<br/>
-   <img src="images/eshop14.jpg"/><br/>
-24. Trip the password exception again once the **Status** has gone from **Unk** to **Ok****.<br/>
-   <img src="images/eshop15.jpg"/><br/>
-25. First person to send me a screen shot of the live log with the exception message wins the challenge
-   <img src="images/eshop17.jpg"/><br/>
+24. You can always edit some text in the site to verify that indeed the container is being update. Make sure when you run the project the browser is pointing to your URL for the container not the local host. You may need to stop it again, save the project and run it again if this happens.<br/>
+25. Generate some load and check out the results<br/>
+26. From your laptop or the Visual Studio Server copy the code in the **LoadScripts** folder and modify it to your URL<br/>
+```
+for ($i = 0 ; $i -lt 100; $i++)
+{
+Invoke-WebRequest -uri http:// mon19webscalesetlb.eastus.cloudapp.azure.com/
+}
+```
+27. Run the code to generate some load on your **eShopOnWeb** site<br/>
+   <img src="images/vs16.jpg"/><br/>
+28. To trip the exception:
+* Open your **eShop** site in your browser and **login** to the site<br/>
+   <img src="images/vs17.jpg"/><br/>
+* Try to change your **password**<br/>
+   <img src="images/vs18.jpg"/><br/>
+   <img src="images/vs19.jpg"/><br/>
+* Find the exception in **App Insights**<br/>
+   <img src="images/vs20.jpg"/><br/>
+   <img src="images/vs21.jpg"/><br/>
+29. Create **Alerts** based on Availability and exceptions in azure Monitor<br/>
+   <img src="images/vs22.jpg"/><br/>
+30. First Team to email me an alert of the exception and a screenshot with your scaleset scale out based on the App Insights metric wins the challenge. Good luck
