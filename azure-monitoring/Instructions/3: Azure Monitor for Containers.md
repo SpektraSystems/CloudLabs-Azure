@@ -1,0 +1,11 @@
+# Azure Monitor for Containers Challenge
+
+1. From your `Visual Studio Server`, deploy the `eShoponWeb` application to AKS using `Dev Spaces`
+  * `Hint:` https://docs.microsoft.com/en-us/azure/dev-spaces/get-started-netcore-visualstudio
+2. From `Azure Monitor`, locate the container running the `eShoponWeb` application
+3. Generate an exception in the `eShoponWeb` application
+  * `Hint:` Try to change your password)
+
+#### First person to send me a screen shot of the live log with the exception message wins the challenge!! Good Luck!!
+
+### [Challenge 3: Azure Monitor for Containers](https://github.com/SpektraSystems/CloudLabs-Azure/tree/master/azure-monitoring/Instructions/Challenge%203:%20Azure%20Monitor%20for%20Containers.md)
