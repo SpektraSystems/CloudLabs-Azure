@@ -5,12 +5,11 @@
 2. Make sure that Http Application Routing is enabled.<br/>
 **Note:**
 - To enable Http Application Routing on an existing cluster, use the command: az aks enable-addons -n {cluster_name} -g {rg_name} --addons http_application_routing<br/>
-``
-Sample Output:
+```
 az aks enable-addons -n 169844aksdemo -g ODL-monitor-169844 --addons http_application_routing
-``
+```
    <img src="images/aks.jpg"/><br/>
-3. Connect to your Visual Studio Server. Install Visual Studio Tools for **Kubernetes** if you are using VS 2017. This is not needed if you are using VS 2019.<br/>
+3. Connect to your Visual Studio Server.<br/>
 4. Navigate to **c:\eshoponweb\eShopOnWeb-master**<br/>
    <img src="images/eshop.jpg"/><br/>
 5. Double-click on **eShopOnWeb.sln** solution file and select Visual Studio 2019 when prompted.<br/>
