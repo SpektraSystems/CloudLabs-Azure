@@ -1,15 +1,15 @@
 # Challenge 1: Monitoring and Alert Rule
 
-1. Login to Azure Protal with your credention given in environment details.<br/>
-2. Connect (RDP) to the Visual Studio Server (xxxxxVSSrv17) using its public IP address which is given in your pre-provisioned environment. Use given username and password to connect visual studio server:<br/>
+1. Navigate to https://github.com/rkuehfus/pre-ready-2019-H1 and download the repository as a zip file to your local disk<br/>
+   <img src="images/downlaods.jpg"/><br/>
+2. Unzip the contents to a local folder on your machine<br/>
+   <img src="images/downlaods1.jpg"/><br/>
+3. Navigate to the location where you unzipped the files and open the .\AzureMonitorHackathon-master\Student\Resources folder in visual studio or visual studio code<br/>
+   <img src="images/downlaods2.jpg"/><br/>
+4. Login to Azure Protal with your credention given in environment details.<br/>
+5. Connect (RDP) to the Visual Studio Server (xxxxxVSSrv17) using its public IP address which is given in your pre-provisioned environment. Use given username and password to connect visual studio server:<br/>
  * Username: **vmadmin**
  * Password: **demo@pass123**
-3. Navigate to https://github.com/rkuehfus/pre-ready-2019-H1 and download the repository as a zip file to your local disk<br/>
-   <img src="images/downlaods.jpg"/><br/>
-4. Unzip the contents to a local folder on your machine<br/>
-   <img src="images/downlaods.jpg"/><br/>
-5. Navigate to the location where you unzipped the files and open the .\AzureMonitorHackathon-master\Student\Resources folder in visual studio or visual studio code<br/>
-   <img src="images/downlaods.jpg"/><br/>
 6. Open Visual Studio.<br/>
 7. Visual Studio has view called **SQL Server Object Explorer** that can be used to add and delete SQL databases on the SQL server.<br/>
    <img src="images/sql.jpg"/><br/>
