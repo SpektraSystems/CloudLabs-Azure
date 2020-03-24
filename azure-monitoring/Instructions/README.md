@@ -10,6 +10,7 @@
 * [Challenge 5: Log Analytics Query](https://github.com/SpektraSystems/CloudLabs-Azure/blob/master/azure-monitoring/Instructions/5.%20Log%20Analytics%20Query%20Challenge.md)<br/>
 * [Challenge 6: Dashboard and Analytics](https://github.com/SpektraSystems/CloudLabs-Azure/blob/master/azure-monitoring/Instructions/6.%20Dashboard%20and%20Analytics.md)<br/>
 * [Challenge 6a: Workbooks](https://github.com/SpektraSystems/CloudLabs-Azure/blob/master/azure-monitoring/Instructions/6a.%20Workbooks%20Challenge.md)
+* [Optional Logs Challenge](https://github.com/SpektraSystems/CloudLabs-Azure/blob/master/azure-monitoring/Instructions/Optional%20Challenge.md)
 
 ## Workshop Setup
 * Setup Azure CLI<br/>
