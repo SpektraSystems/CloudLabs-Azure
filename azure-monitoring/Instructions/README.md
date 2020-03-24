@@ -4,7 +4,7 @@
 
 ## Contents
 8:30 – 9 AM: Kickoff & Introductions
-9:00 - 10:30 AM: [Azure Monitor Metrics, Alerts & Automation Challenge]()
+9:00 - 10:30 AM: [Azure Monitor Metrics, Alerts & Automation Challenge](https://github.com/SpektraSystems/CloudLabs-Azure/blob/master/azure-monitoring/Instructions/1.%20Monitoring%20and%20Alert%20Rule.md)
 10:30 - 10:45 AM: Break
 10:45 - Noon: [Azure Monitor for containers Challenge]()
 Noon – 1 PM: Lunch
