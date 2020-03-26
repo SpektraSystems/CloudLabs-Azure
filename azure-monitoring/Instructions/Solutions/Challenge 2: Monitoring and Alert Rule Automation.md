@@ -10,7 +10,7 @@
 5. Then update the **deployAlertRules.parameters.json** file as it shows below<br/>
    <img src="images/temp3.jpg"/><br/>
 6. Save the parameters file and update the **deployAlertRulesTemplate.ps1** file with the name of your **Resource Group** (and save it).<br/>
-7. Deploy the **GenerateAlertRules.json** template using the **PowerShell** script (deployAlertRulesTemplate.ps1).<br/>
+7. Deploy the **GenerateAlertRules.json** template using the **PowerShell** script given below:(deployAlertRulesTemplate.ps1).<br/>
 ```
 #Update Path to files as needed
 $template=".\AlertsTemplate\GenerateAlertRules.json"
@@ -24,7 +24,7 @@ New-AzureRmResourceGroupDeployment `
 -TemplateParameterFile $para
 ```
    <img src="images/temp4.jpg"/><br/> 
-8. Verify you have new Monitor Alert Rules in the Portal or from the command line (sample command is in the deployment script)<br/>
+8. Verify you have new **Monitor Alert Rules** in the Portal or from the command line (sample command is in the deployment script)<br/>
    <img src="images/temp5.jpg"/><br/>
 9. Modify the GenerateAlertsRules.json to include “Disk Write Operations/Sec” and set a threshold of 10<br/>
 **Tip:** Go here to view the list of metrics available by resource type - https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftcomputevirtualmachines<br/>
