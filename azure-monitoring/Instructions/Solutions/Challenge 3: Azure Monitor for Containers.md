@@ -53,4 +53,3 @@ az aks enable-addons -n 169844aksdemo -g ODL-monitor-169844 --addons http_applic
 24. Trip the password exception again once the **Status** has gone from **Unk** to **Ok****.<br/>
    <img src="images/eshop15.jpg"/><br/>
 25. First person to send me a screen shot of the live log with the exception message wins the challenge
-   <img src="images/eshop17.jpg"/><br/>
