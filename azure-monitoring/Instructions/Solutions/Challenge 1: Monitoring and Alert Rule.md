@@ -30,9 +30,6 @@ Download Visual Studio Code: https://code.visualstudio.com/download (If you don'
  * Object: SQLServer:Databases<br/>
  * Counter: Active Transactions<br/>
  * Instance: tpcc<br/>
-``
-Hint: https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/metrics-store-custom-guestos-resource-manager-vm<br/>
-``
 13. First, figure out the correct format for the counter use the run command on the SQL Server in the Azure portal<br/>
 **Run the command**<br/>
 ```
