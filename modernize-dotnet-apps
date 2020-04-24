@@ -1,0 +1,126 @@
+Introduction
+The objective of this lab is to take you through modernizing a legacy ASP.NET MVC app using serverless tools and patterns. The app is a simple todo app, and after completing all tasks you should have an understanding of how many of the patterns of traditional server apps can map to serverless - including Azure Functions, App Service Authentication, Azure Storage, Azure CosmosDB, and Blazor with .NET Core.
+Getting Started
+Log into your virual machine.
+Note that you can automatically type passwords and usernames into the machine by clicking the Resources tab and selecting the "T" icon next to the text you want to paste into the virtual machine.
+User: LabUser
+Password: Pa$$w0rd
+This will log you into the lab environment, and begin a cloud deployment into your Azure subscription.
+Investigating the Legacy Todo App
+Let's start by looking at the ASP.NET MVC app written in .NET Framework. It's a simple todo app.
+1.	Open the LegeacyApp folder on the desktop
+2.	Open the "app" folder and double-click to open "TodoSolution.sln"
+3.	When Visual Studio opens, it will likely ask you to sign into an account. Select to "Sign out" of any existing accounts and use your Azure username and password to sign in.
+o	Username: {USERNAME}
+o	Password: {PASSWORD}
+4.	Select to "Close" the profile window which should open you to the solutions folder
+5.	Click the IIS Express run / debug button on the top tool bar to start the project
+After a few moments you should see a web browser open to the legacy app. Note the style of the app. You can create, edit, and delete items on the todo list. Like many MVC apps, each gesture loads a new page. For example, click "Delete" for an item, which will load a page for delete, and let you complete the task.
+You can now close the web browser and then stop the debugging session.
+ 
+Evaluating code and logic to modernize
+Before starting with our serverless app, let's evaluate some of the key places that code lives in this app. An MVC app is made up of 3 pieces: Models, Views, and Controllers. Models represent the data models that are needed. Views are the pages and views that are rendered. Controllers are the operations that connect the Models with the Views and underlying data store.
+1.	Expand the Controllers folder in the project Solution Explorer
+2.	Double click to open the TodoApiController.cs
+Notice that these are the different APIs that the todo list app exposes. Things like an HTTP GET to get all todos, HTTP DELETE to delete a todo, and so on. Controller methods often map to Azure Functions when modernizing an application, and likewise we will build an Azure Function to perform each of these steps.
+1.	Expand the Views folder, Todo folder, and open the Index.cshtml file.
+This is the web page view that is rendered to list the todo items. In an MVC app, the view and the controller exist in the same app. In our modern serverless architecture, we are going to decouple the view and the controller. The view will become a Blazor web app, though often views in a modern app can vary from static and single page apps, to traditional web apps.
+The last thing to note is that this app is configured to connect to a SQL database for storage. Our modern app will need storage as well, and could use a variety of options including SQL. For this lab, we will use a CosmosDB database to store todo items.
+Creating Serverless Functions
+Let's start by moving the business logic from this legacy app to serverless functions. As stated above, the logic from the Controller methods will become Azure Functions (Get, Update, and Delete todo item APIs).
+To add an Azure Function project to this solution:
+1.	Right click the Solution 'TodoSolution' in the Solution Explorer
+2.	Select Add -> New Project
+ 
+3.	Scroll or search for Azure Functions and click Next
+4.	Give the project a name or leave as the default
+5.	Click Create
+6.	Since we will be creating HTTP APIs like the legacy controller, select the Http Trigger template, change the Access Rights to anonymous, and click Create
+ 
+Visual Studio will now generate a new Azure Functions project with an HTTP triggered function called Function1.cs. Open the Function1.cs file. You can customize this function to trigger on different routes, return different results, and have different levels of authentication.
+Rather than spending the time to code a full todo app, let's switch to opening a project that already has the HTTP Trigger code written.
+Todo API Functions
+1.	In Visual Studio, select File -> Open -> Project/Solution
+2.	Select the Desktop, and navigate to ServerlessApp -> app -> functions-csharp-todo-auth.sln and click Open
+o	This will open a function app that extends our template from the earlier step with todo list logic.
+3.	In the Solution Explorer, double-click to open ToDoFunctions.cs
+o	Notice we have different HTTP triggered functions here that map to the same methods we saw in the Controller earlier. There are operatios to get, delete, and update todo items.
+o	One thing to note is that this project is setup to use CosmosDB to store the todo items for the current user.
+4.	Click the debug / run button on the top toolbar to run this function locally
+You should notice the project will build and then start up the Azure Functions runtime locally in Visual Studio. You can use this for debugging and breakpoints of any function project.
+Select to Allow Access to any firewall prompts that may appear
+Notice the available functions are listed for testing. This project is already hooked up to a live CosmosDB account. Leave the function project running and open a web browser on the virtual machine to test the GetTodos function at http://localhost:7071/api/todo. You should see some test todo items returned.
+After testing the function, you can close the web browser, close the Azure Functions runtime, and stop the debug session.
+Publish the Azure Function
+Now that the function code is written to modernize our MVC Controllers, we can publish it to Azure to run as a serverless function.
+1.	Right-click the functions-csharp-todo-auth project in the solution explorer
+2.	Click the Publish option
+3.	Choose to Select Existing function, and click to Run from package file as recommended
+ 
+4.	Click the Publish button
+5.	Open the {RESOURCE_GROUP_NAME} folder and select the function listed
+6.	Click Ok
+7.	After the publish profile has finished generating, click the Publish button to publish the function code to the cloud
+You can watch the status in the Output window at the bottom of Visual Studio as your app is built, packaged, and deployed to the cloud. Once publishing has completed you should see a message in the output window like:
+======= Publish: 1 succeeeded, 0 failed, 0 skipped =======
+Adding authentication to the function app
+An important aspect for many application is authentication and security. While we have published this app to the cloud, we still want to secure it behind a login screen so that each user only sees their own todo list items. Azure Functions has a feature called "Authentication" that enables you to handle and enforce authentication outside of your function code. Let's finish configuring those settings now.
+1.	Open a web browser (on your virtual machine or on your host machine)
+2.	Navigate to the Azure Portal: https://portal.azure.com
+3.	Login with your Azure username and password:
+o	Username: {USERNAME}
+o	Password: {PASSWORD}
+4.	Select to view Function Apps
+5.	Open the function app that you deployed to earlier
+6.	After it finishes loading, select the Authentication option
+o	Notice how authentication was enabled during deployment, but hasn't yet been configured. There are many identity providers we could leverage. For this app, let's require an Azure Active Directory logon (either a corporate or Microsoft account).
+7.	Click the Not Configured option under Azure Active Directory
+ 
+8.	Choose Express to easily create an AAD app
+9.	Click Ok and then Save to save and generate an app to login to for access to your functions
+10.	Close the Authentication configuration screen
+11.	Click the URL link to attempt to access your function app information  
+
+
+⚠️ IMPORTANT ⚠️ Copy and paste the Function URL somewhere handy like Notepad in the virtual machine. You will need to know the part of the function before .azurewebsites.net for later in the lab and use it lots.
+(If you get any errors you may need to wait 30 seconds for the AAD application you created to fully register). If everything worked right it should require you log in with your Azure account before loading and rendering a "Your function is running screen."
+Now your function app is protected behind authentication, and our app can use that authentication to surface user-specific data
+Building a .NET Core Blazor website
+Now that the controllers have been modernized with Azure Functions, Azure CosmosDB, and Authentication, we need to create a website to view and manage our todo items.
+Depending on time, you can skip straight to the Test on a live site section to test right away.
+Unlike a traditional website that requires running on a webserver 24/7, Blazor enables you to write static single page applications that can dynamically render on the client browser. These websites can be deployed as static files to a storage account + CDN (Content Delivery Network), and accessible over the internet without needing a web server. This can provide incredibly elastic scale at minimal cost.
+1.	Close Visual Studio if it is still open
+2.	On the desktop, double-click to open Visual Studio Code
+3.	Select File -> Open Folder
+4.	Navigate to Desktop -> ServerlessApp -> app, select blazor-todo and click Select Folder
+o	This will open a blazor app that will act as the website.
+5.	Open Pages -> Index.razor
+o	Notice that this is very familiar to the Index.cshtml file we looked at in our legacy app. The difference is Blazor is optimzed as a dynamically renderable single page application, and can also run as a serverless website
+o	This page specifically will list the todo items for the current user
+Feel free to click around other files in the project to try to get a feel for how a Blazor file is made up and what it is doing (there are only a few files in the project)
+Running the blazor app locally
+1.	In Visual Studio Code, select on the top menu Terminal -> New Terminal
+2.	In the terminal window that appears at the bottom, type dotnet run and press Enter
+o	This will build and start running your blazar app locally on your virtual machine
+3.	After a few moments you should see some URLs listed that you can test like http://localhost:5000
+4.	Open a web browser on the virtual machine and go to http://localhost:5000
+Using the Blazor webiste
+The site will ask for the name of your function app that you deployed earlier. It will use this information to authenticate and call the code you deployed. You'll need to open up the Azure Portal to copy and paste the name of the app. The name of the function should be some random numbers and letters but end with -func
+1.	After you enter in the name of your site, click "Connect" to wire the site up to your function app
+2.	The site will now need you to login, because only with authentication can your function be accessed. So click the login button
+3.	After logging in, it should list the current users todo items
+4.	You can add, remove, complete, and delete items.
+o	Behind the scenes the blazor site is making authenticated calls to your function to interact and store these items in CosmosDB. After refreshing the site and ensuring you log into the same account, you should see the same items preserved.
+Extra credit
+Here's some tasks you can do to understand more of how this modernized app works, and build more yourself:
+1.	Navigate to the Azure Portal and find your CosmosDB database. Use the Data Explorer to see how the Azure Function and Blazor site are interacting to add and remove data as you use the website
+2.	In Visual Studio Code, publish the blazor app to your own storage account
+o	In the integrated terminal you can run dotnet publish -c Release to generate a release build.
+o	After running the above command, naviate in VS Code to the folder bin -> Release -> netstandard2.0 -> dist
+o	Right-click the dist folder and select to Deploy to a Static Website
+o	Follow the prompts to create a new storage account and deploy it to it
+o	Browse to the storage account to see your live webpage
+3.	Open the function app in the Azure Portal and browse to the Configuration. See how the Azure Function is referencing your CosmosDB account using secured environment variables
+Course Resources
+The full code for this lab can be found at https://github.com/jeffhollan/functions-csharp-todo-auth
+ 
