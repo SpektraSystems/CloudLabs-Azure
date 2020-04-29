@@ -27,16 +27,8 @@
       {
         "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/modernize-dotnet-apps/instructions/05.md",
         "Order": 6
-      },
-      {
-        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/modernize-dotnet-apps/instructions/06.md",
-        "Order": 7
-      },
-      {
-        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/modernize-dotnet-apps/instructions/07.md",
-        "Order": 8
       }
-   
+            
     ]
   }
 ]
