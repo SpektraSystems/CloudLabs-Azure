@@ -1,0 +1,42 @@
+[
+  {
+    "Name": "Modernize .NET Apps with Serverless Functions",
+    "Language": "English",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/modernize-dotnet-apps/instructions/0.md",
+        "Order": 1
+
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/modernize-dotnet-apps/instructions/1.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/modernize-dotnet-apps/instructions/2.md",
+        "Order": 3
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/modernize-dotnet-apps/instructions/3.md",
+        "Order": 4
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/modernize-dotnet-apps/instructions/4.md",
+        "Order": 5
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/modernize-dotnet-apps/instructions/5.md",
+        "Order": 6
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/modernize-dotnet-apps/instructions/6.md",
+        "Order": 7
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/modernize-dotnet-apps/instructions/7.md",
+        "Order": 8
+      }
+   
+    ]
+  }
+]
