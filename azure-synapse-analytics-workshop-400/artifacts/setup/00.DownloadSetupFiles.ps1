@@ -9,3 +9,7 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/SpektraSystems/CloudLa
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-synapse-analytics-workshop-400/artifacts/setup/51.ValidateStorageData.ps1" -OutFile "C:\LabFiles\51.ValidateStorageData.ps1"
 
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-synapse-analytics-workshop-400/artifacts/setup/azcopy.exe" -OutFile "C:\LabFiles\azcopy.exe"
+
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-synapse-analytics-workshop-400/artifacts/setup/AzTokenGenerator.exe" -OutFile "C:\LabFiles\AzTokenGenerator.exe"
+
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-synapse-analytics-workshop-400/artifacts/setup/Newtonsoft.Json.dll" -OutFile "C:\LabFiles\Newtonsoft.Json.dll"
