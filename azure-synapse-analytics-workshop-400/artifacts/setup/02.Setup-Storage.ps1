@@ -38,8 +38,8 @@ else # Check for NorthEurope
 $destContext = $storage.Context
 $containerName = "wwi-02"
 $resources = $null
-$resources = Get-AzStorageBlob -Context $srcContext -Container $containerName | Where-Object { $_.Length -ne 0 } | Where-Object { $_.BlobType -ne "PageBlob" }
-$resources.Count
+#$resources = Get-AzStorageBlob -Context $srcContext -Container $containerName | Where-Object { $_.Length -ne 0 } | Where-Object { $_.BlobType -ne "PageBlob" }
+#$resources.Count
 
 New-AzStorageContainer -Context $destContext -Name $containerName -ErrorAction Ignore
 
