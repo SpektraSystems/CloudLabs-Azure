@@ -22,6 +22,9 @@ $userObjectId = (Get-AzADUser -UserPrincipalName (Get-AzContext).Account.Id).Id
 $workspaceId  = (Get-AzADServicePrincipal -DisplayName $workspaceName).Id
 $amlWorkspaceId  = (Get-AzADServicePrincipal -DisplayName $amlWorkspaceName).Id
 
+$secretvalue = ConvertTo-SecureString 'G1KSwXmdOfQvZcdYUwTA' -AsPlainText -Force
+Set-AzKeyVaultSecret -VaultName $keyVaultName -Name 'SQL-USER-ASA' -SecretValue $secretvalue
+
 Set-AzKeyVaultAccessPolicy -VaultName  $keyVaultName -UserPrincipalName $userPrincipalName -PermissionsToSecrets get,list,set,delete -PassThr
 Set-AzKeyVaultAccessPolicy -VaultName  $keyVaultName -ObjectId $workspaceId -PermissionsToSecrets get,list -PassThr
 Set-AzKeyVaultAccessPolicy -VaultName  $keyVaultName -ObjectId $amlWorkspaceId -PermissionsToKeys get,list,update,create,import,delete,recover,backup,restore,decrypt,encrypt,wrapkey,unwrapkey,verify,sign `
