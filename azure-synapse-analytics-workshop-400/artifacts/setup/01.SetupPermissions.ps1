@@ -16,6 +16,7 @@ $keyVaultName = "asakeyvault$($uniqueId)"
 $workspaceName = "asaworkspace$($uniqueId)"
 $amlWorkspaceName = "amlworkspace$($uniqueId)"
 $blobStorageAccountName = "asastore$($uniqueId)"
+$dataLakeAccountName = "asadatalake$($uniqueId)"
 
 $userPrincipalName = (Get-AzContext).Account.Id
 $userObjectId = (Get-AzADUser -UserPrincipalName (Get-AzContext).Account.Id).Id
@@ -42,5 +43,6 @@ $secretvalue = ConvertTo-SecureString 'G1KSwXmdOfQvZcdYUwTA' -AsPlainText -Force
 Set-AzKeyVaultSecret -VaultName $keyVaultName -Name 'SQL-USER-ASA' -SecretValue $secretvalue
 
 New-AzRoleAssignment -ResourceGroupName $resourceGroupName -ResourceName $blobStorageAccountName -ResourceType "Microsoft.Storage/storageAccounts" -SignInName $userPrincipalName -RoleDefinitionName "Storage Blob Data Contributor"
+New-AzRoleAssignment -ResourceGroupName $resourceGroupName -ResourceName $dataLakeAccountName -ResourceType "Microsoft.Storage/storageAccounts" -SignInName $userPrincipalName -RoleDefinitionName "Storage Blob Data Contributor"
 
 Logout-AzAccount
