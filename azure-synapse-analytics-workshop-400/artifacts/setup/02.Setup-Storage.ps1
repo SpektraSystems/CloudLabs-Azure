@@ -69,6 +69,9 @@ $endTime = $startTime.AddDays(2)
 $destSASToken = New-AzStorageContainerSASToken  -Context $destContext -Container "wwi-02" -Permission rwd -StartTime $startTime -ExpiryTime $endTime
 $destUrl = $destContext.BlobEndPoint + "wwi-02" + $destSASToken
 
+$srcUrl 
+$destUrl
+
 C:\LabFiles\azcopy.exe copy $srcUrl $destUrl --recursive
 
 Logout-AzAccount | Out-Null
