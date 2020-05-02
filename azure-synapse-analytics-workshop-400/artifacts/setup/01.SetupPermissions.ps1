@@ -20,7 +20,7 @@ $dataLakeAccountName = "asadatalake$($uniqueId)"
 
 # Invoice the Template deployment
 New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName `
-  -TemplateUri "https://raw.githubusercontent.com/solliancenet/azure-synapse-analytics-workshop-400/master/artifacts/environment-setup/automation/00-asa-workspace-core.json" `
+  -TemplateUri "https://raw.githubusercontent.com/manesh-r/azure-synapse-analytics-workshop-400/master/artifacts/environment-setup/automation/00-asa-workspace-core.json" `
   -uniqueSuffix $uniqueId -sqlAdministratorLoginPassword $AzureSQLPassword
   
 $userPrincipalName = (Get-AzContext).Account.Id
