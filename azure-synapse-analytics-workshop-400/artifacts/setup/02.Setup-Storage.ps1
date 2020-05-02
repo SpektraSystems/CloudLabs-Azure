@@ -14,24 +14,24 @@ $storageName = $storageAccounts | Where-Object { $_.Name -like 'asadatalake*' }
 $storage = Get-AzStorageAccount -ResourceGroupName $rgName -Name $storageName.Name
 $storageContext = $storage.Context
 
-$srcContext = $null
 $srcUrl = $null
 $rgLocation = (Get-AzResourceGroup -Name $rgName).Location
           
 if($rgLocation -like "eastus")
 {
     $srcUrl = "https://synapse400datalake.blob.core.windows.net/wwi-02?sv=2019-10-10&ss=b&srt=sco&sp=rl&se=2021-01-02T04:13:35Z&st=2020-04-29T19:13:35Z&spr=https&sig=yuCcqF655FZ5rOu4aIDjPlLskl%2F5%2BJClOQrzvSd8c%2FI%3D"
-    $srcContext = New-AzStorageContext -StorageAccountName "synapse400datalake" -SasToken "?sv=2019-10-10&ss=b&srt=sco&sp=rl&se=2021-01-02T04:13:35Z&st=2020-04-29T19:13:35Z&spr=https&sig=yuCcqF655FZ5rOu4aIDjPlLskl%2F5%2BJClOQrzvSd8c%2FI%3D"
 }
 elseif($rgLocation -like "westus2")
 {
     $srcUrl = "https://synapse400westus2.blob.core.windows.net/wwi-02?sv=2019-10-10&ss=b&srt=sco&sp=rl&se=2021-01-02T04:15:39Z&st=2020-04-29T19:15:39Z&spr=https&sig=%2BtcDkuKYuA7omgwoNVtTB0bgiFS1Qy9xfdWeMlM5zZs%3D"
-    $srcContext = New-AzStorageContext -StorageAccountName "synapse400westus2" -SasToken "?sv=2019-10-10&ss=b&srt=sco&sp=rl&se=2021-01-02T04:15:39Z&st=2020-04-29T19:15:39Z&spr=https&sig=%2BtcDkuKYuA7omgwoNVtTB0bgiFS1Qy9xfdWeMlM5zZs%3D"
+}
+elseif($rgLocation -like "westcentralus")
+{
+    $srcUrl = "https://synapse400westcentralus.blob.core.windows.net/wwi-02?sv=2019-10-10&ss=b&srt=sco&sp=rl&se=2021-01-01T10:14:02Z&st=2020-05-02T01:14:02Z&spr=https&sig=ZLNoxv9sNuedKYzfC0WuuRnBarPptfyMafKgehBRhRs%3D"
 }
 else # Check for NorthEurope
 {
     $srcUrl = "https://synapse400northeurope.blob.core.windows.net/wwi-02?sv=2019-10-10&ss=b&srt=sco&sp=rl&se=2021-01-02T04:16:29Z&st=2020-04-29T19:16:29Z&spr=https&sig=lpGzyrrE%2B60DWTO1y4gAWL5I0m3c5IcKofOE9tn8RFs%3D"
-    $srcContext = New-AzStorageContext -StorageAccountName "synapse400northeurope" -SasToken "?sv=2019-10-10&ss=b&srt=sco&sp=rl&se=2021-01-02T04:16:29Z&st=2020-04-29T19:16:29Z&spr=https&sig=lpGzyrrE%2B60DWTO1y4gAWL5I0m3c5IcKofOE9tn8RFs%3D"
 }
            
             
