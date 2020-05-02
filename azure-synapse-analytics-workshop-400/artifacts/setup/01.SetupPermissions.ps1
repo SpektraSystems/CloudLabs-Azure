@@ -18,6 +18,11 @@ $amlWorkspaceName = "amlworkspace$($uniqueId)"
 $blobStorageAccountName = "asastore$($uniqueId)"
 $dataLakeAccountName = "asadatalake$($uniqueId)"
 
+# Invoice the Template deployment
+New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName `
+  -TemplateUri "https://raw.githubusercontent.com/solliancenet/azure-synapse-analytics-workshop-400/master/artifacts/environment-setup/automation/00-asa-workspace-core.json" `
+  -uniqueSuffix $uniqueId -sqlAdministratorLoginPassword $AzureSQLPassword
+  
 $userPrincipalName = (Get-AzContext).Account.Id
 $userObjectId = (Get-AzADUser -UserPrincipalName (Get-AzContext).Account.Id).Id
 $workspaceId  = (Get-AzADServicePrincipal -DisplayName $workspaceName).Id
