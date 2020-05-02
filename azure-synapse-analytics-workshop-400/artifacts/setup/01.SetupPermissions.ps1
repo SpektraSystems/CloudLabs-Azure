@@ -47,12 +47,13 @@ foreach($policy in $policies)
 $secretvalue = ConvertTo-SecureString 'G1KSwXmdOfQvZcdYUwTA' -AsPlainText -Force
 Set-AzKeyVaultSecret -VaultName $keyVaultName -Name 'SQL-USER-ASA' -SecretValue $secretvalue
 
-New-AzRoleAssignment -ResourceGroupName $resourceGroupName -ResourceName $blobStorageAccountName `
+New-AzRoleAssignment -ResourceGroupName $resourceGroupName -ResourceName $blobStorageAccountName -ErrorAction Ignore `
  -ResourceType "Microsoft.Storage/storageAccounts" -SignInName $userPrincipalName -RoleDefinitionName "Storage Blob Data Contributor"
-New-AzRoleAssignment -ResourceGroupName $resourceGroupName -ResourceName $dataLakeAccountName `
+New-AzRoleAssignment -ResourceGroupName $resourceGroupName -ResourceName $dataLakeAccountName -ErrorAction Ignore `
  -ResourceType "Microsoft.Storage/storageAccounts" -SignInName $userPrincipalName -RoleDefinitionName "Storage Blob Data Contributor"
  
  # Add proctor AAD Group as Owner
- New-AzRoleAssignment -ResourceGroupName $resourceGroupName -ObjectId "37548b2e-e5ab-4d2b-b0da-4d812f56c30e" -RoleDefinitionName Owner
+ New-AzRoleAssignment -ResourceGroupName $resourceGroupName -ErrorAction Ignore `
+  -ObjectId "37548b2e-e5ab-4d2b-b0da-4d812f56c30e" -RoleDefinitionName Owner
 
 Logout-AzAccount
