@@ -29,6 +29,14 @@ elseif($rgLocation -like "westcentralus")
 {
     $srcUrl = "https://synapse400westcentralus.blob.core.windows.net/wwi-02?sv=2019-10-10&ss=b&srt=sco&sp=rl&se=2021-01-01T10:14:02Z&st=2020-05-02T01:14:02Z&spr=https&sig=ZLNoxv9sNuedKYzfC0WuuRnBarPptfyMafKgehBRhRs%3D"
 }
+elseif($rgLocation -like "southeastasia")
+{
+    $srcUrl = "https://synapse400southeastasia.blob.core.windows.net/wwi-02?sv=2019-10-10&ss=b&srt=sco&sp=rl&se=2021-01-01T10:53:03Z&st=2020-05-03T01:53:03Z&spr=https&sig=AsCpoASmAR0o4W5k9jrAewpYH568LJ1p81Jp%2BrSWy9w%3D"
+}
+elseif($rgLocation -like "westeurope")
+{
+    $srcUrl = "https://synapse400westeurope.blob.core.windows.net/wwi-02?sv=2019-10-10&ss=b&srt=sco&sp=rl&se=2021-01-01T10:54:49Z&st=2020-05-03T01:54:49Z&spr=https&sig=CG9STlUx7Au2WTzCLNGk9mD2EX4mBuQS%2B2y9ON3o%2BHk%3D"
+}
 else # Check for NorthEurope
 {
     $srcUrl = "https://synapse400northeurope.blob.core.windows.net/wwi-02?sv=2019-10-10&ss=b&srt=sco&sp=rl&se=2021-01-02T04:16:29Z&st=2020-04-29T19:16:29Z&spr=https&sig=lpGzyrrE%2B60DWTO1y4gAWL5I0m3c5IcKofOE9tn8RFs%3D"
