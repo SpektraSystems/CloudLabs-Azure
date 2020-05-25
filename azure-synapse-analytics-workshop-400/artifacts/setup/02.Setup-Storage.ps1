@@ -35,7 +35,7 @@ elseif($rgLocation -like "southeastasia")
 }
 elseif($rgLocation -like "westeurope")
 {
-    $srcUrl = "https://synapse400westeurope.blob.core.windows.net/wwi-04?sv=2019-10-10&ss=b&srt=sco&sp=rl&se=2021-01-01T10:54:49Z&st=2020-05-03T01:54:49Z&spr=https&sig=CG9STlUx7Au2WTzCLNGk9mD2EX4mBuQS%2B2y9ON3o%2BHk%3D"
+    $srcUrl = "https://synapse400westeurope.blob.core.windows.net/wwi-02-reduced?sv=2019-10-10&ss=bfqt&srt=sco&sp=rwdlacupx&se=2020-06-12T03:00:47Z&st=2020-05-17T19:00:47Z&spr=https&sig=jALYV1YjR0aPGiCSaAiWf6nJ%2FhY6Lq%2BdWuFuxAWdr5M%3D"
 }
 else # Check for NorthEurope
 {
