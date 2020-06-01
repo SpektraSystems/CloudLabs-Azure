@@ -5,7 +5,7 @@
 2. Make sure that Http Application Routing is enabled.<br/>
 - To enable Http Application Routing on an existing cluster, use the command: az aks enable-addons -n {cluster_name} -g {rg_name} --addons http_application_routing<br/>
 ```
-Sample Output:<br/>
+Sample Output:
 az aks enable-addons -n 169844aksdemo -g ODL-monitor-169844 --addons http_application_routing
 ```
    <img src="images/aks.jpg"/><br/>
