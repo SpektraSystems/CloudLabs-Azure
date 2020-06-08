@@ -7,3 +7,6 @@ You have now completed the setup and migration of on-premises infrastructure fro
   * [https://docs.microsoft.com/en-us/azure/migrate/tutorial-assess-hyper-v](https://docs.microsoft.com/en-us/azure/migrate/tutorial-assess-hyper-v)
   * [https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-hyper-v](https://docs.microsoft.com/en-us/azure/migrate/tutorial-migrate-hyper-v)
   * [https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/getting-started/migrate](https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/getting-started/migrate)
+  
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(10)
