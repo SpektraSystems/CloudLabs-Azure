@@ -54,5 +54,5 @@ az aks enable-addons -n 169844aksdemo -g ODL-monitor-169844 --addons http_applic
 23. Frome azure portal, go to **Kubernetes Service**, under **Insight** Click on the **Web** container and View container live logs.<br/>
    <img src="images/eshop15.jpg"/><br/>
 24. Trip the **password exception** again and check the live logs.<br/>
-25. First person to send me a screen shot of the live log with the exception message wins the challenge
+25. First person to send me a screen shot of the live log with the exception message wins the challenge<br/>
    <img src="images/aks16.jpg"/><br/>
