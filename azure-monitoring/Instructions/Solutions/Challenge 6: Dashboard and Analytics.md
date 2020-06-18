@@ -6,13 +6,14 @@ https://github.com/grafana/azure-monitor-datasource/blob/master/README.md
 
 1. Create a Web App for Linux and configure as recommended below:<br/>
     <img src="images/web.jpg"/><br/>
- * Create a new App service plan and select B1 Basic. It’s under Dev / Test.<br/>
+ * Create a new App service plan and select B1 Basic. It’s under Dev/Test.
     <img src="images/web1.jpg"/><br/>
- * Select Container and specify Docker Hub, Public and Grafana/Grafana for the image tags (this should deploy the latest version by default)<br/>
+ * Select Container and specify Docker Hub, Public and Grafana/Grafana for the image tags (this should deploy the latest version by default)
      <img src="images/web3.jpg"/><br/>
- * Should look like this when complete:<br/>
+ * Should look like this when complete:
      <img src="images/web4.jpg"/><br/>
- * Click Create<br/>
+ * Click Create
+ 
 2. After the Web App deploys, we need to configure some settings to enable Azure Monitor Plugin.<br/>
 3. From the Azure Portal navigate to your newly created App Service, Configurstions, Application Settings<br/>
 4. Under **Always On**, change the value to On.<br/>
