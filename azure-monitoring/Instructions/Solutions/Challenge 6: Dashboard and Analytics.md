@@ -13,7 +13,7 @@ https://github.com/grafana/azure-monitor-datasource/blob/master/README.md
  * Should look like this when complete:
      <img src="images/web4.jpg"/><br/>
  * Click Create
- 
+
 2. After the Web App deploys, we need to configure some settings to enable Azure Monitor Plugin.<br/>
 3. From the Azure Portal navigate to your newly created App Service, Configurstions, Application Settings<br/>
 4. Under **Always On**, change the value to On.<br/>
@@ -28,6 +28,7 @@ https://github.com/grafana/azure-monitor-datasource/blob/master/README.md
 8. Click **Save**<br/>
      <img src="images/app5.jpg"/><br/>
 **Note:** For the Application settings to take effect you may need to restart your Web App<br/>
+
 9. To **Login** to Grafana<br/>
 10. Click on **Overview** and copy the **URL** for your Web App<br/>
      <img src="images/app6.jpg"/><br/>
@@ -64,14 +65,14 @@ https://github.com/grafana/azure-monitor-datasource/blob/master/README.md
      <img src="images/app20.jpg"/><br/>
 28. Under Metrics, make sure service is Azure Log Analytics, your workspace is selected, and build out a Log Analytics query (answer query below for your reference).<br/>
 ```
-Sample query: 
-Perf                                                             
-| where $__timeFilter(TimeGenerated) 
+Sample query:
+Perf
+| where $__timeFilter(TimeGenerated)
 | where CounterName == "% Processor Time" and InstanceName == "_Total"
-| summarize percentile(CounterValue,50) by bin(TimeGenerated, $__interval), Computer 
+| summarize percentile(CounterValue,50) by bin(TimeGenerated, $__interval), Computer
 | order by TimeGenerated asc
 ```
-     <img src="images/grfa17.jpg"/><br/>
+    <img src="images/grfa17.jpg"/><br/>
 29. Click **Run** to test<br/>
 30. Now let’s make a few changes. Click on **Axes** and change the Unit to percent and **Y-Max** to 100. Run it <br/>
      <img src="images/grfa16.jpg"/><br/>
@@ -80,8 +81,10 @@ Perf
      <img src="images/grfa12.jpg"/><br/>
 32. Should look something like this:<br/>
      <img src="images/grfa11.jpg"/><br/>
+
  #### Advanced features:
- * **Variables**<br/>
+ 
+ * Variables<br/>
  * Some query values can be selected through **UI** dropdowns, and updated in the query.<br/>
  * For example, a **Computer** variable can be defined, and then a dropdown will appear on the dashboard, showing a list of possible values:<br/>
       <img src="images/grfa10.jpg"/><br/>
@@ -98,29 +101,34 @@ Perf
      <img src="images/grfa4.jpg"/><br/>
 36. Sample update Computer CPU query to support variable **$ComputerName**<br/>
 ```
-Perf                                                       
+Perf
 | where $__timeFilter(TimeGenerated) and Computer in ($ComputerName)
-| where (CounterName == "% Processor Time" and InstanceName == "_Total") or CounterName == "% Used Memory"                                       
-| summarize AVGPROCESSOR = avg(CounterValue) by bin(TimeGenerated, $__interval), Computer 
+| where (CounterName == "% Processor Time" and InstanceName == "_Total") or CounterName == "% Used Memory"
+| summarize AVGPROCESSOR = avg(CounterValue) by bin(TimeGenerated, $__interval), Computer
 | order by TimeGenerated asc
 ```
-     <img src="images/grfa3.jpg"/><br/>
+    <img src="images/grfa3.jpg"/><br/>
 38. Make sure to **Save**<br/>
      <img src="images/grfa2.jpg"/><br/>
 39. Try it out!<br/>
      <img src="images/grfa.jpg"/><br/>
 40. Try creating a variable that accepts percentiles (50, 90 and 95).<br/>
+
  #### Annotations:
- * Another cool Grafana feature is annotations – which marks points in time that you can overlay on top of charts.
+ 
+ * Another cool Grafana feature is annotations – which marks points in time that you can overlay on top of charts.<br/>
  * Below, you can see the same chart shown above, with an annotation of **Heartbeats**. Hovering on a specific annotation shows informative text about it.<br/>
  * **Configuration** is very similar to Variables:<br/>
  * Click the dashboard **Settings** button (on the top right area), select **Annotations**, and then **+New**.<br/>
  * This page shows up, where you can define the data source (aka “Service”) and query to run in order to get the list of values (in this case a list of computer heartbeats).<br/>
+
 **Note:** that the output of the query should include a date-time value, a Text field with interesting info (in this case we used the computer name) and possibly tags (here we just used “test”).<br/>
+
  * Add an Annotation to your chart overlaying Computer Heartbeat<br/>
       <img src="images/grfa1.jpg"/><br/>
  * FYI… Annotations provide a way to mark points on the graph with rich events. When you hover over an annotation you can get event description and event tags. The text field can include links to other systems with more detail.<br/>
  * Navigate to settings from your dashboard (the gear in the upper right), click on Annotations, Add Annotation Query<br/>
       <img src="images/grfa.jpg"/><br/>
+
 **HINT:** Use the sample Kusto/Data explorer queries to create more dashboard scenarios.<br/>
- * First Team to email me a screenshot with your chart wins the challenge. Good luck!<br/>
+ * First Team to email me a screenshot with your chart wins the challenge. Good luck!
