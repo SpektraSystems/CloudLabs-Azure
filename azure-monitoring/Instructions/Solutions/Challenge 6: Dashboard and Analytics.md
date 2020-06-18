@@ -80,7 +80,7 @@ Perf
      <img src="images/grfa12.jpg"/><br/>
 32. Should look something like this:<br/>
      <img src="images/grfa11.jpg"/><br/>
- #### Advanced features:<br/>
+ #### Advanced features:
  * **Variables**<br/>
  * Some query values can be selected through **UI** dropdowns, and updated in the query.<br/>
  * For example, a **Computer** variable can be defined, and then a dropdown will appear on the dashboard, showing a list of possible values:<br/>
@@ -110,7 +110,7 @@ Perf
 39. Try it out!<br/>
      <img src="images/grfa.jpg"/><br/>
 40. Try creating a variable that accepts percentiles (50, 90 and 95).<br/>
- #### Annotations:<br/>
+ #### Annotations:
  * Another cool Grafana feature is annotations – which marks points in time that you can overlay on top of charts.
  * Below, you can see the same chart shown above, with an annotation of **Heartbeats**. Hovering on a specific annotation shows informative text about it.<br/>
  * **Configuration** is very similar to Variables:<br/>
