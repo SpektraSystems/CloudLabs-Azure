@@ -43,4 +43,4 @@ InsightsMetrics
 | summarize avg(Val) by Computer, bin(TimeGenerated, 1m)
 | render timechart
 ```
-12. **Save** your workbook<br/>
+12. **Save** your workbook with Name myWorkBook<br/>
