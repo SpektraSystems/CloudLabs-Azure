@@ -42,9 +42,6 @@ Download Visual Studio Code: https://code.visualstudio.com/download (If you don'
    <img src="images/output.jpg"/><br/>
 Then change it to target just your specific database<br/>
 `\SQLServer:Databases(tpcc)\Active Transactions`<br/>
-**Tip:** Share the following link to help lead them to how to find the counter:<br/>
-https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.diagnostics/get-counter?view=powershell-5.1<br/>
-
 14. Next, Run the below command to add the collection of this counter that sends it to Azure Monitor using the Azure monitor data sink for SQL Server.<br/>
 ```
 Review PublicConfig.json File: https://github.com/kayodeprinceMS/AzureMonitorHackathon/blob/master/Student/Resources/PublicConfig.json
