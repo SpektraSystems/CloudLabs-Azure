@@ -5,16 +5,16 @@
  * Processor Utilization: Processor / % Processor Time<br/>
 ```
 Perf
-| where ObjectName == "Processor" and CounterName == "% Processor Time" and TimeGenerated > ago(4h) 
+| where ObjectName == "Processor" and CounterName == "% Processor Time" and TimeGenerated > ago(4h)
 | summarize AVGPROCESSOR = avg(CounterValue) by bin(TimeGenerated, 5m), Computer
 | sort by AVGPROCESSOR desc
-| render timechart 
+| render timechart
 ```
    <img src="images/logs.jpg"/><br/>
  * Memory Utilization: Memory / % Committed Bytes In Use<br/>
 ```
 Perf
-| where ObjectName == "Memory" and CounterName == "% Committed Bytes In Use" and TimeGenerated > ago(4h) 
+| where ObjectName == "Memory" and CounterName == "% Committed Bytes In Use" and TimeGenerated > ago(4h)
 | summarize AVGMEMORY = avg(CounterValue) by bin(TimeGenerated, 5m), Computer
 | sort by AVGMEMORY desc
 | render timechart
@@ -23,16 +23,16 @@ Perf
  * Disk Utilization (IO): Disk Reads/sec and Disk Writes/sec<br/>
 ```
 Perf
-| where CounterName == "Disk Reads/sec" and ObjectName == "LogicalDisk" and TimeGenerated > ago(4h) 
+| where CounterName == "Disk Reads/sec" and ObjectName == "LogicalDisk" and TimeGenerated > ago(4h)
 | summarize AvgReadsDiskIO = avg(CounterValue) by bin(TimeGenerated, 5m), Computer
 | sort by AvgReadsDiskIO desc
-| render timechart 
+| render timechart
 
 Perf 
-| where CounterName == "Disk Writes/sec" and ObjectName == "LogicalDisk" and TimeGenerated > ago(4h) 
+| where CounterName == "Disk Writes/sec" and ObjectName == "LogicalDisk" and TimeGenerated > ago(4h)
 | summarize AvgDiskWritesIO = avg(CounterValue) by bin(TimeGenerated, 5m), Computer
 | sort by AvgDiskWritesIO desc
-| render timechart 
+| render timechart
 ```
    <img src="images/logs5.jpg"/><br/>
  * Save the Query<br/>
@@ -50,16 +50,16 @@ Heartbeat
 // Declare time range variable
 let timerange = 1h;
 Perf
-| where Computer startswith "aks" 
+| where Computer startswith "aks"
 | where TimeGenerated > ago(timerange)
-//Aggregate maximum values of usage and capacity in 1 minute intervals for each node  
-| summarize CPUUsage = maxif(CounterValue, CounterName =="cpuUsageNanoCores"), 
-            CPUCapacity = maxif(CounterValue,CounterName == "cpuCapacityNanoCores")  
-            by bin(TimeGenerated, 1m), Computer
+//Aggregate maximum values of usage and capacity in 1 minute intervals for each node
+| summarize CPUUsage = maxif(CounterValue, CounterName =="cpuUsageNanoCores"),
+CPUCapacity = maxif(CounterValue,CounterName == "cpuCapacityNanoCores")
+by bin(TimeGenerated, 1m), Computer
 //Calculate Percent Usage
 | extend PercentUsage = (CPUUsage / CPUCapacity) *100.0
-| project TimeGenerated, PercentUsage, Computer 
-| render timechart 
+| project TimeGenerated, PercentUsage, Computer
+| render timechart
 ```
    <img src="images/logs6.jpg"/><br/>
  * Solution 2 using let and join<br/>
@@ -69,19 +69,19 @@ let myPerf = materialize (Perf
 | where Computer startswith "aks"
 | where TimeGenerated > ago(1h));
 //Store max CPU Usaqe per min values from Perf snapshot in usage table
-let myUsage = myPerf 
-| where CounterName == "cpuUsageNanoCores" 
+let myUsage = myPerf
+| where CounterName == "cpuUsageNanoCores"
 | summarize CPUUsage = max(CounterValue) by bin(TimeGenerated, 1m), Computer;
 //Store max CPU capacity per min values from Perf snapshot in capacity table
-let myCapacity = myPerf 
-| where CounterName == "cpuCapacityNanoCores" 
+let myCapacity = myPerf
+| where CounterName == "cpuCapacityNanoCores"
 | summarize CPUCapacity = max(CounterValue) by bin(TimeGenerated, 1m), Computer;
 //Join usage and capacity tables
 myUsage
 | join myCapacity on TimeGenerated, Computer
 //Calculate percent usage
 | extend PercentUsage = (CPUUsage / CPUCapacity) *100.0
-| project TimeGenerated, PercentUsage, Computer 
+| project TimeGenerated, PercentUsage, Computer
 | render timechart
 ```
    <img src="images/logs7.jpg"/><br/>
@@ -99,13 +99,13 @@ let myNode = ContainerInventory
 let PercentTable = Perf
 | where Computer in (myNode)
 | where TimeGenerated > ago(timerange)
-//Aggregate maximum values of usage and capacity in 1 minute intervals for each node  
-| summarize CPUUsage = maxif(CounterValue, CounterName =="cpuUsageNanoCores"), 
-            CPUCapacity = maxif(CounterValue,CounterName == "cpuCapacityNanoCores")  
-            by bin(TimeGenerated, 1m)
+//Aggregate maximum values of usage and capacity in 1 minute intervals for each node
+| summarize CPUUsage = maxif(CounterValue, CounterName =="cpuUsageNanoCores"),
+CPUCapacity = maxif(CounterValue,CounterName == "cpuCapacityNanoCores")
+by bin(TimeGenerated, 1m)
 //Calculate Percent Usage and rename TimeGenerated
-| extend PercentUsage = (CPUUsage / CPUCapacity) *100.0, timestamp = TimeGenerated 
-| project timestamp, PercentUsage; 
+| extend PercentUsage = (CPUUsage / CPUCapacity) *100.0, timestamp = TimeGenerated
+| project timestamp, PercentUsage;
 //Add AppInsights Data
 let AppInsights = app("kjp17hackAppInsights").pageViews
 | where timestamp > ago(timerange)
@@ -113,10 +113,10 @@ let AppInsights = app("kjp17hackAppInsights").pageViews
 | extend responsetimeseconds = responsetime / 1000.0
 | project timestamp, responsetimeseconds;
 // Join Percent Usage and AppInsights
-PercentTable 
+PercentTable
 | join AppInsights on timestamp
 | project timestamp, PercentUsage, responsetimeseconds
-| render timechart 
+| render timechart
 ```
  * Solution 2 with hardcoding node name and using let and join statements<br/>
  ```
@@ -128,12 +128,12 @@ let myPerf = materialize ( Perf
                          | where Computer == "aks-agentpool-10755307-2"
                          );
 //Store Usage Values
-let myUsage = myPerf 
-| where CounterName == "cpuUsageNanoCores" 
+let myUsage = myPerf
+| where CounterName == "cpuUsageNanoCores"
 | summarize CPUUsage = max(CounterValue) by bin(TimeGenerated, 1m);
 //Store Capacity Values
-let myCapacity = myPerf 
-| where CounterName == "cpuCapacityNanoCores" 
+let myCapacity = myPerf
+| where CounterName == "cpuCapacityNanoCores"
 | summarize CPUCapacity = max(CounterValue) by bin(TimeGenerated, 1m);
 //Calculate Percentage and rename TimeGenerated to timestamp
 let Percent = myUsage
@@ -148,9 +148,9 @@ let AppInsights = app("kjp17hackAppInsights").pageViews
 | project timestamp, responsetimeseconds
 | sort by timestamp asc;
 // Join Percent Usage and AppInsights
-Percent 
+Percent
 | join AppInsights on timestamp
 | project timestamp, PercentUsage, responsetimeseconds
 | sort by timestamp asc
-| render timechart 
+| render timechart
 ```
