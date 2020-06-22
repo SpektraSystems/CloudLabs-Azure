@@ -19,15 +19,18 @@ Perf
 | sort by AVGMEMORY desc
 | render timechart
 ```
+
    <img src="images/logs1.jpg"/><br/>
  * Disk Utilization (IO): Disk Reads/sec and Disk Writes/sec<br/>
+ 
 ```
 Perf
 | where CounterName == "Disk Reads/sec" and ObjectName == "LogicalDisk" and TimeGenerated > ago(4h)
 | summarize AvgReadsDiskIO = avg(CounterValue) by bin(TimeGenerated, 5m), Computer
 | sort by AvgReadsDiskIO desc
 | render timechart
-
+```
+```
 Perf 
 | where CounterName == "Disk Writes/sec" and ObjectName == "LogicalDisk" and TimeGenerated > ago(4h)
 | summarize AvgDiskWritesIO = avg(CounterValue) by bin(TimeGenerated, 5m), Computer
@@ -44,7 +47,6 @@ Heartbeat
 | count
 ```
 2. Write a performance query that renders a time chart for the last hour of the max percentage CPU usage of the AKS Cluster nodes<br/>
-
  * Solution 1 using maxif<br/>
 ```
 // Declare time range variable
@@ -89,7 +91,7 @@ myUsage
 * CPU usage from the node in your AKS cluster hosting the eshoponweb app<br/>
 * Duration of page views on your eshoponweb app hosted on the cluster<br/>
  * Solution 1<br/>
-```
+ ```
 // Declare time range variable
 let timerange = 5h;
 //Find the node running your eshoponweb app container
@@ -119,14 +121,11 @@ PercentTable
 | render timechart
 ```
  * Solution 2 with hardcoding node name and using let and join statements<br/>
- ```
+```
 // Declare time range variable
 let timerange = 5h;
 //Store snapshot of Perf table for the node where the app container is running
-let myPerf = materialize ( Perf
-                         | where TimeGenerated > ago(timerange)
-                         | where Computer == "aks-agentpool-10755307-2"
-                         );
+let myPerf = materialize ( Perf where TimeGenerated > ago(timerange) where Computer == "aks-agentpool-10755307-2" );
 //Store Usage Values
 let myUsage = myPerf
 | where CounterName == "cpuUsageNanoCores"
