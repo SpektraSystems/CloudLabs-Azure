@@ -37,7 +37,9 @@ Download Visual Studio Code: https://code.visualstudio.com/download (If you don'
 ```
    <img src="images/sqlvm.jpg"/><br/>
 14. Once its finished, review the results (scroll up) and copy the output for the `SQLServer:Databases` counter.<br/>
-`\SQLServer:Databases(*)\Active Transactions`
+`
+\SQLServer:Databases(*)\Active Transactions
+`
    <img src="images/output.jpg"/><br/>
 Then change it to target just your specific database<br/>
 `\SQLServer:Databases(tpcc)\Active Transactions`<br/>
