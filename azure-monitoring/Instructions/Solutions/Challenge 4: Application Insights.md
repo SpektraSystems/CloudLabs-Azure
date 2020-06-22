@@ -61,6 +61,7 @@ Invoke-WebRequest -uri http:// mon19webscalesetlb.eastus.cloudapp.azure.com/
 * Find the exception in **App Insights**<br/>
    <img src="images/vs20.jpg"/><br/>
    <img src="images/vs21.jpg"/><br/>
-29. Create **Alerts** based on Availability and exceptions in azure Monitor<br/>
+29. Create **Alert** based on Availability and exceptions in azure Monitor.<br/>
+    Create an Alert Rule **Server Exceptions count over 0** as shown in the figure.<br/>
    <img src="images/vs22.jpg"/><br/>
 30. First Team to email me an alert of the exception and a screenshot with your scaleset scale out based on the App Insights metric wins the challenge. Good luck
