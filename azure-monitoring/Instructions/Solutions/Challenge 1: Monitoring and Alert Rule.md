@@ -11,7 +11,8 @@ Download Visual Studio Code: https://code.visualstudio.com/download (If you don'
    <img src="images/downlaods2.jpg"/><br/>
 4. Login to **Azure Portal** with your credentials given in environment details.<br/>
    <img src="images/new1.jpg"/><br/>
-5. Open Visual Studio.<br/>
+5. Open Visual Studio inside your virtual machine and sign in with **Azure Credentials**.<br/>
+   <img src="images/new2.jpg"/><br/>
 6. Visual Studio has view called **SQL Server Object Explorer** that can be used to add and delete SQL databases on the SQL server.<br/>
    <img src="images/sql.jpg"/><br/>
 7. Add SQL Server from **SQL Server Object Explorer**<br/>
