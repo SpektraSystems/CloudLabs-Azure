@@ -98,7 +98,8 @@ www.hammerdb.com<br/>
    <img src="images/ag.jpg"/><br/>
   * For creating Action Group, Click on **Add Action Group**
    <img src="images/ag1.jpg"/><br/>
-29. Give values as shown below and Click **OK**:
+
+29. Give values as shown below and Click **OK**:<br/>
    <img src="images/ag3.jpg"/><br/>
 30. Create an Alert if Active Transactions goes over 40 on the SQL Server **tpcc** database.<br/>
    <img src="images/alert.jpg"/><br/>
