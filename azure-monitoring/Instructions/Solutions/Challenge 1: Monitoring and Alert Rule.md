@@ -42,7 +42,7 @@ Download Visual Studio Code: https://code.visualstudio.com/download (If you don'
    <img src="images/output.jpg"/><br/>
 Then change it to target just your specific database<br/>
 `\SQLServer:Databases(tpcc)\Active Transactions`<br/>
-14. Next, Run the below command to add the collection of this counter that sends it to Azure Monitor using the Azure monitor data sink for SQL Server.<br/>
+14. Next, edit then Run the below command to add the collection of this counter that sends it to Azure Monitor using the Azure monitor data sink for SQL Server.<br/>
 ```
 Review PublicConfig.json File: https://github.com/kayodeprinceMS/AzureMonitorHackathon/blob/master/Student/Resources/PublicConfig.json
 Relevant docs: https://docs.microsoft.com/en-us/azure/azure-monitor/platform/diagnostics-extension-windows-install
