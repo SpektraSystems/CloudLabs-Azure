@@ -20,7 +20,7 @@ Download Visual Studio Code: https://code.visualstudio.com/download (If you don'
 8. Connect to the database server VM (xxxxxSqlSrv16) make sure to use below username and password to connect your SQL Server Virtual Manchine:<br/>
  * Username: **sqladmin**<br/>
  * Password: **demo@pass123**<br/>
-   <img src="images/sqlconnect.jpg"/><br/>
+   <img src="images/new3.jpg"/><br/>
 9. Once connected create a new database called **tpcc**<br/>
    <img src="images/sqlsrv.jpg"/><br/>
 10. Using Azure CLI or Powershell, send the below guest OS metric to Azure Monitor for the SQL Server.<br/>
