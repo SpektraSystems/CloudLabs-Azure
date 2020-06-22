@@ -79,7 +79,8 @@ www.hammerdb.com<br/>
 * **SQL Server Database:** tpcc<br/>
 * **Number of Warehouses:** 50<br/>
 * **Virtual Users to Build Schema:** 50<br/>
-   <img src="images/db2.jpg"/><br/>
+
+<img src="images/db2.jpg"/><br/>
 **Note:** Setting the last two at 50 should generate enough load to trip a threshold and run long enough for you to graph<br/>
 23. Double click on **Build** and Click Yes to kick of a load test.<br/>
    <img src="images/db3.jpg"/><br/>
