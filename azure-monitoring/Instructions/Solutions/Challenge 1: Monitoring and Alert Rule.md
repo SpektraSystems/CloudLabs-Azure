@@ -58,9 +58,6 @@ az vm extension set --resource-group myResourceGroup --vm-name myVMname --name I
 **Tip**: A bunch of OS metrics are configured already under the scale set as a sample.<br/>
 16. Download and Install HammerDB tool on the Visual Studio VM from below link:<br/>
 www.hammerdb.com<br/>
-**Note:** HammerDB does not have native support for Windows Display Scaling. This may result in a smaller than usual UI that is difficult to read over high resolution RDP sessions. If you run into this issue later, close and re-open your RDP session to the VSServer with a lower display resolution. After the RDP session connects, you can zoom into to adjust the size.<br/>
-   <img src="images/rdp.jpg"/><br/>
-   <img src="images/zoom.jpg"/><br/>
 17. From the Visual Studio Server, download the latest version of **HammerDB**.<br/>
    <img src="images/hammer.jpg"/><br/>
    <img src="images/hammer1.jpg"/><br/>
