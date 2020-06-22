@@ -1,4 +1,4 @@
-## Challenge 5: Log Analytics Query
+# Challenge 5: Log Analytics Query
 
 1. Write a performance query in Azure Log Analytics that renders a time chart for the last 4 hours for both of the Web Servers and the SQL Server for the following perf metrics. Save each query to your favorites.<br/>
    <img src="images/logs9.jpg"/><br/>
