@@ -37,7 +37,7 @@ Download Visual Studio Code: https://code.visualstudio.com/download (If you don'
 ```
    <img src="images/sqlvm.jpg"/><br/>
 14. Once its finished, review the results (scroll up) and copy the output for the `SQLServer:Databases` counter.<br/>
-`\SQLServer:Databases(*)\Active Transactions<br/>`
+`\SQLServer:Databases(*)\Active Transactions`
    <img src="images/output.jpg"/><br/>
 Then change it to target just your specific database<br/>
 `\SQLServer:Databases(tpcc)\Active Transactions`<br/>
@@ -45,12 +45,10 @@ Then change it to target just your specific database<br/>
 https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.diagnostics/get-counter?view=powershell-5.1<br/>
 
 15. Next, Run the below command to add the collection of this counter that sends it to Azure Monitor using the Azure monitor data sink for SQL Server.<br/>
-``
-Review PublicConfig.json File: https://github.com/kayodeprinceMS/AzureMonitorHackathon/blob/master/Student/Resources/PublicConfig.json<br/>
-``
-``
-Relevant docs: https://docs.microsoft.com/en-us/azure/azure-monitor/platform/diagnostics-extension-windows-install<br/>
-``
+```
+Review PublicConfig.json File: https://github.com/kayodeprinceMS/AzureMonitorHackathon/blob/master/Student/Resources/PublicConfig.json
+Relevant docs: https://docs.microsoft.com/en-us/azure/azure-monitor/platform/diagnostics-extension-windows-install
+```
 ```
 az vm extension set --resource-group myResourceGroup --vm-name myVMname --name IaaSDiagnostics --publisher Microsoft.Azure.Diagnostics --settings PublicConfig.json
 ```
