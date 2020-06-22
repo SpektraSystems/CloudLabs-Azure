@@ -40,6 +40,7 @@ Download Visual Studio Code: https://code.visualstudio.com/download (If you don'
 `
 \SQLServer:Databases(*)\Active Transactions
 `
+
    <img src="images/output.jpg"/><br/>
 Then change it to target just your specific database<br/>
 `\SQLServer:Databases(tpcc)\Active Transactions`<br/>
