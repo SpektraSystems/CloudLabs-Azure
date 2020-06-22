@@ -96,24 +96,25 @@ www.hammerdb.com<br/>
    <img src="images/matrix2.jpg"/><br/>
 28. From **Azure Monitor**, create an Action group, to send email to your address<br/>
    <img src="images/ag.jpg"/><br/>
-  * For creating Action Group, Click on **Add Action Group**
+  * For creating Action Group, Click on **Add Action Group**<br/>
    <img src="images/ag1.jpg"/><br/>
 
 29. Give values as shown below and Click **OK**:<br/>
    <img src="images/ag3.jpg"/><br/>
 30. Create an Alert if Active Transactions goes over 40 on the SQL Server **tpcc** database.<br/>
    <img src="images/alert.jpg"/><br/>
-  * Select SQL Server as Resource
+  * Select SQL Server as Resource<br/>
    <img src="images/alert1.jpg"/><br/>
-  * Add Conditon if Active Transactions goes over 40 on the SQL Server
+  * Add Conditon if Active Transactions goes over 40 on the SQL Server<br/>
    <img src="images/alert2.jpg"/><br/>
    <img src="images/alert3.jpg"/><br/>
-  * Add Action Group that you created in above steps
+  * Add Action Group that you created in above steps<br/>
    <img src="images/alert4.jpg"/><br/>
-  * Give Alert Details and Click Create Alert Rule
+  * Give Alert Details and Click Create Alert Rule<br/>
    <img src="images/alert6.jpg"/><br/>
-  * You will get the alert email at your email address that you provided for action group
+  * You will get the alert email at your email address that you provided for action group<br/>
    <img src="images/alert7.jpg"/><br/>
+
 31. Create an another Alert Rule for CPU over **75%** on the **Virtual Scale Set** that emails me when you go over the threshold. First create a dashboard to watch the Scale Set CPU<br/>
 32. Navigate to the folder called `Loadscripts` under the Resources folder in **Student** and copy the **cpuGenLoadwithPS.ps1** script to both instances running in the Scale Set and run them.<br/>
    <img src="images/cpu.jpg"/><br/>
