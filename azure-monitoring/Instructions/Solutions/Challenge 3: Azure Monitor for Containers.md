@@ -41,8 +41,9 @@ az aks enable-addons -n 169844aksdemo -g ODL-monitor-169844 --addons http_applic
    <img src="images/eshop9.jpg"/><br/>
  **OR**<br/>
    <img src="images/eshop10.jpg"/><br/>
- * Generate an exception in the **eShoponWeb** application
+ * Generate an exception in the **eShoponWeb** application<br/>
 (Hint: Try to change your password)<br/>
+
 19. **Login** into your webapp. Enter the user and password provided on the page.<br/>
    <img src="images/eshop11.jpg"/><br/>
 20. Click on **My account**<br/>
