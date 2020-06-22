@@ -22,7 +22,7 @@ Download Visual Studio Code: https://code.visualstudio.com/download (If you don'
  * Password: **demo@pass123**<br/>
    <img src="images/new3.jpg"/><br/>
 9. Once connected create a new database called **tpcc**<br/>
-   <img src="images/sqlsrv.jpg"/><br/>
+   <img src="images/new5.jpg"/><br/>
 10. Using Azure CLI or Powershell, send the below guest OS metric to Azure Monitor for the SQL Server.<br/>
 11. Add a Performance Counter Metric for:<br/>
  * Object: SQLServer:Databases<br/>
