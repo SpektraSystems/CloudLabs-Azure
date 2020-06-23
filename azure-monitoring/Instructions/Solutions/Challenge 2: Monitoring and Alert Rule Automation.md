@@ -1,20 +1,20 @@
 # Challenge 2: Monitoring and Alert Rule Automation
 
-1. Update the parameters file and deployment script for the **GenerateAlertRules.json** template located in the **AlertTemplates** folder<br/>
+1. Update the parameters file and deployment script for the **GenerateAlertRules.json** template located in the **AlertTemplates** folder.<br/>
 <img src="images/temp.jpg"/><br/>
-2. Add the names of your **VMs** and **ResouceId** for your Action Group<br/>
-3. To find the **ResourceId** for your Action group navigate to the **Resource Group** where you are stored the action group and make sure to check off **Show hidden types**<br/>
+2. Add the names of your **VMs** and **ResouceId** for your Action Group.<br/>
+3. To find the **ResourceId** for your Action group navigate to the **Resource Group** where you are stored the action group and make sure to check off **Show hidden types**.<br/>
 <img src="images/temp1.jpg"/><br/>
-4. Click on your Action Group and copy the **ResourceId**<br/>
+4. Click on your Action Group and copy the **ResourceId**.<br/>
 <img src="images/temp2.jpg"/><br/>
-5. Then update the **deployAlertRules.parameters.json** file as it shows below<br/>
+5. Then update the **deployAlertRules.parameters.json** file as it shows below:<br/>
 <img src="images/temp3.jpg"/><br/>
 6. Save the parameters file and update the **deployAlertRulesTemplate.ps1** file with the name of your **Resource Group** (and save it).<br/>
-7. Deploy the **GenerateAlertRules.json** template using the **PowerShell** script given below:(deployAlertRulesTemplate.ps1).<br/>
+7. Deploy the **GenerateAlertRules.json** template using the **PowerShell** script given below ( deployAlertRulesTemplate.ps1 ):<br/>
 <img src="images/temp4.jpg"/><br/>
-8. Verify you have new **Monitor Alert Rules** in the Portal or from the command line (sample command is in the deployment script)<br/>
+8. Verify you have new **Monitor Alert Rules** in the Portal or from the command line (sample command is in the deployment script).<br/>
 <img src="images/temp5.jpg"/><br/>
-9. Modify the **GenerateAlertsRules.json** to include “Disk Write Operations/Sec” and set a threshold of 10<br/>
+9. Modify the **GenerateAlertsRules.json** to include “Disk Write Operations/Sec” and set a threshold of 10.<br/>
 **Tip:** Go here to view the list of metrics available by resource type - https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftcomputevirtualmachines
 
 **Use this link to see the ARM schema-** https://docs.microsoft.com/en-us/rest/api/monitor/metricalerts/update
