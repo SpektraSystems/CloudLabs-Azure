@@ -25,6 +25,7 @@ New-AzureRmResourceGroupDeployment `
 -TemplateParameterFile $para
 ```
    <img src="images/temp4.jpg"/><br/> 
+   
 8. Verify you have new **Monitor Alert Rules** in the Portal or from the command line (sample command is in the deployment script)<br/>
    <img src="images/temp5.jpg"/><br/>
 9. Modify the **GenerateAlertsRules.json** to include “Disk Write Operations/Sec” and set a threshold of 10<br/>
