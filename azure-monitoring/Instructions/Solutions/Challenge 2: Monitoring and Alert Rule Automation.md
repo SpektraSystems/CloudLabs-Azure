@@ -5,7 +5,7 @@
 2. Add the names of your **VMs** and **ResouceId** for your Action Group<br/>
 3. To find the **ResourceId** for your Action group navigate to the **Resource Group** where you are stored the action group and make sure to check off **Show hidden types**<br/>
 <img src="images/temp1.jpg"/><br/>
-4. Click on your Action Group and copy the **ResourceId**<br/> 
+4. Click on your Action Group and copy the **ResourceId**<br/>
 <img src="images/temp2.jpg"/><br/>
 5. Then update the **deployAlertRules.parameters.json** file as it shows below<br/>
 <img src="images/temp3.jpg"/><br/>
@@ -15,8 +15,10 @@
 8. Verify you have new **Monitor Alert Rules** in the Portal or from the command line (sample command is in the deployment script)<br/>
 <img src="images/temp5.jpg"/><br/>
 9. Modify the **GenerateAlertsRules.json** to include “Disk Write Operations/Sec” and set a threshold of 10<br/>
-**Tip:** Go here to view the list of metrics available by resource type - https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftcomputevirtualmachines<br/>
-**Use this link to see the ARM schema-** https://docs.microsoft.com/en-us/rest/api/monitor/metricalerts/update<br/>
+**Tip:** Go here to view the list of metrics available by resource type - https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftcomputevirtualmachines
+
+**Use this link to see the ARM schema-** https://docs.microsoft.com/en-us/rest/api/monitor/metricalerts/update
+
 <img src="images/temp7.jpg"/><br/>
 10. Rerun your template and verify your new Alert Rules are created for each of your VMs.<br/>
 <img src="images/temp6.jpg"/><br/>
