@@ -19,7 +19,7 @@ Download Visual Studio Code: https://code.visualstudio.com/download (If you don'
    <img src="images/sqlsrv1.jpg"/><br/>
 8. Connect to the database server VM (xxxxxSqlSrv16) make sure to use below username and password to connect your SQL Server Virtual Manchine:<br/>
  * Username: **sqladmin**<br/>
- * Password: **demopass!123**<br/>
+ * Password:c<br/>
    <img src="images/new3.jpg"/><br/>
 9. Once connected create a new database called **tpcc**<br/>
    <img src="images/new5.jpg"/><br/>
@@ -75,7 +75,7 @@ www.hammerdb.com<br/>
 * **SQL Server ODBC Driver:** SQL Server<br/>
 * **Authentication:** SQL Server Authentication<br/>
 * **SQL Server User ID:** sqladmin<br/>
-* **SQL Server User Password:** demo@pass123<br/>
+* **SQL Server User Password:** demopass!123<br/>
 * **SQL Server Database:** tpcc<br/>
 * **Number of Warehouses:** 50<br/>
 * **Virtual Users to Build Schema:** 50<br/>
