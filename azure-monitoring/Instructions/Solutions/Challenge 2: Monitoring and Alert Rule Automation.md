@@ -15,13 +15,6 @@
 #Update Path to files as needed
 $template=".\AlertsTemplate\GenerateAlertRules.json"
 $para=".\AlertsTemplate\deployAlertRules.parameters.json"
-
-$job = 'job.' + ((Get-Date).ToUniversalTime()).tostring("MMddyy.HHmm")
-New-AzureRmResourceGroupDeployment `
--Name $job `
--ResourceGroupName $rg.ResourceGroupName `
--TemplateFile $template `
--TemplateParameterFile $para
 ```
 <img src="images/temp4.jpg"/><br/>
 8. Verify you have new **Monitor Alert Rules** in the Portal or from the command line (sample command is in the deployment script).<br/>
