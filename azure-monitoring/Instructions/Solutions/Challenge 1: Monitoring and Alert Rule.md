@@ -100,18 +100,21 @@ www.hammerdb.com<br/>
    <img src="images/ag1.jpg"/><br/>
 
 29. Give values as shown below and Click **OK**:<br/>
-   <img src="images/ag3.jpg"/><br/>
+   <img src="images/action1.jpg"/><br/>
+   <img src="images/action2.jpg"/><br/>
+   <img src="images/action3.jpg"/><br/>
 30. Create an Alert if Active Transactions goes over 40 on the SQL Server **tpcc** database.<br/>
    <img src="images/alert.jpg"/><br/>
   * Select SQL Server as Resource<br/>
-   <img src="images/alert1.jpg"/><br/>
+   <img src="images/alerts1.jpg"/><br/>
   * Add Conditon if Active Transactions goes over 40 on the SQL Server<br/>
-   <img src="images/alert2.jpg"/><br/>
+   <img src="images/alerts2.jpg"/><br/>
    <img src="images/alert3.jpg"/><br/>
   * Add Action Group that you created in above steps<br/>
-   <img src="images/alert4.jpg"/><br/>
+   <img src="images/alerts3.jpg"/><br/>
   * Give Alert Details and Click Create Alert Rule<br/>
-   <img src="images/alert6.jpg"/><br/>
+  - Alert Name: SQL 
+   <img src="images/alerts4.jpg"/><br/>
   * You will get the alert email at your email address that you provided for action group<br/>
    <img src="images/alert7.jpg"/><br/>
 
