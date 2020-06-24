@@ -66,8 +66,8 @@ by bin(TimeGenerated, 1m), Computer
 | project TimeGenerated, PercentUsage, Computer
 | render timechart
 ```
-   <img src="images/logs6.jpg"/><br/>
- * Solution 2 using let and join<br/>
+<img src="images/logs6.jpg"/><br/>
+* Solution 2 using let and join<br/>
  
  ```
 //Store last 1hr snapshot of Perf table
