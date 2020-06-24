@@ -20,7 +20,7 @@ Note: Make sure to only at this package. Do not update everything.
 ``
 10. Go to **Tools**, **NuGet Package Manager**, **Manage NuGet Packages for Solution**<br/>
 <img src="images/vs12.jpg"/><br/>
-11. Check off the **Microsoft.ApplicationInsights** package and click **Update**<br/>
+11. Check off the **Microsoft.ApplicationInsights** package and click **Install**<br/>
 <img src="images/vs13.jpg"/><br/>
 12. Click **OK**<br/>
 <img src="images/vs131.jpg"/><br/>
