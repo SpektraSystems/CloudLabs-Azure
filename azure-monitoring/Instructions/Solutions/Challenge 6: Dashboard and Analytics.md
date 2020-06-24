@@ -76,12 +76,13 @@ Perf
 <img src="images/grfa171.jpg"/><br/>
 28. Click **Run** to test<br/>
 29. Now let’s make a few changes. Click on **Axes** and change the Unit to percent and **Y-Max** to 100. Run it <br/>
-<img src="images/grfa16.jpg"/><br/>
+<img src="images/grfa161.jpg"/><br/>
+<img src="images/grfa162.jpg"/><br/>
 30. Let’s save it by click on the disk in the upper right side.<br/>
-<img src="images/grfa13.jpg"/><br/>
+<img src="images/grfa131.jpg"/><br/>
 <img src="images/grfa12.jpg"/><br/>
 31. Should look something like this:<br/>
-<img src="images/grfa11.jpg"/><br/>
+<img src="images/grfa111.jpg"/><br/>
 
  #### Advanced features:
  
@@ -94,12 +95,13 @@ Perf
 * Click on **Add** Variable<br/>
 <img src="images/grfa8.jpg"/><br/>
 32. Configure the **Variable** to look like the screen below.<br/>
-<img src="images/grfa7.jpg"/><br/>
+<img src="images/grfa71.jpg"/><br/>
 ``
 Note: In my case I make sure to specify the Workspace name as I have many workspaces and wanted to make sure we only returned values that would work in our chart. Click Add
 ``
 33. Make sure to **Save** your dashboard<br/>
-<img src="images/grfa5.jpg"/><br/>
+<img src="images/grfa51.jpg"/><br/>
+<img src="images/grfa52.jpg"/><br/>
 34. Now go back and edit your **Computer CPU** chart to update the query to use the new variable.<br/>
 <img src="images/grfa4.jpg"/><br/>
 35. Sample update Computer CPU query to support variable **$ComputerName**<br/>
