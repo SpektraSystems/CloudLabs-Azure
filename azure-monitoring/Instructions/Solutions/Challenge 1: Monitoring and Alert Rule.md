@@ -113,7 +113,7 @@ www.hammerdb.com<br/>
   * Add Action Group that you created in above steps<br/>
    <img src="images/alerts3.jpg"/><br/>
   * Give Alert Details and Click Create Alert Rule<br/>
-  - Alert Name: SQL 
+  - Alert Name: **SQL Active Transaction over 40**
    <img src="images/alerts4.jpg"/><br/>
   * You will get the alert email at your email address that you provided for action group<br/>
    <img src="images/alert7.jpg"/><br/>
