@@ -6,9 +6,9 @@
 <img src="images/vs.jpg"/><br/>
 3. If this is the first time you are opening Visual Studio please log in or create an account and log in.<br/>
 4. Select Web<br/>
-<img src="images/vs1.jpg"/><br/>
+<img src="images/11.jpg"/><br/>
 5. Right-click on **Web** in **Solutions Explorer** and select properties. Under Debug unselect the checkbox for **Enable SSL**.<br/>
- <img src="images/vs3.jpg"/><br/>
+ <img src="images/21.jpg"/><br/>
 6. Click Save<br/>
 7. Click on **IIS Express** to test the eShopOnWeb application<br/>
 <img src="images/vs21.jpg"/><br/>
