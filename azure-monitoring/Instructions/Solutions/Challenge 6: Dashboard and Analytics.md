@@ -79,7 +79,7 @@ Perf
 <img src="images/grfa161.jpg"/><br/>
 <img src="images/grfa162.jpg"/><br/>
 30. Let’s save it by click on the disk in the upper right side.<br/>
-<img src="images/grfa131.jpg"/><br/>
+<img src="images/grfa13.jpg"/><br/>
 <img src="images/grfa12.jpg"/><br/>
 31. Should look something like this:<br/>
 <img src="images/grfa111.jpg"/><br/>
