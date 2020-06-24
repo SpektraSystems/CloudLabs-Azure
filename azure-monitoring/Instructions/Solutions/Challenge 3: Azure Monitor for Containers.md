@@ -30,7 +30,10 @@ az aks enable-addons -n 169844aksdemo -g ODL-monitor-169844 --addons http_applic
 13. Don’t worry about seeing the message about the unreachable code.<br/>
 <img src="images/eshop5.jpg"/><br/>
 **Note:** The initial creation of the container takes a while.<br/>
-14. When its complete Visual Studio will open the URL for you in the default browser.<br/>
+14. When its complete, Visual Studio will open the URL for you in the default browser.<br/>
+``
+If URL not open Re-run the application as shown in step 7
+``
 15. Copy the URL and test it from your local machine.<br/>
 <img src="images/eshop7.jpg"/><br/>
 **Note:** The URL can also be found in the Output section if you scroll up.<br/>
