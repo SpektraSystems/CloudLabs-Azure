@@ -28,13 +28,13 @@ Note: Make sure to only at this package. Do not update everything.
 <img src="images/vs132.jpg"/><br/>
 14. On the right hand side, find Web and right click, go to **Add** and select **Application Insights Telemetry**<br/>
 <img src="images/vs5.jpg"/><br/>
-15. Click get Started<br/>
+15. Configure dependency as **Azure Application Insight** and click **Next**<br/>
 <img src="images/vs61.jpg"/><br/>
-16. Select your **subscription**, **Resource** (name of your App Insights) and click **Register**<br/>
+16. Select your **subscription**, **Resource** (name of your App Insights) and click **Next**<br/>
 <img src="images/vs71.jpg"/><br/>
-17. If prompted make sure to Add the SDK.<br/>
+17. Configure Azure Application Insight and Click **Next**.<br/>
 <img src="images/vs81.jpg"/><br/>
-18. Run the **eShopOnWeb** Web project and check out the App Insights tooling<br/>
+18. Click on Finish to Run the **eShopOnWeb** Web project and check out the App Insights tooling<br/>
 <img src="images/91.jpg"/><br/>
 <img src="images/101.jpg"/><br/>
 19. Test the application by running it and verify it’s working.<br/>
