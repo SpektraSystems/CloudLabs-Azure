@@ -1,4 +1,4 @@
-Prerequisite 
+## Prerequisite
 
 1. Open azure portal then go to cloud shell and follow the steps:<br/>
 <img src="images/i1.jpg"/><br/>
