@@ -65,8 +65,8 @@ Note: For the Application settings to take effect you may need to restart your W
 27. Under General change to the name to something like **Computer CPU**.<br/>
 <img src="images/app20.jpg"/><br/>
 28. Under Metrics, make sure service is Azure Log Analytics, your workspace is selected, and build out a Log Analytics query (answer query below for your reference).<br/>
-```
 Sample query:
+```
 Perf
 | where $__timeFilter(TimeGenerated)
 | where CounterName == "% Processor Time" and InstanceName == "_Total"
