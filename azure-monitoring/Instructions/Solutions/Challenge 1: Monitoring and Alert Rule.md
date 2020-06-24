@@ -19,7 +19,7 @@ Download Visual Studio Code: https://code.visualstudio.com/download (If you don'
    <img src="images/sqlsrv1.jpg"/><br/>
 8. Connect to the database server VM (xxxxxSqlSrv16) make sure to use below username and password to connect your SQL Server Virtual Manchine:<br/>
  * Username: **sqladmin**<br/>
- * Password:c<br/>
+ * Password: **demopass!123**<br/>
    <img src="images/new3.jpg"/><br/>
 9. Once connected create a new database called **tpcc**<br/>
    <img src="images/new5.jpg"/><br/>
