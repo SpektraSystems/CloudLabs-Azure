@@ -4,16 +4,18 @@ Prerequisite
 <img src="images/i1.jpg"/><br/>
 <img src="images/2.jpg"/><br/>
 <img src="images/3.jpg"/><br/>
-<img src="images/4.jpg"/><br/>
 2. Run below commands for connecting to cluster using below command:<br/>
 ``
 az aks get-credentials --name 170531aksdemo --resource-group ODL-monitor-170531
 ``
+
 Replace the 170531aksdemo and ODL-monitor-170531 with your resource group and aks cluster name<br/>
+
 ``
-kubectl get nodes 
+kubectl get nodes
 ``
 <img src="images/5.jpg"/><br/>
+
 4. Navigate to https://github.com/kayodeprinceMS/AzureMonitorHackathon and download the repository as a zip file to your local disk<br/>
 <img src="images/downlaods.jpg"/><br/>
 5. **Unzip** the contents to a local folder on your machine<br/>
