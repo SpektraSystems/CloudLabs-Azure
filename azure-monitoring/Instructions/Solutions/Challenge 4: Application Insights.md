@@ -23,9 +23,9 @@ Note: Make sure to only at this package. Do not update everything.
 11. Check off the **Microsoft.ApplicationInsights** package and click **Update**<br/>
 <img src="images/vs13.jpg"/><br/>
 12. Click **OK**<br/>
-<img src="images/vs14.jpg"/><br/>
+<img src="images/vs131.jpg"/><br/>
 13. Click **I Accept**. When finished run the **eShopOnWeb** application again to make sure it’s working<br/>
-<img src="images/vs15.jpg"/><br/>
+<img src="images/vs132.jpg"/><br/>
 14. On the right hand side, find Web and right click, go to **Add** and select **Application Insights Telemetry**<br/>
 <img src="images/vs5.jpg"/><br/>
 15. Click get Started<br/>
