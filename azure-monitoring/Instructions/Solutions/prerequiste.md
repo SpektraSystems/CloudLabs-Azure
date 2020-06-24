@@ -1,7 +1,7 @@
 Prerequisite 
 
 1. Open azure portal then go to cloud shell and follow the steps:<br/>
-<img src="images/1.jpg"/><br/>
+<img src="images/i1.jpg"/><br/>
 <img src="images/2.jpg"/><br/>
 <img src="images/3.jpg"/><br/>
 <img src="images/4.jpg"/><br/>
