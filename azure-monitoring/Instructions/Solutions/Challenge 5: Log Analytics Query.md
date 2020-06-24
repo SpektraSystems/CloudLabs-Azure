@@ -2,7 +2,8 @@
 
 1. Write a performance query in Azure Log Analytics that renders a time chart for the last 4 hours for both of the Web Servers and the SQL Server for the following perf metrics. Save each query to your favorites.<br/>
    <img src="images/logs9.jpg"/><br/>
- * Processor Utilization: Processor / % Processor Time<br/>
+* Processor Utilization: Processor / % Processor Time<br/>
+
 ```
 Perf
 | where ObjectName == "Processor" and CounterName == "% Processor Time" and TimeGenerated > ago(4h)
@@ -10,8 +11,9 @@ Perf
 | sort by AVGPROCESSOR desc
 | render timechart
 ```
-   <img src="images/logs.jpg"/><br/>
- * Memory Utilization: Memory / % Committed Bytes In Use<br/>
+<img src="images/logs.jpg"/><br/>
+* Memory Utilization: Memory / % Committed Bytes In Use<br/>
+
 ```
 Perf
 | where ObjectName == "Memory" and CounterName == "% Committed Bytes In Use" and TimeGenerated > ago(4h)
@@ -19,9 +21,8 @@ Perf
 | sort by AVGMEMORY desc
 | render timechart
 ```
-
-   <img src="images/logs1.jpg"/><br/>
- * Disk Utilization (IO): Disk Reads/sec and Disk Writes/sec<br/>
+<img src="images/logs1.jpg"/><br/>
+* Disk Utilization (IO): Disk Reads/sec and Disk Writes/sec<br/>
  
 ```
 Perf
@@ -37,9 +38,10 @@ Perf
 | sort by AvgDiskWritesIO desc
 | render timechart
 ```
-   <img src="images/logs5.jpg"/><br/>
+<img src="images/logs5.jpg"/><br/>
  * Save the Query<br/>
  * Create a heartbeat query for Web and SQL Server<br/>
+ 
 ```
 Heartbeat
 | summarize max(TimeGenerated) by Computer
@@ -47,7 +49,8 @@ Heartbeat
 | count
 ```
 2. Write a performance query that renders a time chart for the last hour of the max percentage CPU usage of the AKS Cluster nodes<br/>
- * Solution 1 using maxif<br/>
+* Solution 1 using maxif<br/>
+
 ```
 // Declare time range variable
 let timerange = 1h;
@@ -65,6 +68,7 @@ by bin(TimeGenerated, 1m), Computer
 ```
    <img src="images/logs6.jpg"/><br/>
  * Solution 2 using let and join<br/>
+ 
  ```
 //Store last 1hr snapshot of Perf table
 let myPerf = materialize (Perf
@@ -86,11 +90,12 @@ myUsage
 | project TimeGenerated, PercentUsage, Computer
 | render timechart
 ```
-   <img src="images/logs7.jpg"/><br/>
+<img src="images/logs7.jpg"/><br/>
 3. Combine infrastructure and application logs to create a single timeseries chart that includes:<br/>
 * CPU usage from the node in your AKS cluster hosting the eshoponweb app<br/>
 * Duration of page views on your eshoponweb app hosted on the cluster<br/>
- * Solution 1<br/>
+* Solution 1<br/>
+
  ```
 // Declare time range variable
 let timerange = 5h;
@@ -120,7 +125,9 @@ PercentTable
 | project timestamp, PercentUsage, responsetimeseconds
 | render timechart
 ```
- * Solution 2 with hardcoding node name and using let and join statements<br/>
+
+* Solution 2 with hardcoding node name and using let and join statements<br/>
+
 ```
 // Declare time range variable
 let timerange = 5h;
