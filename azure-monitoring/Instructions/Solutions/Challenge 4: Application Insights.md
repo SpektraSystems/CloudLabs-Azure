@@ -61,7 +61,8 @@ Invoke-WebRequest -uri http:// mon19webscalesetlb.eastus.cloudapp.azure.com/
 <img src="images/vs18.jpg"/><br/>
 <img src="images/vs19.jpg"/><br/>
 * Find the exception in **App Insights**<br/>
-<img src="images/vs20.jpg"/><br/>
+<img src="images/vs201.jpg"/><br/>
+<img src="images/vs202.jpg"/><br/>
 <img src="images/vs21.jpg"/><br/>
 28. Create **Alerts** based on Availability and exceptions in azure Monitor.<br/>
 Create Alert Rule **Server Exceptions count over 0**.<br/>
