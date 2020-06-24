@@ -11,7 +11,7 @@
  <img src="images/vs3.jpg"/><br/>
 6. Click Save<br/>
 7. Click on **IIS Express** to test the eShopOnWeb application<br/>
-<img src="images/vs2.jpg"/><br/>
+<img src="images/vs21.jpg"/><br/>
 8. You should see the **eShop** app open locally. Close it and let’s add the **Application Insights SDK**<br/>
 <img src="images/vs4.jpg"/><br/>
 9. Stop the app and add the updated **Application Insights NuGet package** with latest version<br/>
@@ -29,16 +29,16 @@ Note: Make sure to only at this package. Do not update everything.
 14. On the right hand side, find Web and right click, go to **Add** and select **Application Insights Telemetry**<br/>
 <img src="images/vs5.jpg"/><br/>
 15. Click get Started<br/>
-<img src="images/vs6.jpg"/><br/>
+<img src="images/vs61.jpg"/><br/>
 16. Select your **subscription**, **Resource** (name of your App Insights) and click **Register**<br/>
-<img src="images/vs7.jpg"/><br/>
+<img src="images/vs71.jpg"/><br/>
 17. If prompted make sure to Add the SDK.<br/>
-<img src="images/vs8.jpg"/><br/>
+<img src="images/vs81.jpg"/><br/>
 18. Run the **eShopOnWeb** Web project and check out the App Insights tooling<br/>
-<img src="images/vs9.jpg"/><br/>
-<img src="images/vs10.jpg"/><br/>
+<img src="images/91.jpg"/><br/>
+<img src="images/vs101.jpg"/><br/>
 19. Test the application by running it and verify it’s working.<br/>
-<img src="images/vs11.jpg"/><br/>
+<img src="images/vs111.jpg"/><br/>
 20. While its running you can navigate to Application Insights and view the telemetry while you are interacting with eShop running on the local machine. Add something to the shopping cart, log in and check out.<br/>
 21. Publish eShopOnWeb Web project to AKS<br/>
 22. Change over to **Azure Dev Spaces** from **IIS Express** and run the **Web project (F5)**<br/>
