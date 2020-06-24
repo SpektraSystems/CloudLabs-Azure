@@ -36,9 +36,9 @@ Note: Make sure to only at this package. Do not update everything.
 <img src="images/vs81.jpg"/><br/>
 18. Run the **eShopOnWeb** Web project and check out the App Insights tooling<br/>
 <img src="images/91.jpg"/><br/>
-<img src="images/vs101.jpg"/><br/>
+<img src="images/101.jpg"/><br/>
 19. Test the application by running it and verify it’s working.<br/>
-<img src="images/vs111.jpg"/><br/>
+<img src="images/111.jpg"/><br/>
 20. While its running you can navigate to Application Insights and view the telemetry while you are interacting with eShop running on the local machine. Add something to the shopping cart, log in and check out.<br/>
 21. Publish eShopOnWeb Web project to AKS<br/>
 22. Change over to **Azure Dev Spaces** from **IIS Express** and run the **Web project (F5)**<br/>
