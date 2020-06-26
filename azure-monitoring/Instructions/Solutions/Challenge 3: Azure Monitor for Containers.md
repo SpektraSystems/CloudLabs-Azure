@@ -18,16 +18,20 @@
     ```
 3. Now, you will open the solution file in Visual Studio 2019
 
+
 4. Navigate to **c:\eshoponweb\eShopOnWeb-master**
 
     <img src="images/eshop.jpg"/>
 
 5. Double-click on **eShopOnWeb.sln** solution file and select Visual Studio 2019 when prompted.
 
+    <img src="images/challenge3-step3.png"/>
+
 6. Sign in to **Visual Studio** using the provided Azure Credentials
 
 7. Once Visual Studio opens and settles down. Change the project over to **Web** and select **Azure Dev Spaces**.
 
+    <img src="images/challenge3-step-7.jpg"/>
 
 8. The Azure Dev Spaces login screen will appear. Make sure to select your **Subscription** and **Azure Kubernetes Service** cluster that was created during the setup.
 
