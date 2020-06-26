@@ -72,39 +72,36 @@
 
 12. Once the command shows output, go to metrics and check to make sure you are seeing the new metrics.
 
+* To check metrix go to **SQL Server virtual machine -> Diagnostic setting -> Performance Counter**
+
    <img src="images/monitor1.jpg"/>
-
-   <img src="images/monitor2.jpg"/>
-
-   <img src="images/monitor3.jpg"/>
 
    > **Tip**: A bunch of OS metrics are configured already under the scale set as a sample.
 
-13. Download and Install HammerDB tool on the Visual Studio VM from below link:
+13. Download and Install HammerDB tool on the Virtual Machine from below link:
     
     ```
       www.hammerdb.com
     ```
-
-14. From the Visual Studio Server, download the latest version of **HammerDB**.
-
-   <img src="images/hammer.jpg"/>
+    
+    <img src="images/hammer.jpg"/>
    
+14. Download the latest version of **HammerDB**.
+
 
    <img src="images/hammer1.jpg"/>
-
-15. If you get this Security Warning, go to Internet Options and then **Security \ Security Settings \ Downloads \ File download \ Enable**.
-
-   <img src="images/enable.jpg"/>
-
-16. Click OK. Try again & Click Save and Run the warnings.
-
-   <img src="images/run.jpg"/>
    
+15. Click on three dots then Open.
 
-   <img src="images/run1.jpg"/>
+   <img src="images/hammer11.jpg"/>
 
-   > **Tip:** If you end up closing HammerDB you have to go to C:\Program Files\HammerDB-3.1 and run the batch file
+16. It will ask for language select english and click **OK**. Then click on **Yes** to continue the Installing.
+
+   <img src="images/hammer2.jpg"/>
+   
+   <img src="images/hammer3.jpg"/>
+   
+   > **Tip:** If you end up closing HammerDB you have to go to C:\Program Files\HammerDB-3.3 and run the batch file
 
 17. Use **HammerDB** to create transaction load
 
