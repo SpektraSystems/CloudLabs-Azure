@@ -1,6 +1,6 @@
 # Challenge 4: Application Insights 
 
-    > **Note:** User Access Administrator role is required to complete the Container Insights Challenge
+   > **Note:** User Access Administrator role is required to complete the Container Insights Challenge
 
 1. In Visual Studio, Install the Application Insights SDK in the eShopOnWeb Web Project in the Solution
 
