@@ -72,7 +72,3 @@
 17. Add an Action Rule Name and Description, check off enable action Rule.
 
     <img src="images/ag9.jpg"/>
-
-18. First team to me a screenshot of the new Alert Rules and New Action Rule wins the challenge!!
-
-19. Good luck!
