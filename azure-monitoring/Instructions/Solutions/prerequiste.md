@@ -13,7 +13,7 @@
  
     <img src="images/3.jpg"/>
  
-2. Run below commands for connecting to cluster using below command:
+2. Run below commands for setting the context to the existing AKS cluster:
  
 
     ```
