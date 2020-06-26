@@ -16,7 +16,7 @@
     Sample Output:
     az aks enable-addons -n 169844aksdemo -g ODL-monitor-169844 --addons http_application_routing
     ```
-3. Connect to your Visual Studio Server. Install Visual Studio Tools for **Kubernetes** if you are using VS 2017. This is not needed if you are using VS 2019.
+3. Now, you will open the solution file in Visual Studio 2019
 
 4. Navigate to **c:\eshoponweb\eShopOnWeb-master**
 
@@ -24,7 +24,7 @@
 
 5. Double-click on **eShopOnWeb.sln** solution file and select Visual Studio 2019 when prompted.
 
-6. Sign in to **Visual Studio**
+6. Sign in to **Visual Studio** using the provided Azure Credentials
 
 7. Once Visual Studio opens and settles down. Change the project over to **Web** and select **Azure Dev Spaces**.
 
