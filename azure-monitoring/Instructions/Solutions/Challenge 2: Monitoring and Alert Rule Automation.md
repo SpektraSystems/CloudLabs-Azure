@@ -16,7 +16,7 @@
 
 5. Then update the **deployAlertRules.parameters.json** file as it shows below:
 
-    <img src="images/temp3.jpg"/>
+    <img src="images/step-5-image(new).jpg"/>
 
 6. Save the parameters file and update the **deployAlertRulesTemplate.ps1** file with the name of your **Resource Group** (and save it).
 
