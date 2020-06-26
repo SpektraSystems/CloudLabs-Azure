@@ -75,7 +75,7 @@
 
    <img src="images/monitor3.jpg"/>
 
-    >**Tip**: A bunch of OS metrics are configured already under the scale set as a sample.
+   > **Tip**: A bunch of OS metrics are configured already under the scale set as a sample.
 
 13. Download and Install HammerDB tool on the Visual Studio VM from below link:
     
@@ -86,6 +86,7 @@
 14. From the Visual Studio Server, download the latest version of **HammerDB**.
 
    <img src="images/hammer.jpg"/>
+   
 
    <img src="images/hammer1.jpg"/>
 
@@ -96,6 +97,7 @@
 16. Click OK. Try again & Click Save and Run the warnings.
 
    <img src="images/run.jpg"/>
+   
 
    <img src="images/run1.jpg"/>
 
@@ -104,6 +106,7 @@
 17. Use **HammerDB** to create transaction load
 
 18. Double click on SQL Server and click OK, and OK on the confirm popup.
+
    <img src="images/db1.jpg"/>
 
 19. Drill into SQL Server \ TPC-C \ Schema Build and double click on Options. Modify the Build Options for the following:
@@ -148,7 +151,7 @@
 
    <img src="images/ag.jpg"/>
 
-      * For creating Action Group, Click on **Add Action Group**
+   * For creating Action Group, Click on **Add Action Group**
        
    <img src="images/ag1.jpg"/>
 
@@ -177,7 +180,7 @@
 
    * Give Alert Details and Click Create Alert Rule
 
-         - Alert Name: **SQL Active Transaction over 40**
+        - Alert Name: **SQL Active Transaction over 40**
    <img src="images/alerts4.jpg"/>
 
    * You will get the alert email at your email address that you provided for action group
@@ -190,9 +193,9 @@
 
    <img src="images/cpu.jpg"/>
 
-   ```
-   This may be a bit of a challenge to those not used to working with a scale set.  If your student just grabs the public IP address and then RDP to it.  They will end up on one of the instances but because they are going through the Load Balancer, they cannot control which one.  Or can they?😊
-   ```
+
+   > This may be a bit of a challenge to those not used to working with a scale set.  If your student just grabs the public IP address and then RDP to it.  They will end up on one of the instances but because they are going through the Load Balancer, they cannot control which one.  Or can they?😊
+
 
 29. If you look at the configuration of the LB it is configured with an inbound NAT rule that will map starting at port 50000 to each instance in the Scale Set.  So if they RDP using the PIP:50000 for instance 1 and PIP:50001 for instance 2.
 
