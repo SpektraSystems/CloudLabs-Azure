@@ -236,7 +236,7 @@ Sample query:
 
    * This page shows up, where you can define the data source (aka “Service”) and query to run in order to get the list of values (in this case a list of computer heartbeats).
 
-> Note:** that the output of the query should include a date-time value, a Text field with interesting info (in this case we used the computer name) and possibly tags (here we just used “test”).
+> **Note:** that the output of the query should include a date-time value, a Text field with interesting info (in this case we used the computer name) and possibly tags (here we just used “test”).
 
    * Add an Annotation to your chart overlaying Computer Heartbeat
       
