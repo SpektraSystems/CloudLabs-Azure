@@ -34,7 +34,7 @@
 4. Upload **PublicConfig.json** and **LogReaderRBAC.yaml** files to cloud shell which are under **.\AzureMonitorHackathon-master\Student\Resources**:
  
    <img src="images/6.jpg"/>
-   <img src="images/11.jpg"/>   
+   <img src="images/im11.jpg"/>   
  
 5. Deploy the cluster role bindings:
 
