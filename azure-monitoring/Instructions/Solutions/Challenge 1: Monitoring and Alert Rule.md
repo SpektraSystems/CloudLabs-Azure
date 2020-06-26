@@ -1,10 +1,10 @@
 # Solution 1: Monitoring and Alert Rule
 
-1. Open a browser on the provided virtual machine and Navigate to Azure Portal( https://portal.azure.com ) and login with the credentials provided under **Azure Crendentials** on Environment Details tab on the right.
+1. Open a browser on the provided virtual machine and Navigate to **Azure Portal**( https://portal.azure.com ) and login with the credentials provided under **Azure Crendentials** on Environment Details tab on the right.
 
    <img src="images/new1.jpg"/>
    
-2. Open Visual Studio inside your virtual machine and sign in with **Azure Credentials**.
+2. Open Visual Studio inside your virtual machine and sign in with **Azure Credentials** given under Environment Details tab on the right.
 
    <img src="images/new2.jpg"/>
    
@@ -16,7 +16,7 @@
 
    <img src="images/sqlsrv1.jpg"/>
    
-5. Connect to the database server VM (SqlSrv16-xxxxx) make sure to use below username and password to connect your SQL Server Virtual Manchine:
+5. Connect to the database server Virtual Machine (SqlSrv16-xxxxx) make sure to use below username and password to connect your SQL Server Virtual Manchine:
 
     * Username: **sqladmin**
     * Password: **demopass!123**
@@ -27,11 +27,13 @@
 
    <img src="images/new5.jpg"/>   
 
-7. Add a Performance Counter Metric for:
+7. From Azure CLI or cloud shell, send the below guest OS metric to Azure Monitor for the SQL Server. 
 
-    * Object: SQLServer:Databases
-    * Counter: Active Transactions
-    * Instance: tpcc
+- Add a Performance Counter Metric for:
+
+    * Object: **SQLServer:Databases**
+    * Counter: **Active Transactions**
+    * Instance: **tpcc**
  
 8. First, figure out the correct format for the counter use the run command on the SQL Server in the Azure portal **Run the command**
 
