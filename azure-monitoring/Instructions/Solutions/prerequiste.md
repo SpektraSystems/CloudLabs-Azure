@@ -12,34 +12,31 @@
  
    <img src="images/3.jpg"/>
  
-2. Run below commands for setting the context to the existing AKS cluster:
+2. For enabled Kubernetes RBAC authorization, you need to apply cluster role binding for live logs to work. Run the below commands:
+
+* Connect to your cluster using below command:
+   ```
+   az aks get-credentials --name ClusterName --resource-group MyResourceGroup
+   ```
+ > Replace the ClusterName and MyResourceGroup with your resource group and aks cluster name given under ODL-Monitor-XXXX resource group.
  
-   ```
-   az aks get-credentials --name 170531aksdemo --resource-group ODL-monitor-170531
-   ```
- > Replace the 170531aksdemo and ODL-monitor-170531 with your resource group and aks cluster name
+   <img src="images/45.jpg"/>
+   
+   <img src="images/10.jpg"/>
+   
+* Use below command to test your connection:
 
    ```
    kubectl get nodes
    ```
-   <img src="images/5.jpg"/>
+   <img src="images/9.jpg"/>
  
-
-4. Navigate to https://github.com/kayodeprinceMS/AzureMonitorHackathon and download the repository as a zip file to your local disk
- 
-   <img src="images/downlaods.jpg"/>
- 
-5. **Unzip** the contents to a local folder on your machine
- 
-   <img src="images/downlaods1.jpg"/>
- 
-6. Navigate to the location where you unzipped the files and open the **.\AzureMonitorHackathon-master\Student\Resources** folder in Visual Studio or Visual Studio code
- 
-7. Once you download the repository, upload **PublicConfig.json** and **LogReaderRBAC.yaml** files which are under Resources folder to cloud shell:
+4. Upload **PublicConfig.json** and **LogReaderRBAC.yaml** files to cloud shell which are under **.\AzureMonitorHackathon-master\Student\Resources**:
  
    <img src="images/6.jpg"/>
+   <img src="images/11.jpg"/>   
  
-8. Deploy the cluster role bindings
+5. Deploy the cluster role bindings:
 
    ```
    kubectl create -f LogReaderRBAC.yaml
