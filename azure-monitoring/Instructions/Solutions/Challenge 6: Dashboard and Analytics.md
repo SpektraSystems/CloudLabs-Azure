@@ -2,7 +2,7 @@
 
 * Deploy Grafana using Web App for Container https://github.com/grafana/azure-monitor-datasource/blob/master/README.md
 
-> * Hint: http://docs.grafana.org/installation/docker/
+    >  Hint: http://docs.grafana.org/installation/docker/
 
 1. Create a Web App for Linux and configure as recommended below:
 
