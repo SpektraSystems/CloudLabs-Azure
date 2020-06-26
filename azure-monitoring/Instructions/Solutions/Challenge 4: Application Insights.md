@@ -80,7 +80,7 @@
 
 22. Change over to **Azure Dev Spaces** from **IIS Express** and run the **Web project (F5)**
 
-    <img src="images/vs21.jpg"/>
+    <img src="images/challenge3-step-7.jpg"/>
 
 23. You can always edit some text in the site to verify that indeed the container is being update. Make sure when you run the project the browser is pointing to your URL for the container not the local host. You may need to stop it again, save the project and run it again if this happens
 
