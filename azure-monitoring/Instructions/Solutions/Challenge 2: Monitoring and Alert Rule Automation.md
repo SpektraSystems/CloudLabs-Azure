@@ -55,6 +55,7 @@
 
     <img src="images/ag5.jpg"/>
 
+
     <img src="images/ag6.jpg"/>
 
 14. Under Scope, click on Select a resource and make sure you have your subscription selected. Then search for the name of the resource group that was created in the deployment of the workshop. Select your resource group when it comes up. Click **Done**
