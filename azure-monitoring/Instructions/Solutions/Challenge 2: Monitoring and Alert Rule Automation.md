@@ -1,10 +1,12 @@
 # Solution 2: Monitoring and Alert Rule Automation
 
-1. Update the parameters file and deployment script for the **GenerateAlertRules.json** template located in the **AlertTemplates** folder.
+1. Follow steps to update the parameters file and deployment script for the **GenerateAlertRules.json** template located in the **AlertTemplates** folder.
 
     <img src="images/temp.jpg"/>
 
-2. Add the names of your **VMs** and **ResouceId** for your Action Group.
+2. Get the names of your **VMs** from Lab Detials which are under environment details.
+
+    <img src="images/labenv.jpg"/>
 
 3. To find the **ResourceId** for your Action group navigate to the **Resource Group** where you are stored the action group and make sure to check off **Show hidden types**.
 
