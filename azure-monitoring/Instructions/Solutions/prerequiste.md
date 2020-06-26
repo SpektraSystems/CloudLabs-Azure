@@ -36,7 +36,7 @@
  
 5. **Unzip** the contents to a local folder on your machine
  
-       <img src="images/downlaods1.jpg"/>
+      <img src="images/downlaods1.jpg"/>
  
 6. Navigate to the location where you unzipped the files and open the **.\AzureMonitorHackathon-master\Student\Resources** folder in Visual Studio or Visual Studio code
  
