@@ -33,7 +33,7 @@
 
     <img src="images/temp5.jpg"/>
 
-9. Modify the **GenerateAlertsRules.json** to include “Disk Write Operations/Sec” and set a threshold of 10.
+9. Modify the **GenerateAlertsRules.json** to include “Disk Write Operations/Sec” and set a threshold of 20.
 
     > **Tip:** Go here to view the list of metrics available by resource type - https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftcomputevirtualmachines
 
