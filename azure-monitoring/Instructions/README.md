@@ -3,6 +3,7 @@
    <img src="images/architecture.jpg"/><br/>
 
 ## Agenda
+* Pre-requisite
 * Challenge 1: Monitoring and Alert Rule
 * Challenge 2: Monitoring and Alert Rule Automation
 * Challenge 3: Azure Monitor for Containers
