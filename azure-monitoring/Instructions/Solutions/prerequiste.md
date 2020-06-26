@@ -40,11 +40,9 @@
    <img src="images/6.jpg"/>
  
 8. Deploy the cluster role bindings
- 
 
    ```
    kubectl create -f LogReaderRBAC.yaml
    ```
 
    <img src="images/7.jpg"/>
- 
