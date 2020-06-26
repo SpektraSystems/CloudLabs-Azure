@@ -8,21 +8,25 @@
 
     
     <img src="images/web.jpg"/>
+    
 
     * Create a new App service plan and select B1 Basic. It’s under Dev/Test
 
 
     <img src="images/web1.jpg"/>
+    
 
     * Select Container and specify Docker Hub, Public and Grafana/Grafana for the image tags (this should deploy the latest version by default)
 
 
     <img src="images/web3.jpg"/>
+    
 
     * Should look like this when complete:
 
 
     <img src="images/web4.jpg"/>
+    
 
     * Click Create
 
@@ -135,7 +139,7 @@ Sample query:
     | order by TimeGenerated asc
     ```
 
-    <img src="images/grfa171.jpg"/>
+   <img src="images/grfa171.jpg"/>
 
 28. Click **Run** to test
 
@@ -167,18 +171,18 @@ Sample query:
     * For example, a **Computer** variable can be defined, and then a dropdown will appear on the dashboard, showing a list of possible values:
 
 
-    <img src="images/grfa10.jpg"/>
+   <img src="images/grfa10.jpg"/>
 
 
     * Now let’s add a variable that lets us select computers in the chart. Click on the gear in the upper right corner.
 
 
-    <img src="images/grfa9.jpg"/>
+   <img src="images/grfa9.jpg"/>
 
 * Click on **Add** Variable
 
 
-    <img src="images/grfa8.jpg"/>
+   <img src="images/grfa8.jpg"/>
 
 32. Configure the **Variable** to look like the screen below.
 
@@ -236,17 +240,14 @@ Sample query:
 > Note:** that the output of the query should include a date-time value, a Text field with interesting info (in this case we used the computer name) and possibly tags (here we just used “test”).
 
     * Add an Annotation to your chart overlaying Computer Heartbeat
-
       
-    <img src="images/grfa1.jpg"/>
+   <img src="images/grfa1.jpg"/>
 
     * FYI… Annotations provide a way to mark points on the graph with rich events. When you hover over an annotation you can get event description and event tags. The text field can include links to other systems with more detail.
 
     * Navigate to settings from your dashboard (the gear in the upper right), click on Annotations, Add Annotation Query
 
-
-    <img src="images/grfa.jpg"/>
-
+   <img src="images/grfa.jpg"/>
 
     > **HINT:** Use the sample Kusto/Data explorer queries to create more dashboard scenarios.
 
