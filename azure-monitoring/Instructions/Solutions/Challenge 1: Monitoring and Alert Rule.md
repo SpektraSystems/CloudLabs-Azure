@@ -68,7 +68,7 @@
     az vm extension set --resource-group myResourceGroup --vm-name myVMname --name IaaSDiagnostics --publisher Microsoft.Azure.Diagnostics --settings PublicConfig.json
     ```
     
-   <img src="images/monitor.jpg"/>
+   <img src="images/cloudshell1.jpg"/>
 
 12. Once the command shows output, go to metrics and check to make sure you are seeing the new metrics.
 
