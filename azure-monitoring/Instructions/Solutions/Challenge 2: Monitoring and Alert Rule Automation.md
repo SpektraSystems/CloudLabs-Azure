@@ -53,8 +53,7 @@
 
 13. Navigate to Action rules (preview)
 
-    <img src="images/ag5.jpg"/>
-
+    <img src="images/ag5.jpg"/><br/>
 
     <img src="images/ag6.jpg"/>
 
