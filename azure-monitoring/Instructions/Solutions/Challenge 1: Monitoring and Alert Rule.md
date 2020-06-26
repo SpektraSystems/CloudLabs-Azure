@@ -25,24 +25,22 @@
    
 6. Once connected create a new database called **tpcc**
 
-   <img src="images/new5.jpg"/>
-   
-7. Using Azure CLI or Powershell, send the below guest OS metric to Azure Monitor for the SQL Server.
+   <img src="images/new5.jpg"/>   
 
-8. Add a Performance Counter Metric for:
+7. Add a Performance Counter Metric for:
 
     * Object: SQLServer:Databases
     * Counter: Active Transactions
     * Instance: tpcc
  
-9. First, figure out the correct format for the counter use the run command on the SQL Server in the Azure portal **Run the command**
+8. First, figure out the correct format for the counter use the run command on the SQL Server in the Azure portal **Run the command**
 
     ```
     (Get-Counter -ListSet SQLServer:Databases).Paths
     ```
    <img src="images/sqlvm.jpg"/>
 
-10. Once its finished, review the results (scroll up) and copy the output for the `SQLServer:Databases` counter.
+9. Once its finished, review the results (scroll up) and copy the output for the `SQLServer:Databases` counter.
 
     `
     \SQLServer:Databases(*)\Active Transactions
@@ -53,17 +51,18 @@
     Then change it to target just your specific database
 
     `\SQLServer:Databases(tpcc)\Active Transactions`
+    
+10. Open CloudShell( from Azure portal ) or navigate to https://shell.azure.com and select bash or Powershell, to send the below guest OS metric to Azure Monitor for the SQL Server.
 
 11. Next, edit then Run the below command to add the collection of this counter that sends it to Azure Monitor using the Azure monitor data sink for SQL Server.
 
-    ```
-    Review PublicConfig.json File: https://github.com/kayodeprinceMS/AzureMonitorHackathon/blob/master/Student/Resources/PublicConfig.json
+    > Note: Review PublicConfig.json File: https://github.com/kayodeprinceMS/AzureMonitorHackathon/blob/master/Student/Resources/PublicConfig.json
     Relevant docs: https://docs.microsoft.com/en-us/azure/azure-monitor/platform/diagnostics-extension-windows-install
-    ```
 
     ```
     az vm extension set --resource-group myResourceGroup --vm-name myVMname --name IaaSDiagnostics --publisher Microsoft.Azure.Diagnostics --settings PublicConfig.json
     ```
+    
    <img src="images/monitor.jpg"/>
 
 12. Once the command shows output, go to metrics and check to make sure you are seeing the new metrics.
