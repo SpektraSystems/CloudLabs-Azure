@@ -35,9 +35,7 @@
     * Counter: Active Transactions
     * Instance: tpcc
  
-9. First, figure out the correct format for the counter use the run command on the SQL Server in the Azure portal
-
-    **Run the command**
+9. First, figure out the correct format for the counter use the run command on the SQL Server in the Azure portal **Run the command**
 
     ```
     (Get-Counter -ListSet SQLServer:Databases).Paths
@@ -109,14 +107,14 @@
 
 19. Drill into SQL Server \ TPC-C \ Schema Build and double click on Options. Modify the Build Options for the following:
 
-* **SQL Server:** Name of your SQL Server
-* **SQL Server ODBC Driver:** SQL Server
-* **Authentication:** SQL Server Authentication
-* **SQL Server User ID:** sqladmin
-* **SQL Server User Password:** demopass!123
-* **SQL Server Database:** tpcc
-* **Number of Warehouses:** 50
-* **Virtual Users to Build Schema:** 50
+      * **SQL Server:** Name of your SQL Server
+      * **SQL Server ODBC Driver:** SQL Server
+      * **Authentication:** SQL Server Authentication
+      * **SQL Server User ID:** sqladmin
+      * **SQL Server User Password:** demopass!123
+      * **SQL Server Database:** tpcc
+      * **Number of Warehouses:** 50
+      * **Virtual Users to Build Schema:** 50
 
    <img src="images/db2.jpg"/>
 
@@ -149,7 +147,8 @@
 
    <img src="images/ag.jpg"/>
 
-  * For creating Action Group, Click on **Add Action Group**
+      * For creating Action Group, Click on **Add Action Group**
+       
    <img src="images/ag1.jpg"/>
 
 
@@ -164,23 +163,23 @@
 27. Create an Alert if Active Transactions goes over 40 on the SQL Server **tpcc** database.
    <img src="images/alert.jpg"/>
 
-  * Select SQL Server as Resource
+   * Select SQL Server as Resource
    <img src="images/alerts1.jpg"/>
 
-  * Add Conditon if Active Transactions goes over 40 on the SQL Server
+   * Add Conditon if Active Transactions goes over 40 on the SQL Server
    <img src="images/alerts2.jpg"/>
 
    <img src="images/alert3.jpg"/>
 
-  * Add Action Group that you created in above steps
+   * Add Action Group that you created in above steps
    <img src="images/alerts3.jpg"/>
 
-  * Give Alert Details and Click Create Alert Rule
+   * Give Alert Details and Click Create Alert Rule
 
-  - Alert Name: **SQL Active Transaction over 40**
+         - Alert Name: **SQL Active Transaction over 40**
    <img src="images/alerts4.jpg"/>
 
-  * You will get the alert email at your email address that you provided for action group
+   * You will get the alert email at your email address that you provided for action group
    <img src="images/alert7.jpg"/>
 
 
@@ -207,7 +206,3 @@
    <img src="images/vm1.jpg"/>
 
 31. The trick to getting the alert to fire is to pin both instances at the same time as the CPU metric is an aggregate of the scale set. If you just max the CPU on one server to 100% the Scale Set is only at 50% and till not trip the alert threshold of 75%. Also, if they run the script and then setup the Alert Rule then to back to run another test to trip the alert, they have scaled out to a third instance and not realized it. They may need to jump on that box and max it out as well.
-
-* First team to send me both alerts wins the challenge!!
-
-* Good luck!
