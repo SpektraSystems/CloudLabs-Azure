@@ -1,4 +1,4 @@
-# Challenge 6: Dashboard and Analytics
+# Solution 6: Dashboard and Analytics
 
 * Deploy Grafana using Web App for Container https://github.com/grafana/azure-monitor-datasource/blob/master/README.md
 
