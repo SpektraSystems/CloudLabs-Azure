@@ -54,6 +54,8 @@
     
 10. Open CloudShell( from Azure portal ) or navigate to https://shell.azure.com and select bash or Powershell, to send the below guest OS metric to Azure Monitor for the SQL Server.
 
+    <img src="images/1.jpg"/>
+
 11. Next, edit then Run the below command to add the collection of this counter that sends it to Azure Monitor using the Azure monitor data sink for SQL Server.
 
     > Note: Review PublicConfig.json File: https://github.com/kayodeprinceMS/AzureMonitorHackathon/blob/master/Student/Resources/PublicConfig.json
