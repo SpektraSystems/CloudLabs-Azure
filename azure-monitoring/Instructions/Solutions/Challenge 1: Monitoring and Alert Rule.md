@@ -6,7 +6,7 @@
    
 2. Open Visual Studio inside your virtual machine and sign in with **Azure Credentials** given under Environment Details tab on the right.
 
-   <img src="images/new2.jpg"/>
+   <img src="images/visualupdate1.jpg"/>
    
 3. Visual Studio has view called **SQL Server Object Explorer** that can be used to add and delete SQL databases on the SQL server.
 
@@ -25,8 +25,9 @@
    
 6. Once connected create a new database called **tpcc**
 
-   <img src="images/new5.jpg"/>   
-
+   <img src="images/new5.jpg"/>
+   <img src="images/visualupdate2.jpg"/>
+   
 7. From Azure CLI or cloud shell, send the below guest OS metric to Azure Monitor for the SQL Server. 
 
 - Add a Performance Counter Metric for:
@@ -54,11 +55,11 @@
 
     `\SQLServer:Databases(tpcc)\Active Transactions`
     
-10. Open CloudShell( from Azure portal ) or navigate to https://shell.azure.com and select bash or Powershell, to send the below guest OS metric to Azure Monitor for the SQL Server.
+10. Open CloudShell( from Azure portal ) or navigate to https://shell.azure.com and select bash, to send the below guest OS metric to Azure Monitor for the SQL Server.
 
     <img src="images/1.jpg"/>
 
-11. Next, run the below command to add the collection of this counter that sends it to Azure Monitor using the Azure monitor data sink for SQL Server. Edit below command with your resource group name (ODL-monitor-XXXXX) and sql server virtual machine name (sqlSrv16-XXXXX).
+11. Next, run the below command to add the collection of this counter that sends it to Azure Monitor using the Azure monitor data sink for SQL Server. Edit below command with your resource group name **(ODL-monitor-XXXXX)** and sql server virtual machine name **(sqlSrv16-XXXXX)**.
 
     > Note: Review PublicConfig.json File: https://github.com/kayodeprinceMS/AzureMonitorHackathon/blob/master/Student/Resources/PublicConfig.json
     Relevant docs: https://docs.microsoft.com/en-us/azure/azure-monitor/platform/diagnostics-extension-windows-install
