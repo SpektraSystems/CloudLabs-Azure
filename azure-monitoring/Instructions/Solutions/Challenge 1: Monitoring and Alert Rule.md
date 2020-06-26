@@ -169,22 +169,26 @@
 
 26. Give values as shown below and Click **OK**:
 
+* Under **Basics** select Resource Group as ODL-Moitor-XXXXX and Name the Action group as **Hackgroup**. Click Next.
+
    <img src="images/action1.jpg"/>
 
+* Select Notification type as Email/SMS message/Push/Voice and name it as email. Click on **Review+create**
    <img src="images/action2.jpg"/>
-
+   
+* Click on Create.
    <img src="images/action3.jpg"/>
 
-27. Create an Alert if Active Transactions goes over 40 on the SQL Server **tpcc** database.
+27. Create an Alert Rule if **Active Transactions goes over 40 on the SQL Server tpcc** database.
    <img src="images/alert.jpg"/>
 
-   * Select SQL Server as Resource
+   * Select SQL Server VM as Resource
    <img src="images/alerts1.jpg"/>
 
    * Add Conditon if Active Transactions goes over 40 on the SQL Server
    <img src="images/alerts2.jpg"/>
 
-   <img src="images/alert3.jpg"/>
+   <img src="images/logic.jpg"/>
 
    * Add Action Group that you created in above steps
    <img src="images/alerts3.jpg"/>
@@ -198,7 +202,7 @@
    <img src="images/alert7.jpg"/>
 
 
-28. Create an another Alert Rule for CPU over **75%** on the **Virtual Scale Set** that emails me when you go over the threshold. First create a dashboard to watch the Scale Set CPU
+28. Create an another Alert Rule for **CPU over 75% on the **Virtual Scale Set** that emails me when you go over the threshold. First create a dashboard to watch the Scale Set CPU
 
 32. Navigate to the folder called `Loadscripts` under the Resources folder in **Student** and copy the **cpuGenLoadwithPS.ps1** script to both instances running in the Scale Set and run them.
 
