@@ -116,7 +116,7 @@
       * **Number of Warehouses:** 50
       * **Virtual Users to Build Schema:** 50
 
-   <img src="images/db2.jpg"/>
+   <img src="images/challenge1-step-19.jpg"/>
 
  > **Note:** Setting the last two at 50 should generate enough load to trip a threshold and run long enough for you to graph
 
