@@ -56,9 +56,9 @@
 
 14. When its complete, Visual Studio will open the URL for you in the default browser.
 
-    ```
-    If URL not open Re-run the application as shown in step 7
-    ```
+
+    > **Note:** If URL doesn't pop up, you will need to re-run the application as shown in step 7
+
 15. Copy the URL and test it from your local machine.
 
     <img src="images/eshop7.jpg"/>
