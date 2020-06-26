@@ -7,6 +7,14 @@
 2. Open Visual Studio inside your virtual machine and sign in with **Azure Credentials** given under Environment Details tab on the right.
 
    <img src="images/visualupdate1.jpg"/>
+ 
+* Once you sign up click on **Open a local folder**.
+
+   <img src="images/vsfolder.jpg"/>
+   
+* Select the **AzureMonitorHackthon-master** folder which is under C drive AzMonHack folder.
+
+   <img src="images/vsopen.jpg"/>
    
 3. Visual Studio has view called **SQL Server Object Explorer** that can be used to add and delete SQL databases on the SQL server.
 
