@@ -131,13 +131,13 @@
 
 Sample query:
 
-    ```
+   ```
     Perf
     | where $__timeFilter(TimeGenerated)
     | where CounterName == "% Processor Time" and InstanceName == "_Total"
     | summarize percentile(CounterValue,50) by bin(TimeGenerated, $__interval), Computer
     | order by TimeGenerated asc
-    ```
+   ```
 
    <img src="images/grfa171.jpg"/>
 
