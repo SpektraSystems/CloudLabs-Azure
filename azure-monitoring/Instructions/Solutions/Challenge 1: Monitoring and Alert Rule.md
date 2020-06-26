@@ -1,6 +1,6 @@
 # Solution 1: Monitoring and Alert Rule
 
-1. Login to **Azure Portal** with your credentials given in environment details.
+1. Open a browser on the provided virtual machine and Navigate to Azure Portal( https://portal.azure.com ) and login with the credentials provided under **Azure Crendentials** on Environment Details tab on the right.
 
    <img src="images/new1.jpg"/>
    
