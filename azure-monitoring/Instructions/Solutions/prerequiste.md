@@ -4,14 +4,14 @@
  
     <img src="images/i1.jpg"/>
  
- Then launch the CloudShell by clicking on the icon next to the search bar at the top of the Azure portal and Select Bash when the prompt comes up.
+    Then launch the CloudShell by clicking on the icon next to the search bar at the top of the Azure portal and Select Bash when the prompt comes up.
  
- Select Show advanced settings and proceed as shown in the below images:
+    Select Show advanced settings and proceed as shown in the below images:
  
-   <img src="images/2.jpg"/>
+    <img src="images/2.jpg"/>
  
  
-   <img src="images/3.jpg"/>
+    <img src="images/3.jpg"/>
  
 2. Run below commands for connecting to cluster using below command:
  
