@@ -8,7 +8,7 @@
    <img src="images/new4.jpg"/><br/>
 4. Add SQL Server from **SQL Server Object Explorer**<br/>
    <img src="images/sqlsrv1.jpg"/><br/>
-5. Connect to the database server VM (xxxxxSqlSrv16) make sure to use below username and password to connect your SQL Server Virtual Manchine:<br/>
+5. Connect to the database server VM (SqlSrv16-XXXXXX) make sure to use below username and password to connect your SQL Server Virtual Manchine:<br/>
  * Username: **sqladmin**<br/>
  * Password: **demopass!123**<br/>
    <img src="images/new3.jpg"/><br/>
