@@ -39,7 +39,7 @@
 
     > **Use this link to see the ARM schema-** https://docs.microsoft.com/en-us/rest/api/monitor/metricalerts/update
 
-    <img src="images/temp7.jpg"/>
+    <img src="images/challenge2-new-image-for-step-9.jpg"/>
 
 10. Rerun your template and verify your new Alert Rules are created for each of your VMs.
 
