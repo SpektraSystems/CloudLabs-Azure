@@ -164,23 +164,22 @@ Sample query:
 
  #### Advanced features:
  
-    * Variables
+ * Variables
 
-    * Some query values can be selected through **UI** dropdowns, and updated in the query.
+ * Some query values can be selected through **UI** dropdowns, and updated in the query.
 
-    * For example, a **Computer** variable can be defined, and then a dropdown will appear on the dashboard, showing a list of possible values:
+ * For example, a **Computer** variable can be defined, and then a dropdown will appear on the dashboard, showing a list of possible values:
 
 
    <img src="images/grfa10.jpg"/>
 
 
-    * Now let’s add a variable that lets us select computers in the chart. Click on the gear in the upper right corner.
+ * Now let’s add a variable that lets us select computers in the chart. Click on the gear in the upper right corner.
 
 
    <img src="images/grfa9.jpg"/>
 
-* Click on **Add** Variable
-
+ * Click on **Add** Variable
 
    <img src="images/grfa8.jpg"/>
 
@@ -204,15 +203,15 @@ Sample query:
 
 35. Sample update Computer CPU query to support variable **$ComputerName**
 
-    ```
+   ```
     Perf
     | where $__timeFilter(TimeGenerated) and Computer in ($ComputerName)
     | where (CounterName == "% Processor Time" and InstanceName == "_Total") or CounterName == "% Used Memory"
     | summarize AVGPROCESSOR = avg(CounterValue) by bin(TimeGenerated, $__interval), Computer
     | order by TimeGenerated asc
-    ```
+   ```
 
-    <img src="images/grfa3.jpg"/>
+   <img src="images/grfa3.jpg"/>
 
 36. Make sure to **Save**
 
@@ -227,27 +226,27 @@ Sample query:
 
  #### Annotations:
  
-    * Another cool Grafana feature is annotations – which marks points in time that you can overlay on top of charts.
+   * Another cool Grafana feature is annotations – which marks points in time that you can overlay on top of charts.
 
-    * Below, you can see the same chart shown above, with an annotation of **Heartbeats**. Hovering on a specific annotation shows informative text about it.
+   * Below, you can see the same chart shown above, with an annotation of **Heartbeats**. Hovering on a specific annotation shows informative text about it.
 
-    * **Configuration** is very similar to Variables:
+   * **Configuration** is very similar to Variables:
 
-    * Click the dashboard **Settings** button (on the top right area), select **Annotations**, and then **+New**.
+   * Click the dashboard **Settings** button (on the top right area), select **Annotations**, and then **+New**.
 
-    * This page shows up, where you can define the data source (aka “Service”) and query to run in order to get the list of values (in this case a list of computer heartbeats).
+   * This page shows up, where you can define the data source (aka “Service”) and query to run in order to get the list of values (in this case a list of computer heartbeats).
 
 > Note:** that the output of the query should include a date-time value, a Text field with interesting info (in this case we used the computer name) and possibly tags (here we just used “test”).
 
-    * Add an Annotation to your chart overlaying Computer Heartbeat
+   * Add an Annotation to your chart overlaying Computer Heartbeat
       
    <img src="images/grfa1.jpg"/>
 
-    * FYI… Annotations provide a way to mark points on the graph with rich events. When you hover over an annotation you can get event description and event tags. The text field can include links to other systems with more detail.
+   * FYI… Annotations provide a way to mark points on the graph with rich events. When you hover over an annotation you can get event description and event tags. The text field can include links to other systems with more detail.
 
-    * Navigate to settings from your dashboard (the gear in the upper right), click on Annotations, Add Annotation Query
+   * Navigate to settings from your dashboard (the gear in the upper right), click on Annotations, Add Annotation Query
 
    <img src="images/grfa.jpg"/>
 
-    > **HINT:** Use the sample Kusto/Data explorer queries to create more dashboard scenarios.
+   > **HINT:** Use the sample Kusto/Data explorer queries to create more dashboard scenarios.
 
