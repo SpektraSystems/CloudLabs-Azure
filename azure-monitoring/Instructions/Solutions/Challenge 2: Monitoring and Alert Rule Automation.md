@@ -1,4 +1,4 @@
-# Challenge 2: Monitoring and Alert Rule Automation
+# Solution 2: Monitoring and Alert Rule Automation
 
 1. Update the parameters file and deployment script for the **GenerateAlertRules.json** template located in the **AlertTemplates** folder.
 
