@@ -53,15 +53,3 @@
 
     <img src="images/7.jpg"/>
  
-9. Run below command to host the web app to aks cluster:
- 
-
-    ```
-    mkdir ~/clouddrive/source/ReadyAzureMonitoringWorkshop -p
-    cd ~/clouddrive/source/ReadyAzureMonitoringWorkshop
-    git clone https://github.com/rkuehfus/pre-ready-2019-H1.git
-    code .
-    ```
-
-    <img src="images/8.jpg"/>
- 
