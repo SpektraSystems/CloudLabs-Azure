@@ -1,12 +1,17 @@
 # Pre-requisites
 
-1. Open azure portal then go to cloud shell and follow the steps:
+1. Open a browser on the provided VM and Navigate to Azure Portal( https://portal.azure.com ) and login with the credentials provided under Azure Crendentials on Environment Details tab on the right.
  
     <img src="images/i1.jpg"/>
  
-    <img src="images/2.jpg"/>
+ Then launch the CloudShell by clicking on the icon next to the search bar at the top of the Azure portal and Select Bash when the prompt comes up.
  
-    <img src="images/3.jpg"/>
+ Select Show advanced settings and proceed as shown in the below images:
+ 
+   <img src="images/2.jpg"/>
+ 
+ 
+   <img src="images/3.jpg"/>
  
 2. Run below commands for connecting to cluster using below command:
  
