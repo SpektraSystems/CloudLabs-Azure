@@ -1,4 +1,4 @@
-# Challenge 4: Application Insights 
+# Solution 4: Application Insights 
 
    > **Note:** User Access Administrator role is required to complete the Container Insights Challenge
 
