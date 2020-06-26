@@ -1,4 +1,4 @@
-# Challenge 1: Monitoring and Alert Rule
+# Solution 1: Monitoring and Alert Rule
 
 1. Login to **Azure Portal** with your credentials given in environment details.
 
