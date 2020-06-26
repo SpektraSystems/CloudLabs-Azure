@@ -1,4 +1,4 @@
-# Challenge 6a: Workbooks
+# Solution 6a: Workbooks
 
 Workbook documentation is available here: https://docs.microsoft.com/en-us/azure/azure-monitor/app/usage-workbooks
  
