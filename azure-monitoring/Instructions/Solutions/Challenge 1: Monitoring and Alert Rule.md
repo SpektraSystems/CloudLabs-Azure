@@ -16,7 +16,7 @@
 
    <img src="images/sqlsrv1.jpg"/>
    
-5. Connect to the database server VM (xxxxxSqlSrv16) make sure to use below username and password to connect your SQL Server Virtual Manchine:
+5. Connect to the database server VM (SqlSrv16-xxxxx) make sure to use below username and password to connect your SQL Server Virtual Manchine:
 
     * Username: **sqladmin**
     * Password: **demopass!123**
