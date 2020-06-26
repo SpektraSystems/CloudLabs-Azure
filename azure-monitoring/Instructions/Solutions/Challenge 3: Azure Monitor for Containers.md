@@ -28,7 +28,6 @@
 
 7. Once Visual Studio opens and settles down. Change the project over to **Web** and select **Azure Dev Spaces**.
 
-    <img src="images/1.jpg"/>
 
 8. The Azure Dev Spaces login screen will appear. Make sure to select your **Subscription** and **Azure Kubernetes Service** cluster that was created during the setup.
 
