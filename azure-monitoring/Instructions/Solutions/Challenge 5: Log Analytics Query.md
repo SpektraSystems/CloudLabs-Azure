@@ -4,7 +4,9 @@
 
     <img src="images/logs9.jpg"/>
 
+
     * Processor Utilization: Processor / % Processor Time
+
 
     ```
     Perf
@@ -13,9 +15,12 @@
     | sort by AVGPROCESSOR desc
     | render timechart
     ```
+    
     <img src="images/logs.jpg"/>
 
+
     * Memory Utilization: Memory / % Committed Bytes In Use
+
 
     ```
     Perf
@@ -24,7 +29,9 @@
     | sort by AVGMEMORY desc
     | render timechart
     ```
+    
     <img src="images/logs1.jpg"/>
+
 
     * Disk Utilization (IO): Disk Reads/sec and Disk Writes/sec
 
@@ -44,11 +51,13 @@
     | sort by AvgDiskWritesIO desc
     | render timechart
     ```
+    
     <img src="images/logs5.jpg"/>
 
     * Save the Query
 
     * Create a heartbeat query for Web and SQL Server
+
 
     ```
     Heartbeat
@@ -76,7 +85,9 @@
     | project TimeGenerated, PercentUsage, Computer
     | render timechart
     ```
+    
     <img src="images/logs6.jpg"/>
+    
 
     * Solution 2 using let and join
 
@@ -101,7 +112,9 @@
     | project TimeGenerated, PercentUsage, Computer
     | render timechart
     ```
+    
     <img src="images/logs7.jpg"/>
+    
 
 3. Combine infrastructure and application logs to create a single timeseries chart that includes:
 
