@@ -169,11 +169,11 @@
 
 26. Give values as shown below and Click **OK**:
 
-* Under **Basics** select Resource Group as ODL-Moitor-XXXXX and Name the Action group as **Hackgroup**. Click Next.
+* Under **Basics** select Resource Group as **ODL-Moitor-XXXXX** and Name the Action group as **Hackgroup**. Click Next.
 
    <img src="images/action1.jpg"/>
 
-* Select Notification type as Email/SMS message/Push/Voice and name it as email. Click on **Review+create**
+* Select Notification type as **Email/SMS message/Push/Voice** and name it as email. Under **Email/SMS message/Push/Voice** check the **Email** and click **OK**.
    <img src="images/action2.jpg"/>
    
 * Click on Create.
