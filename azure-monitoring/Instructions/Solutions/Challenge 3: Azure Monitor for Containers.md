@@ -1,4 +1,4 @@
-# Challenge 3: Azure Monitor for Containers
+# Solution 3: Azure Monitor for Containers
 
 1. From your Visual Studio Server, deploy the eShoponWeb application to AKS using Dev Spaces
 
