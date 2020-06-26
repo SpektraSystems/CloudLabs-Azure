@@ -134,7 +134,18 @@
 
    > **TIP:** If you would like to run a second test you must first delete the database you created and recreate it. HammerDB will not run a test against a database that has data in it.  When you run a test is fills the database with a bunch of sample data.
 
-22. Go Back to **Azure portal** and from **Azure Monitor** create a graph for the **SQL Server Active Transactions and Percent CPU** and pin to your Azure Dashboard.
+22. Go Back to **Azure portal**, then open Matrcis under **Sql Server VM** for creating a graph for the **SQL Server Active Transactions and Percent CPU** and pin to your Azure Dashboard.
+
+
+* Select Namespace as SQL server VM name then **Select SQLServer:Databases\Active Transactions** from matrics.
+
+   <img src="images/metricsql1.jpg"/>
+
+* Select any graph
+
+   <img src="images/metricsql2.jpg"/>
+
+* Pin to your Azure Dashboard
 
    <img src="images/matrix.jpg"/>
 
