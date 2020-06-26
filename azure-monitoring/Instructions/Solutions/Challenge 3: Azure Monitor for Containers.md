@@ -81,7 +81,7 @@
 
     * Generate an exception in the **eShoponWeb** application
 
-      > (Hint: Try to change your password)
+   > (Hint: Try to change your password)
 
 
 19. **Login** into your webapp. Enter the user and password provided on the page.
