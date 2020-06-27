@@ -8,7 +8,7 @@
 
     <img src="images/aks01.jpg"/>
 
-2. To enable Http Application Routing on an existing cluster, use the command: th below command: (Optional: Only if http routing not enable)
+2. To enable Http Application Routing on an existing cluster, use the below command: (Optional: Only if http routing not enable)
 
     ```    
     az aks enable-addons -n {cluster_name} -g {rg_name} --addons http_application_routing
