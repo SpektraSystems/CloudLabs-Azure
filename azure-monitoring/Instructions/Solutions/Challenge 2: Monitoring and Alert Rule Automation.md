@@ -63,13 +63,15 @@
 
 9. Modify the **GenerateAlertsRules.json** to include “Disk Write Operations/Sec” and set a threshold of 20.
 
+* Update the name with **Disk_Write_Alert** and threshold with **20** (ands save it).
+
     > **Tip:** Go here to view the list of metrics available by resource type - https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-supported-metrics#microsoftcomputevirtualmachines
 
     > **Use this link to see the ARM schema-** https://docs.microsoft.com/en-us/rest/api/monitor/metricalerts/update
 
     <img src="images/challenge2-new-image-for-step-9.jpg"/>
 
-10. Rerun your template and verify your new Alert Rules are created for each of your VMs.
+10. Rerun your template using PowerShell sript and verify your new Alert Rules are created for each of your VMs.
 
     <img src="images/temp6.jpg"/>
 
