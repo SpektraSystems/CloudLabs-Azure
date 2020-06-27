@@ -12,7 +12,7 @@
 
 4. Select Web
 
-    <img src="images/11.jpg"/>
+    <img src="images/web1.jpg"/>
 
 5. Right-click on **Web** in **Solutions Explorer** and select properties. Under Debug unselect the checkbox for **Enable SSL**.
 
