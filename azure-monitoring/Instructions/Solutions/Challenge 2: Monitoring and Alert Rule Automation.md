@@ -16,23 +16,24 @@
 
     <img src="images/temp2.jpg"/>
 
-5. Update the **deployAlertRules.parameters.json** and save the file.
+5. Update the **deployAlertRules.parameters.json** with resource ID and VM's name.
 
     <img src="images/visualtemp.jpg"/>
 
-6. Save the parameters file and update the **deployAlertRulesTemplate.ps1** file with the name of your **Resource Group** and update the path for **$template** and **$para** then save it.
+6. Save the parameters file and follow the steps to update the **deployAlertRulesTemplate.ps1** file.
 
-7. Deploy the **GenerateAlertRules.json** template using the **PowerShell** script given in deployAlertRulesTemplate.ps1:
+7. Will deploy the **GenerateAlertRules.json** template using the PowerShell script given in deployAlertRulesTemplate.ps1:
 
 * Open the **Powershell ISE** in your virtual machine.
 
     <img src="images/powersh1.jpg"/>
 
-* Open the **deployAlertRulesTemplate.ps1** file which is under **C:\AzMonHack\AzureMonitorHackathon-master\Student\Resources\AlertsTemplate\**.
+* Open the **deployAlertRulesTemplate.ps1** file which is under "C:\AzMonHack\AzureMonitorHackathon-master\Student\Resources\AlertsTemplate\".
 
     <img src="images/powersh2.jpg"/>
+    <img src="images/powersh3.jpg"/>
 
-* Update the rgname your **Resource Group** name and path for **$template** and **$para** as given  below in **deployAlertRulesTemplate.ps1** file:
+* Update the rgname your **Resource Group** name and path for **$template** and **$para** as shown  below:
 
     ```
     #Specify your resourcegroup
@@ -48,7 +49,7 @@
     $para="C:\AzMonHack\AzureMonitorHackathon-master\Student\Resources\AlertsTemplate\deployAlertRules.parameters.json"
     ```
 
-* Save the file and run it.
+* Save the **deployAlertRulesTemplate.ps1** file and run it.
 
     <img src="images/powersh4.jpg"/>
     
