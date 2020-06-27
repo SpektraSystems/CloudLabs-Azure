@@ -18,75 +18,77 @@
 
     <img src="images/21.jpg"/>
 
-6. Click Save
+6. Save the changes.
 
-7. Click on **IIS Express** to test the eShopOnWeb application
+7. Click on **IIS Express** to test the eShopOnWeb application.
 
     <img src="images/vs21.jpg"/>
+    <img src="images/vs4.jpg"/>
 
 8. You should see the **eShop** app open locally. Close it and let’s add the **Application Insights SDK**
 
-    <img src="images/vs4.jpg"/>
+    <img src="images/telemetry.jpg"/>
 
-9. Stop the app and add the updated **Application Insights NuGet package** with latest version
-
-    > **Note**: Make sure to only at this package. Do not update everything.
-
-10. Go to **Tools**, **NuGet Package Manager**, **Manage NuGet Packages for Solution**
-
-    <img src="images/vs12.jpg"/>
-
-11. Check off the **Microsoft.ApplicationInsights** package and click **Install**
-
-    <img src="images/vs13.jpg"/>
-
-12. Click **OK**
-
-    <img src="images/vs131.jpg"/>
-
-13. Click **I Accept**. When finished run the **eShopOnWeb** application again to make sure it’s working
-
-    <img src="images/vs132.jpg"/>
-
-14. On the right hand side, find Web and right click, go to **Add** and select **Application Insights Telemetry**
-
-    <img src="images/vs5.jpg"/>
-
-15. Configure dependency as **Azure Application Insight** and click **Next**
+9. Configure dependency as **Azure Application Insight** and click **Next**
 
     <img src="images/vs61.jpg"/>
 
-16. Select your **subscription**, **Resource** (name of your App Insights) and click **Next**
+10. Select your **subscription**, **Resource** (name of your App Insights) and click **Next**
 
     <img src="images/vs71.jpg"/>
 
-17. Configure Azure Application Insight and Click **Next**.
+11. Configure Azure Application Insight and Click **Next**.
 
     <img src="images/vs81.jpg"/>
 
-18. Click on Finish to Run the **eShopOnWeb** Web project and check out the App Insights tooling
+12. Click on Finish to Run the **eShopOnWeb** Web project and check out the App Insights tooling
 
     <img src="images/91.jpg"/>
 
     <img src="images/101.jpg"/>
 
-19. Test the application by running it and verify it’s working.
+13. Run the eShopOnWeb Web project and check out the App Insights tooling.
 
-    <img src="images/111.jpg"/>
+14. Test the application by running it and verify it’s working.
 
-20. While its running you can navigate to Application Insights and view the telemetry while you are interacting with eShop running on the local machine. Add something to the shopping cart, log in and check out.
+15. While its running you can navigate to Application Insights and view the telemetry while you are interacting with eShop running on the local machine. Add something to the shopping cart, log in and check out.
 
-21. Publish eShopOnWeb Web project to AKS
+    <img src="images/telemtry1.jpg"/>
+    <img src="images/telemtry2.jpg"/>
 
-22. Change over to **Azure Dev Spaces** from **IIS Express** and run the **Web project (F5)**
+16. Stop the app and add the updated **Application Insights NuGet package** with latest version
+
+    > **Note**: Make sure to only at this package. Do not update everything.
+
+17. Go to **Tools**, **NuGet Package Manager**, **Manage NuGet Packages for Solution**
+
+    <img src="images/telemtry3.jpg"/>
+
+18. Check off the **Microsoft.ApplicationInsights** package and click **Update**.
+
+    <img src="images/telemtry4.jpg"/>
+
+19. Click **OK**
+
+    <img src="images/telemtry5.jpg"/>
+
+20. Click **I Accept**. When finished run the **eShopOnWeb** application again to make sure it’s working
+
+    <img src="images/telemtry6.jpg"/>
+    <img src="images/telemtry7.jpg"/>
+
+   * Publish **eShopOnWeb** Web project to AKS
+
+21. Change over to **Azure Dev Spaces** from **IIS Express** and run the **Web project (F5)**
 
     <img src="images/challenge3-step-7.jpg"/>
+    <img src="images/telemtry8.jpg"/>
 
-23. You can always edit some text in the site to verify that indeed the container is being update. Make sure when you run the project the browser is pointing to your URL for the container not the local host. You may need to stop it again, save the project and run it again if this happens
+22. You can always edit some text in the site to verify that indeed the container is being update. Make sure when you run the project the browser is pointing to your URL for the container not the local host. You may need to stop it again, save the project and run it again if this happens
 
-24. Generate some load and check out the results
+   * Generate some load and check out the results
 
-25. From your laptop or the Visual Studio Server copy the code in the **LoadScripts** folder and modify it to your URL
+23. From your virtual machine, open **UrlGenLoadwithPS.ps** under **LoadScripts** folder and modify it to your URL
 
     ```
     for ($i = 0 ; $i -lt 100; $i++)
@@ -94,11 +96,9 @@
     Invoke-WebRequest -uri http:// mon19webscalesetlb.eastus.cloudapp.azure.com/
     }
     ```
-26. Run the code to generate some load on your **eShopOnWeb** site
+24. Run the code to generate some load on your **eShopOnWeb** site
 
-    <img src="images/vs16.jpg"/>
-
-27. To trip the exception:
+25. To trip the exception:
 
     * Open your **eShop** site in your browser and **login** to the site
 
@@ -106,7 +106,7 @@
 
     * Try to change your **password**
 
-    <img src="images/vs18.jpg"/>
+    <img src="images/telemetry9.jpg"/>
 
     <img src="images/vs19.jpg"/>
 
@@ -116,6 +116,6 @@
 
     <img src="images/vs202.jpg"/>
 
-28. Create **Alerts** based on Availability and exceptions in azure Monitor. Create Alert Rule **Server Exceptions count over 0**.
+26. Create **Alerts** based on Availability and exceptions in azure Monitor. Create Alert Rule **Server Exceptions count over 0**.
 
     <img src="images/vs22.jpg"/>
