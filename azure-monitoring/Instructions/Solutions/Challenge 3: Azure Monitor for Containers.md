@@ -1,22 +1,25 @@
 # Solution 3: Azure Monitor for Containers
 
-1. From your Visual Studio Server, deploy the eShoponWeb application to AKS using Dev Spaces
+ In this will deploy the eShoponWeb application to AKS using Dev Spaces from your Visual Studio Server
 
     > **Hint:** https://docs.microsoft.com/en-us/azure/dev-spaces/get-started-netcore-visualstudio
 
-2. Make sure that Http Application Routing is enabled.
+1. Make sure that Http Application Routing is enabled.
 
     <img src="images/aks01.jpg"/>
 
-    ```   
-    To enable Http Application Routing on an existing cluster, use the command: az aks enable-addons -n {cluster_name} -g {rg_name} --addons http_application_routing
+2. To enable Http Application Routing on an existing cluster, use the command: th below command: (Optional: Only if http routing not enable)
+
+    ```    
+    az aks enable-addons -n {cluster_name} -g {rg_name} --addons http_application_routing
     ```
 
     ```
     Sample Output:
     az aks enable-addons -n 169844aksdemo -g ODL-monitor-169844 --addons http_application_routing
     ```
-3. Now, you will open the solution file in Visual Studio 2019
+    
+3. Now, you will open the solution file in Visual Studio.
 
 
 4. Navigate to **c:\eshoponweb\eShopOnWeb-master**
@@ -45,26 +48,27 @@
 
 11. Click **OK**.
 
-    <img src="images/eshop3.jpg"/>
+    <img src="images/azureweb.jpg"/>
 
-12. Click in the lower left to see the progress.
+12. Click on the Ready lower left to see the progress.
 
-    <img src="images/eshop4.jpg"/>
+    <img src="images/azureweb1.jpg"/>
+    <img src="images/azureweb3.jpg"/>
 
-13. Don’t worry about seeing the message about the unreachable code.
+13. To run the project (build and deploy to the AKS cluster) and view live logs in Container Insights, the app must be running on container without VS debugging by performing a (Crtl +F5).
 
-    <img src="images/eshop5.jpg"/>
+* Don’t worry about seeing the message about the unreachable code.
+
+    <img src="images/azureweb2.jpg"/>
 
     > **Note:** The initial creation of the container takes a while.
 
 14. When its complete, Visual Studio will open the URL for you in the default browser.
 
+    <img src="images/azureweb5.jpg"/>
 
-    > **Note:** If URL doesn't pop up, you will need to re-run the application as shown in step 7
 
 15. Copy the URL and test it from your local machine.
-
-    <img src="images/eshop7.jpg"/>
 
     > **Note:** The URL can also be found in the Output section if you scroll up.
 
