@@ -40,7 +40,7 @@
 
     <img src="images/eshop2.jpg"/>
 
-9. It’s important you check off the **Publicly Accessible** checkbox.
+9. It’s important you check on the **Enable ingress** checkbox.
 
 10. Click **OK**.
 
@@ -50,7 +50,7 @@
 
     <img src="images/azureweb.jpg"/>
 
-12. Click on the Ready lower left to see the progress.
+12. Click on the Ready i.e, lower left to see the progress.
 
     <img src="images/azureweb1.jpg"/>
     <img src="images/azureweb3.jpg"/>
