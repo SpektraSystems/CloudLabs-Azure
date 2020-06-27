@@ -16,21 +16,46 @@
 
     <img src="images/temp2.jpg"/>
 
-5. Then update the **deployAlertRules.parameters.json** file as it shows below:
+5. Update the **deployAlertRules.parameters.json** and save the file.
 
-    <img src="images/step-5-image(new).jpg"/>
+    <img src="images/visualtemp.jpg"/>
 
-6. Save the parameters file and update the **deployAlertRulesTemplate.ps1** file with the name of your **Resource Group** (and save it).
+6. Save the parameters file and update the **deployAlertRulesTemplate.ps1** file with the name of your **Resource Group** and update the path for **$template** and **$para** then save it.
 
-7. Deploy the **GenerateAlertRules.json** template using the **PowerShell** script given below ( deployAlertRulesTemplate.ps1 ):
+7. Deploy the **GenerateAlertRules.json** template using the **PowerShell** script given in deployAlertRulesTemplate.ps1:
+
+* Open the **Powershell ISE** in your virtual machine.
+
+    <img src="images/powersh1.jpg"/>
+
+* Open the **deployAlertRulesTemplate.ps1** file which is under **C:\AzMonHack\AzureMonitorHackathon-master\Student\Resources\AlertsTemplate\**.
+
+    <img src="images/powersh2.jpg"/>
+
+* Update the rgname your **Resource Group** name and path for **$template** and **$para** as given  below in **deployAlertRulesTemplate.ps1** file:
 
     ```
+    #Specify your resourcegroup
+    $rgname="ODL-monitor-XXXXXX"
+    $rg = Get-AzResourceGroup -Name $rgname
+    
+    #Get Azure Monitor Action Group
+    (Get-AzActionGroup -ResourceGroup $rgname).Id
+    
     #Update Path to files as needed
-    $template=".\AlertsTemplate\GenerateAlertRules.json"
-    $para=".\AlertsTemplate\deployAlertRules.parameters.json"
+    #Update the parameters file with the names of your VMs and the ResourceId of your Action Group (use command above to find ResourceId)
+    $template="C:\AzMonHack\AzureMonitorHackathon-master\Student\Resources\AlertsTemplate\GenerateAlertRules.json"
+    $para="C:\AzMonHack\AzureMonitorHackathon-master\Student\Resources\AlertsTemplate\deployAlertRules.parameters.json"
     ```
-    <img src="images/temp4.jpg"/>
 
+* Save the file and run it.
+
+    <img src="images/powersh4.jpg"/>
+    
+* Give the Azure Credentails and see the output.
+
+    <img src="images/powersh5.jpg"/>
+    
 8. Verify you have new **Monitor Alert Rules** in the Portal or from the command line (sample command is in the deployment script).
 
     <img src="images/temp5.jpg"/>
