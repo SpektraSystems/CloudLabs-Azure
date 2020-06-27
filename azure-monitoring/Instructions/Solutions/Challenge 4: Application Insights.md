@@ -53,8 +53,8 @@
 
 15. While its running you can navigate to Application Insights and view the telemetry while you are interacting with eShop running on the local machine. Add something to the shopping cart, log in and check out.
 
-    <img src="images/telemtry1.jpg"/>
-    <img src="images/telemtry2.jpg"/>
+    <img src="images/telemetry1.jpg"/>
+    <img src="images/telemetry2.jpg"/>
 
 16. Stop the app and add the updated **Application Insights NuGet package** with latest version
 
@@ -62,27 +62,27 @@
 
 17. Go to **Tools**, **NuGet Package Manager**, **Manage NuGet Packages for Solution**
 
-    <img src="images/telemtry3.jpg"/>
+    <img src="images/telemetry3.jpg"/>
 
 18. Check off the **Microsoft.ApplicationInsights** package and click **Update**.
 
-    <img src="images/telemtry4.jpg"/>
+    <img src="images/telemetry4.jpg"/>
 
 19. Click **OK**
 
-    <img src="images/telemtry5.jpg"/>
+    <img src="images/telemetry5.jpg"/>
 
 20. Click **I Accept**. When finished run the **eShopOnWeb** application again to make sure it’s working
 
-    <img src="images/telemtry6.jpg"/>
-    <img src="images/telemtry7.jpg"/>
+    <img src="images/telemetry6.jpg"/>
+    <img src="images/telemetry7.jpg"/>
 
    * Publish **eShopOnWeb** Web project to AKS
 
 21. Change over to **Azure Dev Spaces** from **IIS Express** and run the **Web project (F5)**
 
     <img src="images/challenge3-step-7.jpg"/>
-    <img src="images/telemtry8.jpg"/>
+    <img src="images/telemetry8.jpg"/>
 
 22. You can always edit some text in the site to verify that indeed the container is being update. Make sure when you run the project the browser is pointing to your URL for the container not the local host. You may need to stop it again, save the project and run it again if this happens
 
