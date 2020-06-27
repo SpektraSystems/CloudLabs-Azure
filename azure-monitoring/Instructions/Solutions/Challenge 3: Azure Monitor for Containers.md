@@ -2,7 +2,7 @@
 
  In this will deploy the eShoponWeb application to AKS using Dev Spaces from your Visual Studio Server
 
-    > **Hint:** https://docs.microsoft.com/en-us/azure/dev-spaces/get-started-netcore-visualstudio
+    > Hint: https://docs.microsoft.com/en-us/azure/dev-spaces/get-started-netcore-visualstudio
 
 1. Make sure that Http Application Routing is enabled.
 
