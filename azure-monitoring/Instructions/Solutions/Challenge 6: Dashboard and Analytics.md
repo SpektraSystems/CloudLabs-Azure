@@ -69,11 +69,11 @@
 
 14. Configure Azure Monitor data source
 
-    <img src="images/app9.jpg"/>
+    <img src="images/challenge6-step14.jpg"/>
 
 15. Fill out the Azure Monitor API Details
 
-    <img src="images/app10.jpg"/>
+    <img src="images/challenge6-step15.jpg"/>
 
 16. From your Environment Details copy the **Tenant Id**, **Application/Client Id**, **Application Secret Key** properties to find the Directory ID
 
