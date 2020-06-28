@@ -6,30 +6,22 @@
 
 1. Create a Web App for Linux and configure as recommended below:
 
-    
     <img src="images/web.jpg"/>
     
 
-    * Create a new App service plan and select B1 Basic. It’s under Dev/Test
-
+ * Create a new App service plan and select B1 Basic. It’s under Dev/Test
 
     <img src="images/web1.jpg"/>
     
-
-    * Select Container and specify Docker Hub, Public and Grafana/Grafana for the image tags (this should deploy the latest version by default)
-
+ * Select Container and specify Docker Hub, Public and Grafana/Grafana for the image tags (this should deploy the latest version by default)
 
     <img src="images/web3.jpg"/>
     
-
-    * Should look like this when complete:
-
+ * Should look like this when complete:
 
     <img src="images/web4.jpg"/>
     
-
-    * Click Create
-
+* Click Create
 
 2. After the Web App deploys, we need to configure some settings to enable Azure Monitor Plugin
 
@@ -50,7 +42,6 @@
 7. Click **Add** new Setting and add the following:
 
     <img src="images/app3.jpg"/>
-
 
     <img src="images/app4.jpg"/>
 
@@ -100,7 +91,6 @@
 
     <img src="images/app14.jpg"/>
 
-
     <img src="images/app15.jpg"/>
 
 20. Copy the key and paste in the **Grafana Application Insights Details**. **Note:** You cannot retrieve this key again.
@@ -129,7 +119,7 @@
 
 27. Under Metrics, make sure service is Azure Log Analytics, your workspace is selected, and build out a Log Analytics query (answer query below for your reference).
 
-Sample query:
+**Sample query:**
 
    ```
     Perf
@@ -143,10 +133,9 @@ Sample query:
 
 28. Click **Run** to test
 
-29. Now let’s make a few changes. Click on **Axes** and change the Unit to percent and **Y-Max** to 100. Run it 
+29. Now let's make a few changes. Click on **Axes** and change the Unit to percent and **Y-Max** to 100. Run the query
 
     <img src="images/grfa161.jpg"/>
-
 
     <img src="images/grfa162.jpg"/>
 
@@ -154,16 +143,14 @@ Sample query:
 
     <img src="images/grfa13.jpg"/>
 
-
     <img src="images/grfa12.jpg"/>
 
 31. Should look something like this:
 
     <img src="images/grfa111.jpg"/>
 
-
  #### Advanced features:
- 
+
  * Variables
 
  * Some query values can be selected through **UI** dropdowns, and updated in the query.
@@ -188,12 +175,11 @@ Sample query:
     <img src="images/grfa71.jpg"/>
 
 
-    > **Note**: In my case I make sure to specify the Workspace name as I have many workspaces and wanted to make sure we only returned values that would work in our chart. Click Add
+    > Note: In my case I make sure to specify the Workspace name as I have many workspaces and wanted to make sure we only returned values that would work in our chart. Click Add
 
 33. Make sure to **Save** your dashboard
 
     <img src="images/grfa51.jpg"/>
-
 
     <img src="images/grfa52.jpg"/>
 
@@ -223,8 +209,7 @@ Sample query:
 
 38. Try creating a variable that accepts percentiles (50, 90 and 95).
 
-
- #### Annotations:
+ ## Annotations:
  
    * Another cool Grafana feature is annotations – which marks points in time that you can overlay on top of charts.
 
@@ -248,5 +233,4 @@ Sample query:
 
    <img src="images/grfa.jpg"/>
 
-   > **HINT:** Use the sample Kusto/Data explorer queries to create more dashboard scenarios.
-
+   > HINT: Use the sample Kusto/Data explorer queries to create more dashboard scenarios.
