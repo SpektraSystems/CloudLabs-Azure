@@ -59,7 +59,7 @@
 
 11. Navigate to the URL in your browser. The username is **admin** lowercase and the password is whatever you configured in Application Settings. Notice the version of Grafana as you need 5.2.0 or newer if you are querying **Azure Log Analytics**
 
-    <img src="images/app7.jpg"/>
+    <img src="images/challenge6-step11.jpg"/>
 
 12. Once logged into **Grafana** you should notice Azure Monitor is installed
 
