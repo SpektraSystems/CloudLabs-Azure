@@ -8,7 +8,7 @@
 
     <img src="images/vs.jpg"/>
 
-3. If this is the first time you are opening Visual Studio please log in or create an account and log in.
+3. If this is the first time you are opening Visual Studio please log in again.
 
 4. Select Web
 
