@@ -128,24 +128,24 @@
     let PercentTable = Perf
     | where Computer in (myNode)
     | where TimeGenerated > ago(timerange)
-    //Aggregate maximum values of usage and capacity in 1 minute intervals for each node
-    | summarize CPUUsage = maxif(CounterValue, CounterName =="cpuUsageNanoCores"),
-    CPUCapacity = maxif(CounterValue,CounterName == "cpuCapacityNanoCores")
-    by bin(TimeGenerated, 1m)
+    //Aggregate maximum values of usage and capacity in 1 minute intervals for each node  
+    | summarize CPUUsage = maxif(CounterValue, CounterName =="cpuUsageNanoCores"), 
+            CPUCapacity = maxif(CounterValue,CounterName == "cpuCapacityNanoCores")  
+            by bin(TimeGenerated, 1m)
     //Calculate Percent Usage and rename TimeGenerated
-    | extend PercentUsage = (CPUUsage / CPUCapacity) *100.0, timestamp = TimeGenerated
-    | project timestamp, PercentUsage;
+    | extend PercentUsage = (CPUUsage / CPUCapacity) *100.0, timestamp = TimeGenerated 
+    | project timestamp, PercentUsage; 
     //Add AppInsights Data
-    let AppInsights = app("kjp17hackAppInsights").pageViews
+    let AppInsights = app("204049hackAppInsights").pageViews
     | where timestamp > ago(timerange)
     | summarize responsetime = avg(duration) by bin(timestamp, 1m)
     | extend responsetimeseconds = responsetime / 1000.0
     | project timestamp, responsetimeseconds;
     // Join Percent Usage and AppInsights
-    PercentTable
+    PercentTable 
     | join AppInsights on timestamp
     | project timestamp, PercentUsage, responsetimeseconds
-    | render timechart
+    | render timechart 
     ```
 
     * Solution 2 with hardcoding node name and using let and join statements
@@ -154,14 +154,17 @@
     // Declare time range variable
     let timerange = 5h;
     //Store snapshot of Perf table for the node where the app container is running
-    let myPerf = materialize ( Perf where TimeGenerated > ago(timerange) where Computer == "aks-agentpool-10755307-2" );
+    let myPerf = materialize ( Perf
+                         | where TimeGenerated > ago(timerange)
+                         | where Computer == "aks-agentpool-36675746-2"
+                         );
     //Store Usage Values
-    let myUsage = myPerf
-    | where CounterName == "cpuUsageNanoCores"
+    let myUsage = myPerf 
+    | where CounterName == "cpuUsageNanoCores" 
     | summarize CPUUsage = max(CounterValue) by bin(TimeGenerated, 1m);
     //Store Capacity Values
-    let myCapacity = myPerf
-    | where CounterName == "cpuCapacityNanoCores"
+    let myCapacity = myPerf 
+    | where CounterName == "cpuCapacityNanoCores" 
     | summarize CPUCapacity = max(CounterValue) by bin(TimeGenerated, 1m);
     //Calculate Percentage and rename TimeGenerated to timestamp
     let Percent = myUsage
@@ -169,16 +172,16 @@
     | extend PercentUsage = (CPUUsage / CPUCapacity) *100.0, timestamp = TimeGenerated
     | project timestamp, PercentUsage;
     //Add AppInsights Data
-    let AppInsights = app("kjp17hackAppInsights").pageViews
+    let AppInsights = app("204049hackAppInsights").pageViews
     | where timestamp > ago(timerange)
     | summarize responsetime = avg(duration) by bin(timestamp, 1m)
     | extend responsetimeseconds = responsetime/1000.0
     | project timestamp, responsetimeseconds
     | sort by timestamp asc;
     // Join Percent Usage and AppInsights
-    Percent
+    Percent 
     | join AppInsights on timestamp
     | project timestamp, PercentUsage, responsetimeseconds
     | sort by timestamp asc
-    | render timechart
+    | render timechart 
     ```
