@@ -3,11 +3,9 @@
 1. Write a performance query in Azure Log Analytics that renders a time chart for the last 4 hours for both of the Web Servers and the SQL Server for the following perf metrics. Save each query to your favorites.
 
     <img src="images/logs9.jpg"/>
-
-
-    * Processor Utilization: Processor / % Processor Time
-
-
+    
+* Processor Utilization: Processor / % Processor Time
+    
     ```
     Perf
     | where ObjectName == "Processor" and CounterName == "% Processor Time" and TimeGenerated > ago(4h)
@@ -15,12 +13,11 @@
     | sort by AVGPROCESSOR desc
     | render timechart
     ```
-    
+	
     <img src="images/logs.jpg"/>
-
-
-    * Memory Utilization: Memory / % Committed Bytes In Use
-
+    
+    
+* Memory Utilization: Memory / % Committed Bytes In Use
 
     ```
     Perf
@@ -32,9 +29,7 @@
     
     <img src="images/logs1.jpg"/>
 
-
-    * Disk Utilization (IO): Disk Reads/sec and Disk Writes/sec
-
+* Disk Utilization (IO): Disk Reads/sec and Disk Writes/sec
  
     ```
     Perf
@@ -54,10 +49,9 @@
     
     <img src="images/logs5.jpg"/>
 
-    * Save the Query
+* Save the Query
 
-    * Create a heartbeat query for Web and SQL Server
-
+* Create a heartbeat query for Web and SQL Server
 
     ```
     Heartbeat
@@ -68,7 +62,7 @@
 
 2. Write a performance query that renders a time chart for the last hour of the max percentage CPU usage of the AKS Cluster nodes
 
-    * Solution 1 using maxif
+* Solution 1 using maxif
 
     ```
     // Declare time range variable
@@ -89,7 +83,7 @@
     <img src="images/logs6.jpg"/>
     
 
-    * Solution 2 using let and join
+* Solution 2 using let and join
 
     ```
     //Store last 1hr snapshot of Perf table
