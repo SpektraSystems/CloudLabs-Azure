@@ -11,7 +11,7 @@
 
  * Create a new App service plan and select B1 Basic. It’s under Dev/Test
 
-    <img src="images/web1.jpg"/>
+    <img src="images/challenge-6-step-1-change-size.jpg"/>
     
  * Select Container and specify Docker Hub, Public and Grafana/Grafana for the image tags (this should deploy the latest version by default)
 
