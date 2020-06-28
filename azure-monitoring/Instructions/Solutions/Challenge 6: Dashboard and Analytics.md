@@ -81,7 +81,7 @@
 
 17. Click **Save & Test** and you should see a message like below.
 
-    <img src="images/app12.jpg"/>
+    <img src="images/challenge6-step17.jpg"/>
 
 18. To configure **Application Insights**, find your **API Id** and generate a key
 
@@ -95,7 +95,7 @@
 
 20. Copy the key and paste in the **Grafana Application Insights Details**. **Note:** You cannot retrieve this key again.
 
-    <img src="images/app16.jpg"/>
+    <img src="images/challenge6-step20.jpg"/>
 
 21. Click **Save & Test**. Should like this now.
 
