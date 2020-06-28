@@ -25,7 +25,7 @@
 
 2. After the Web App deploys, we need to configure some settings to enable Azure Monitor Plugin
 
-3. From the Azure Portal navigate to your newly created App Service, Configurstions, Application Settings
+3. From the Azure Portal navigate to your newly created App Service -> Configurations -> General Settings
 
 4. Under **Always On**, change the value to On.
 
