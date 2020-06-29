@@ -42,7 +42,7 @@
 7. Click **Add** new Setting and add the following:
 
     <img src="images/app3.jpg"/>
-
+    
     <img src="images/app4.jpg"/>
 
 8. Click **Save**
@@ -204,7 +204,7 @@
     | order by TimeGenerated asc
    ```
 
-   <img src="images/grfa3.jpg"/>
+   <img src="images/challenge6-for-step33.jpg"/>
 
 34. Make sure to **Save**
 
