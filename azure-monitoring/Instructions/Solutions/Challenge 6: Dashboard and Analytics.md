@@ -145,11 +145,12 @@
 
     <img src="images/grfa162.jpg"/>
 
-28. Let’s save it by click on the disk in the upper right side.
+28. Let’s save it by clicking on **save** in the upper right side.
 
-    <img src="images/grfa13.jpg"/>
+    <img src="images/challenge6-step28.jpg"/>
 
-    <img src="images/grfa12.jpg"/>
+
+    <img src="images/challenge6-step28-part2.jpg"/>
 
 29. Should look something like this:
 
