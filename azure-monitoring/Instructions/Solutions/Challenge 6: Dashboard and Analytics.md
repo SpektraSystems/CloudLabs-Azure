@@ -171,7 +171,7 @@
  * Now let’s add a variable that lets us select computers in the chart. Click on the gear in the upper right corner.
 
 
-   <img src="images/grfa9.jpg"/>
+   <img src="images/challenge6-step29-part3.jpg"/>
 
  * Click on **Add** Variable
 
