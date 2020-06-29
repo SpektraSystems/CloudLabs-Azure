@@ -104,6 +104,10 @@
 23. Create a new dashboard.
 
     <img src="images/app171.jpg"/>
+    
+* click on **add new panel** to add a dashboard
+    
+    <img src="images/challenge6-step-23-part2.jpg"/> 
 
 24. Add **Graph**
 
