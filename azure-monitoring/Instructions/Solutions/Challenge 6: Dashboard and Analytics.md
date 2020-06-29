@@ -175,7 +175,7 @@
 
  * Click on **Add** Variable
 
-   <img src="images/grfa8.jpg"/>
+   <img src="images/challenge6-step29-part4.jpg"/>
 
 30. Configure the **Variable** to look like the screen below.
 
