@@ -162,10 +162,10 @@
 
  * Some query values can be selected through **UI** dropdowns, and updated in the query.
 
- * For example, a **Computer** variable can be defined, and then a dropdown will appear on the dashboard, showing a list of possible values:
+ * For example, a **ComputerName** variable can be defined, and then a dropdown will appear on the dashboard, showing a list of possible values:
 
 
-   <img src="images/grfa10.jpg"/>
+   <img src="images/Advanced-Features-first-image.jpg"/>
 
 
  * Now let’s add a variable that lets us select computers in the chart. Click on the gear in the upper right corner.
