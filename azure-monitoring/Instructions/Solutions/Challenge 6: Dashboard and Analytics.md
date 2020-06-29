@@ -208,7 +208,7 @@
 
 34. Make sure to **Save**
 
-    <img src="images/grfa2.jpg"/>
+   
 
 35. Try it out!
 
