@@ -109,23 +109,19 @@
     
     <img src="images/challenge6-step-23-part2.jpg"/>
 
-* This is how the dashboard looks like :-
+* This is how the dashboard looks like and also graph visualization will be selected as default:-
 
    <img src="images/challenge6-step-23-part3.jpg"/>
 
-24. Add **Graph**
-
-    <img src="images/app181.jpg"/>
-
-25. Edit the **Panel Title**
+24. Edit the **Panel Title**
 
     <img src="images/app21.jpg"/>
 
-26. Under General change to the name to something like **Computer CPU**.
+25. Under General change to the name to something like **Computer CPU**.
 
     <img src="images/app20.jpg"/>
 
-27. Under Metrics, make sure service is Azure Log Analytics, your workspace is selected, and build out a Log Analytics query (answer query below for your reference).
+26. Under Metrics, make sure service is Azure Log Analytics, your workspace is selected, and build out a Log Analytics query (answer query below for your reference).
 
 **Sample query:**
 
@@ -139,21 +135,21 @@
 
    <img src="images/grfa171.jpg"/>
 
-28. Click **Run** to test
+27. Click **Run** to test
 
-29. Now let's make a few changes. Click on **Axes** and change the Unit to percent and **Y-Max** to 100. Run the query
+28. Now let's make a few changes. Click on **Axes** and change the Unit to percent and **Y-Max** to 100. Run the query
 
     <img src="images/grfa161.jpg"/>
 
     <img src="images/grfa162.jpg"/>
 
-30. Let’s save it by click on the disk in the upper right side.
+29. Let’s save it by click on the disk in the upper right side.
 
     <img src="images/grfa13.jpg"/>
 
     <img src="images/grfa12.jpg"/>
 
-31. Should look something like this:
+30. Should look something like this:
 
     <img src="images/grfa111.jpg"/>
 
@@ -178,24 +174,24 @@
 
    <img src="images/grfa8.jpg"/>
 
-32. Configure the **Variable** to look like the screen below.
+31. Configure the **Variable** to look like the screen below.
 
     <img src="images/grfa71.jpg"/>
 
 
     > Note: In my case I make sure to specify the Workspace name as I have many workspaces and wanted to make sure we only returned values that would work in our chart. Click Add
 
-33. Make sure to **Save** your dashboard
+32. Make sure to **Save** your dashboard
 
     <img src="images/grfa51.jpg"/>
 
     <img src="images/grfa52.jpg"/>
 
-34. Now go back and edit your **Computer CPU** chart to update the query to use the new variable.
+33. Now go back and edit your **Computer CPU** chart to update the query to use the new variable.
 
     <img src="images/grfa4.jpg"/>
 
-35. Sample update Computer CPU query to support variable **$ComputerName**
+34. Sample update Computer CPU query to support variable **$ComputerName**
 
    ```
     Perf
@@ -207,15 +203,15 @@
 
    <img src="images/grfa3.jpg"/>
 
-36. Make sure to **Save**
+35. Make sure to **Save**
 
     <img src="images/grfa2.jpg"/>
 
-37. Try it out!
+36. Try it out!
 
     <img src="images/grfa.jpg"/>
 
-38. Try creating a variable that accepts percentiles (50, 90 and 95).
+37. Try creating a variable that accepts percentiles (50, 90 and 95).
 
  ## Annotations:
  
