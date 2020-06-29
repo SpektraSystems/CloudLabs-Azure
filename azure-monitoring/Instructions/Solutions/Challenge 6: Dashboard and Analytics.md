@@ -129,6 +129,12 @@
     | order by TimeGenerated asc
    ```
 
+* To run the query first make sure the service is azure log analytics.
+
+   <img src="images/challenge6-step25-part1.jpg"/>
+   
+* Then paste the query given above
+
    <img src="images/grfa171.jpg"/>
 
 26. Click **Run** to test
