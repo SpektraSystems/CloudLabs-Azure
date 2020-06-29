@@ -107,7 +107,11 @@
     
 * click on **add new panel** to add a dashboard
     
-    <img src="images/challenge6-step-23-part2.jpg"/> 
+    <img src="images/challenge6-step-23-part2.jpg"/>
+
+* This is how the dashboard looks like :-
+
+   <img src="images/challenge6-step-23-part3.jpg"/>
 
 24. Add **Graph**
 
