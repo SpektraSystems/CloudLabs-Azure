@@ -82,7 +82,6 @@
 21. Change over to **Azure Dev Spaces** from **IIS Express** and run the **Web project (F5)**
 
     <img src="images/challenge3-step-7.jpg"/>
-    <img src="images/telemetry8.jpg"/>
 
 22. You can always edit some text in the site to verify that indeed the container is being update. Make sure when you run the project the browser is pointing to your URL for the container not the local host. You may need to stop it again, save the project and run it again if this happens
 
@@ -96,9 +95,13 @@
     Invoke-WebRequest -uri http:// mon19webscalesetlb.eastus.cloudapp.azure.com/
     }
     ```
-24. Run the code to generate some load on your **eShopOnWeb** site
+24. Please follow the instuction given in below link for collecting Appliction insight telemetry when the application is not running locally:
 
-25. To trip the exception:
+https://docs.microsoft.com/en-us/azure/azure-monitor/app/asp-net-core#enable-application-insights-server-side-telemetry-no-visual-studio
+
+25. Run the code to generate some load on your **eShopOnWeb** site
+
+26. To trip the exception:
 
     * Open your **eShop** site in your browser and **login** to the site
 
@@ -116,6 +119,6 @@
 
     <img src="images/vs202.jpg"/>
 
-26. Create **Alerts** based on Availability and exceptions in azure Monitor. Create Alert Rule **Server Exceptions count over 0**.
+27. Create **Alerts** based on Availability and exceptions in azure Monitor. Create Alert Rule **Server Exceptions count over 0**.
 
     <img src="images/vs22.jpg"/>
