@@ -4,41 +4,45 @@
     "Language": "English",
     "Files": [
       {
-        "RawFilePath": "https://accessprivaterepo.azurewebsites.net/PrivateRepoAccess/raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/intro.md",
+        "RawFilePath": "https://accessprivaterepo.azurewebsites.net/PrivateRepoAccess/raw.githubusercontent.com/SpektraSystems/IoT-in-a-Day/master/instructions/readme.md",
         "Order": 1
 
       },
       {
-        "RawFilePath": "https://accessprivaterepo.azurewebsites.net/PrivateRepoAccess/raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/0.md",
+        "RawFilePath": "https://accessprivaterepo.azurewebsites.net/PrivateRepoAccess/raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/intro.md",
         "Order": 2
       },
       {
-        "RawFilePath": "https://accessprivaterepo.azurewebsites.net/PrivateRepoAccess/raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/1.md",
+        "RawFilePath": "https://accessprivaterepo.azurewebsites.net/PrivateRepoAccess/raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/0.md",
         "Order": 3
       },
       {
-        "RawFilePath": "https://accessprivaterepo.azurewebsites.net/PrivateRepoAccess/raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/2.md",
+        "RawFilePath": "https://accessprivaterepo.azurewebsites.net/PrivateRepoAccess/raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/1.md",
         "Order": 4
       },
       {
-        "RawFilePath": "https://accessprivaterepo.azurewebsites.net/PrivateRepoAccess/raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/3.md",
+        "RawFilePath": "https://accessprivaterepo.azurewebsites.net/PrivateRepoAccess/raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/2.md",
         "Order": 5
       },
       {
-        "RawFilePath": "https://accessprivaterepo.azurewebsites.net/PrivateRepoAccess/raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/4.md",
+        "RawFilePath": "https://accessprivaterepo.azurewebsites.net/PrivateRepoAccess/raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/3.md",
         "Order": 6
       },
       {
-        "RawFilePath": "https://accessprivaterepo.azurewebsites.net/PrivateRepoAccess/raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/5.md",
+        "RawFilePath": "https://accessprivaterepo.azurewebsites.net/PrivateRepoAccess/raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/4.md",
         "Order": 7
       },
       {
-        "RawFilePath": "https://accessprivaterepo.azurewebsites.net/PrivateRepoAccess/raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/6.md",
+        "RawFilePath": "https://accessprivaterepo.azurewebsites.net/PrivateRepoAccess/raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/5.md",
         "Order": 8
       },
       {
-        "RawFilePath": "https://accessprivaterepo.azurewebsites.net/PrivateRepoAccess/raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/conclusion.md",
+        "RawFilePath": "https://accessprivaterepo.azurewebsites.net/PrivateRepoAccess/raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/6.md",
         "Order": 9
+      },
+      {
+        "RawFilePath": "https://accessprivaterepo.azurewebsites.net/PrivateRepoAccess/raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/conclusion.md",
+        "Order": 10
       }
       ]
     }
