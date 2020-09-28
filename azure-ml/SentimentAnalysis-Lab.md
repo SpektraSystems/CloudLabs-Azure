@@ -19,7 +19,7 @@ over [here](https://studio.azureml.net/)
 
 The high level solution design of this lab looks like this.
 
-![](Images/Images/images:sentimentanalytics:*.png/image--000.png)
+![](images/sentimentanalysis/image--000.png)
 
 • Two Logic Apps are capturing tweets that contain #happy or #sad
 
@@ -45,7 +45,7 @@ ingestion pipeline.
 
 • In the upper-left corner of Azure portal, select + Create a resource.
 
-![](Images/Images/images:sentimentanalytics:*.png/image--001.png)
+![](images/sentimentanalysis/image--001.png)
 
 • Use the search bar to find Event Hubs
 
@@ -53,7 +53,7 @@ ingestion pipeline.
 
 • Click Create
 
-![](Images/Images/images:sentimentanalytics:*.png/image--002.png)
+![](images/sentimentanalysis/image--002.png)
 
 • Provide the following information to configure your new eventhub.
 
@@ -71,7 +71,7 @@ ingestion pipeline.
 
 **Throughput Units** : 1
 
-![](Images/Images/images:sentimentanalytics:*.png/image--003.png)
+![](images/sentimentanalysis/image--003.png)
 
 • Click Next:Features
 
@@ -83,20 +83,20 @@ ingestion pipeline.
 
 • If the validation is successful, click create
 
-![](Images/Images/images:sentimentanalytics:*.png/image--004.png)
+![](images/sentimentanalysis/image--004.png)
 
 • To view the new workspace, select Go to resource.
 
-![](Images/Images/images:sentimentanalytics:*.png/image--005.png)
+![](images/sentimentanalysis/image--005.png)
 
 • Click on +Event Hub
 
-![](Images/Images/images:sentimentanalytics:*.png/image--006.png)
+![](images/sentimentanalysis/image--006.png)
 
 • Create a new EventHub ingestion-eventHubs. A partition count of 2 and 1 day of
 message retention is sufficient. No need to enable the capture feature.
 
-![](Images/Images/images:sentimentanalytics:*.png/image--007.png)
+![](images/sentimentanalysis/image--007.png)
 
 Click Create
 
@@ -108,22 +108,22 @@ can revoke each one of them separately.
 
 • Navigate to the previously created Event Hub by selecting the event hub.
 
-![](Images/Images/images:sentimentanalytics:*.png/image--008.png)
+![](images/sentimentanalysis/image--008.png)
 
 • Click on Shared access policies (under settings)
 
-![](Images/Images/images:sentimentanalytics:*.png/image--009.png)
+![](images/sentimentanalysis/image--009.png)
 
 • Add here a new policy, that gives read access to Azure Stream Analytics
 
-![](Images/Images/images:sentimentanalytics:*.png/image--010.png)
+![](images/sentimentanalysis/image--010.png)
 
 • Click Create
 
 • Click on the created access policy and copy the connection string with primary
 key. You'll need this later in this lab.
 
-![](Images/Images/images:sentimentanalytics:*.png/image--011.png)
+![](images/sentimentanalysis/image--011.png)
 
 ## Create a Logic App
 
@@ -134,18 +134,18 @@ in search bar on the portal page)
 
 • Click on +Add
 
-![](Images/Images/images:sentimentanalytics:*.png/image--012.png)
+![](images/sentimentanalysis/image--012.png)
 
 • Search for Logic app.
 
-![](Images/Images/images:sentimentanalytics:*.png/image--013.png)
+![](images/sentimentanalysis/image--013.png)
 
 • Click Create
 
 • Create a Logic App, named *{prefix}-sentiment-analysis-ingestion-happy*, choose
 the same region as previously.
 
-![](Images/Images/images:sentimentanalytics:*.png/image--014.png)
+![](images/sentimentanalysis/image--014.png)
 
 • Click Review+Create
 
@@ -155,7 +155,7 @@ the same region as previously.
 
 • Choose to start from *Blank Logic App*.
 
-![](Images/Images/images:sentimentanalytics:*.png/image--015.png)
+![](images/sentimentanalysis/image--015.png)
 
 ## Add a trigger that receives specific tweets
 
@@ -163,22 +163,22 @@ This Logic App must fire each time a tweet contains a certain key word.
 
 • Search for twitter in the search connector and trigger window
 
-![](Images/Images/images:sentimentanalytics:*.png/image--016.png)
+![](images/sentimentanalysis/image--016.png)
 
 • Select Twitter
 
 • Select When a new tweet is posted and authenticate with your Twitter account, by
 clicking Signin.
 
-![](Images/Images/images:sentimentanalytics:*.png/image--017.png)
+![](images/sentimentanalysis/image--017.png)
 
 • Click Authorize app in popup window
 
-![](Images/Images/images:sentimentanalytics:*.png/image--018.png)
+![](images/sentimentanalysis/image--018.png)
 
 • Provide *#happy* as the hashtag to search for and poll every second.
 
-![](Images/Images/images:sentimentanalytics:*.png/image--019.png)
+![](images/sentimentanalysis/image--019.png)
 
 ## Send the tweets to Event Hubs
 
@@ -189,24 +189,24 @@ the Send event action.
 
 • Search for event hub in search connector and action window
 
-![](Images/Images/images:sentimentanalytics:*.png/image--020.png)
+![](images/sentimentanalysis/image--020.png)
 
 • Select event hub -> Send event
 
-![](Images/Images/images:sentimentanalytics:*.png/image--021.png)
+![](images/sentimentanalysis/image--021.png)
 
 • Connect the action to the previously created Event Hub namespace and provide
 connection name
 
-![](Images/Images/images:sentimentanalytics:*.png/image--022.png)
+![](images/sentimentanalysis/image--022.png)
 
 • Select the event hub policy and click create
 
-![](Images/Images/images:sentimentanalytics:*.png/image--023.png)
+![](images/sentimentanalysis/image--023.png)
 
 • In the parameter drop-down select content
 
-![](Images/Images/images:sentimentanalytics:*.png/image--024.png)
+![](images/sentimentanalysis/image--024.png)
 
 • Select the eventhub and add the following JSON structure:
 
@@ -218,7 +218,7 @@ connection name
                  
 • This should result in the following Logic App:
 
-![](Images/Images/images:sentimentanalytics:*.png/image--025.png)
+![](images/sentimentanalysis/image--025.png)
 
 • Click Save
 
@@ -228,9 +228,9 @@ connection name
 successful Logic App runs. All tweets that contain #happy are from now on being
 ingested into your Event Hub.
 
-![](Images/Images/images:sentimentanalytics:*.png/image--027.png)
+![](images/sentimentanalysis/image--027.png)
 
-![](Images/Images/images:sentimentanalytics:*.png/image--028.png)
+![](images/sentimentanalysis/image--028.png)
 
 ### Repeat the above steps to create another Logic App that ingests tweets that contain *#sad*.
 
@@ -243,35 +243,35 @@ the sentiment analysis.
 
 • Click on *Open in studio*.
 
-![](Images/Images/images:sentimentanalytics:*.png/image--029.png)
+![](images/sentimentanalysis/image--029.png)
 
 • Select and/or create a AML Studio workspace. Click OK if you get a warning
 about upgrading the experiment to a later version.
 
-![](Images/Images/images:sentimentanalytics:*.png/image--030.png)
+![](images/sentimentanalysis/image--030.png)
 
 • Run the experiment, via the command at the bottom of the page, in order to
 train the model. This can take several minutes
 
-![](Images/Images/images:sentimentanalytics:*.png/image--031.png)
+![](images/sentimentanalysis/image--031.png)
 
 • Next, you can click Deploy web service. After a while, you get redirected to the
 overview page of the created web service. Copy already the API key, as you will
 need this later in the lab.
 
-![](Images/Images/images:sentimentanalytics:*.png/image--032.png)
+![](images/sentimentanalysis/image--032.png)
 
 **• Via the *Test* button, you can easily provide a value to be analyzed:**
 
-![](Images/Images/images:sentimentanalytics:*.png/image--033.png)
+![](images/sentimentanalysis/image--033.png)
 
 • At the bottom of the page, the result appears
 
-![](Images/Images/images:sentimentanalytics:*.png/image--034.png)
+![](images/sentimentanalysis/image--034.png)
 
 ### • Click now on the *REQUEST/RESPONSE* link, to go to the *API Help Page*, where you need to copy the web service URL for later usage
 
-![](Images/Images/images:sentimentanalytics:*.png/image--035.png)
+![](images/sentimentanalysis/image--035.png)
 
 
 # Process tweets in realtime
@@ -286,20 +286,20 @@ in search bar on the portal page)
 
 • Click on +Add
 
-![](Images/Images/images:sentimentanalytics:*.png/image--036.png)
+![](images/sentimentanalysis/image--036.png)
 
 • Search for stream analytics job.
 
 • Click create
 
-![](Images/Images/images:sentimentanalytics:*.png/image--037.png)
+![](images/sentimentanalysis/image--037.png)
 
 • Create a Stream Analytics Job, named *{prefix}-sentiment-analysis-asa*. Select the
 resource group you created and identical location as the previously created
 services. Keep *Cloud* as the hosting environment and set the *Streaming* units to 1.
 The latter will save you some costs.
 
-![](Images/Images/images:sentimentanalytics:*.png/image--038.png)
+![](images/sentimentanalysis/image--038.png)
 
 • Click Create
 
@@ -311,15 +311,15 @@ Let's now create a new *Input*, which should refer to the Event Hub that we crea
 
 • Go to the *Inputs* blade and click *Add stream input*. Choose *Event Hub*
 
-![](Images/Images/images:sentimentanalytics:*.png/image--039.png)
+![](images/sentimentanalysis/image--039.png)
 
-![](Images/Images/images:sentimentanalytics:*.png/image--040.png)
+![](images/sentimentanalysis/image--040.png)
 
 • In case you created the Event Hub yourself, you can use the Select Event Hub from
 your subscription option. If not, provide the settings manually. You can retrieve all
 these settings from the Event Hubs connection string.
 
-![](Images/Images/images:sentimentanalytics:*.png/image--041.png)
+![](images/sentimentanalysis/image--041.png)
 
 • Click Save
 
@@ -329,12 +329,12 @@ To be able to connect to the AML web service, we must create a new *Function*.
 
 • Go to the *Funtions* blade and click *Add*. Choose *Azure ML Studio*.
 
-![](Images/Images/images:sentimentanalytics:*.png/image--042.png)
+![](images/sentimentanalysis/image--042.png)
 
 • Provide the function alias *getSentiment*. Provide the settings manually by
 specifying the *Url* and *API Key* that you copied previously.
 
-![](Images/Images/images:sentimentanalytics:*.png/image--043.png)
+![](images/sentimentanalysis/image--043.png)
 
 ## Configure the Power BI output
 
@@ -342,16 +342,16 @@ We need to send the result to Power BI, which means creating an *Output*.
 
 • Go to the *Outputs* blade and click *Add*. Choose Power BI.
 
-![](Images/Images/images:sentimentanalytics:*.png/image--044.png)
+![](images/sentimentanalysis/image--044.png)
 
 • Click on Authorize if it prompts you to authenticate
 
-![](Images/Images/images:sentimentanalytics:*.png/image--045.png)
+![](images/sentimentanalysis/image--045.png)
 
 • Provide the output alias *powerbi*. Specify a meaningful *Dataset name* and *Table
 name*. These names will be used to create automatically a data set in Power BI
 
-![](Images/Images/images:sentimentanalytics:*.png/image--046.png)
+![](images/sentimentanalysis/image--046.png)
 
 
 ## Configure the query
@@ -382,7 +382,7 @@ window.
               hashtag, TumblingWindow(second,10) 
               
               
- ![](Images/Images/images:sentimentanalytics:*.png/image--047.png)
+ ![](images/sentimentanalysis/image--047.png)
  
  • Click *Save*.
  
@@ -390,36 +390,36 @@ window.
  
  • Go to the *Overview* blade and start the job from now.
  
- ![](Images/Images/images:sentimentanalytics:*.png/image--048.png)
+ ![](images/sentimentanalysis/image--048.png)
  
  • Click Start
  
  • It takes a while before the job is completed up and running, but after 5 minutes,
 you should see that the first events are getting processed.
 
-![](Images/Images/images:sentimentanalytics:*.png/image--049.png)
+![](images/sentimentanalysis/image--049.png)
 
 ## Visualize results in Power BI
 
 In your Power BI namespace, you should see under the *Datasets* tab, that a data set has
 been automatically created by Azure Stream Analytics.
 
-![](Images/Images/images:sentimentanalytics:*.png/image--050.png)
+![](images/sentimentanalysis/image--050.png)
 
 • In the *Actions* of your data set, choose *Create report*.
 
-![]Images/Images/images:sentimentanalytics:*.png/image--051.png)
+![]images/sentimentanalysis/image--051.png)
 
 • Select the *Line chart* as the chart type. Take time as the *Axis*, *hashtag* as
 the *Legend* and *score* as the *Values*.
 
-![](Images/Images/images:sentimentanalytics:*.png/image--052.png)
+![](images/sentimentanalysis/image--052.png)
 
 • Make the chart itself bigger, so it nicely fits your screen. You should see the
 results by now. Normally, *#happy* should have a significantly better sentiment
 score, compared to *#sad*.
 
-![](Images/Images/images:sentimentanalytics:*.png/image--053.jpg)
+![](images/sentimentanalysis/image--053.jpg)
 
 • Save the report and give it a meaningful name.
  
