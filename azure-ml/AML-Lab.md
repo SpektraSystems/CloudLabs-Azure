@@ -241,21 +241,21 @@ metadata. To create a dataset in the studio:
 Statistic | Description
 --------- | -----------------
 Feature | Name of the column that is being summarized.
-Profile :  In-line visualization based on the type inferred. For example, strings, booleans, and dates will have value counts, while decimals (numerics) have approximated    histograms. This allows you to gain a quick understanding of the distribution of the data.
+Profile | In-line visualization based on the type inferred. For example, strings, booleans, and dates will have value counts, while decimals (numerics) have approximated    histograms. This allows you to gain a quick understanding of the distribution of the data.
 Type distribution | In-line value count of types within a column. Nulls are their own type, so this visualization is useful for detecting odd or missing values.
 Type | Inferred type of the column. Possible values include: strings, booleans, dates, and decimals.
 Min | Minimum value of the column. Blank entries appear for features whose type does not have an inherent ordering (e.g. booleans).
 Max | Maximum value of the column.
 Count | Total number of missing and non-missing entries in the column.
 Not missing count | Number of entries in the column that are not missing. Empty strings and errors are treated as values, so they will not contribute to the "not missing   count".
-Quantiles** | Approximated values at each quantile to provide a sense of the distribution of the data.
-Mean** | Arithmetic mean or average of the column.
+Quantiles | Approximated values at each quantile to provide a sense of the distribution of the data.
+Mean | Arithmetic mean or average of the column.
 Standard deviation | Measure of the amount of dispersion or variation of this column's data.
 Variance | Measure of how far spread out this column's data is from its average value.
 Skewness | Measure of how different this column's data is from a normal distribution.
 Kurtosis | Measure of how heavily tailed this column's data is compared to a normal distribution.
 
-![](images/aml/image--019.png)
+  ![](images/aml/image--019.png)
 
    • Now, click on the newly created dataset and click Explore. Here you can see the fields of the
      Tabular dataset.
@@ -340,7 +340,7 @@ Follow the [instructions](https://docs.microsoft.com/en-us/azure/machine-learnin
    • Open Postman and create a new HTTP Post for that Rest Endpoint and send following HTTP Body
    
    ![](images/aml/image--031.png)
-   
+ ``` 
    {
 "data": [{
 "Age": 41,
@@ -379,6 +379,7 @@ Follow the [instructions](https://docs.microsoft.com/en-us/azure/machine-learnin
 "YearsWithCurrManager": 5
 }]
 }
+```
 
 To learn more about automated ML, see documentation [here](https://docs.microsoft.com/en-us/azure/machine-learning/concept-automated-ml).
 
