@@ -129,7 +129,7 @@ File | *not used in this tutorial* | This uploads files for questions and answer
 Chit-chat personality | None | This gives a friendly and casual [personality](https://github.com/hinault/Workshop-ChatBot-With-QnAMaker/blob/master/Concepts/best-practices.md#chit-chat) to common questions and answers. You can edit these questions and answers later.
   
   
-    ![](images/chatbot/image--005.png)
+   ![](images/chatbot/image--005.png)
   
 10. Select **Create your KB** to finish the creation process.   
   
