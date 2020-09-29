@@ -119,7 +119,6 @@ Click on Resource groups in the Dashboard to see the resourse groups that you ha
   
     ![](images/chatbot/image--004.png)
   
- 
 9. Populate your knowledge base with the following settings:
 
  
@@ -184,7 +183,7 @@ questions are the same.
   3. Run the cURL command and receive the JSON response, including the score and
 answer.
 
-    ![](images/chatbot/image--012.png)
+  ![](images/chatbot/image--012.png)
   
   4. QnA Maker is somewhat confident with the score of 35.92%.
   
@@ -198,7 +197,7 @@ answer is configured in the Azure portal.
   2. Run the cURL command and receive the JSON response, including the score and
 answer
 
-    ![](images/chatbot/image--013.png)
+  ![](images/chatbot/image--013.png)
     
   3. QnA Maker returned a score of 0, which means no confidence. It also returned
 the default answer
@@ -210,7 +209,7 @@ Create a bot as a client application for the knowledge base.
   1. In the QnA Maker portal, go to the **Publish** page, and publish your knowledge
 base. Select **Create Bot**.
 
-    ![](images/chatbot/image--014.png)
+  ![](images/chatbot/image--014.png)
 
   2. The Azure portal opens with the bot creation configuration.
     
