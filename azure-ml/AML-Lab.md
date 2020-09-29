@@ -152,7 +152,7 @@ TensorBoard, Bokeh, Shiny or other apps used during the development work of a Da
    • Choose some sufficiently unique name, keep the default VM type (STANDARD_DS3_V2 - a fairly
      inexpensive machine type costing).
      
-     ![](images/aml/image--009.png)
+   ![](images/aml/image--009.png)
      
    • Click Create.
    
