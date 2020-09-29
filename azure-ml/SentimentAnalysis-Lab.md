@@ -401,7 +401,7 @@ been automatically created by Azure Stream Analytics.
 
 • In the *Actions* of your data set, choose *Create report*.
 
-![]images/sentimentanalysis/image--051.png)
+![](images/sentimentanalysis/image--051.png)
 
 • Select the *Line chart* as the chart type. Take time as the *Axis*, *hashtag* as
 the *Legend* and *score* as the *Values*.
