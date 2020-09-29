@@ -38,12 +38,6 @@ In this hands-on lab, you will learn how to:
 
 • Add Chit-chat personality at your knowledge base
 
-## Prerequisites
-
-The following are required to complete this hands-on lab:
-
-• Azure Pass or subscription - [Try it for Free](https://azure.microsoft.com/en-gb/)
-
 # Case description
 
 A bot is an autonomous program that interacts with people or computer systems in a
@@ -67,6 +61,11 @@ A client application for QnA Maker is any conversational application that commun
 with a user in natural language to answer a question. Examples of client applications
 include social media apps, chat bots, and speech-enabled desktop applications.
 
+## Getting started
+Launch the lab and Sign-in to Azure Portal using the Azure credentials provided in the lab details page.
+
+Click on Resource groups in the Dashboard to see the resourse groups that you have access. You can see a resource group named *chat-bot-XXXXX*. You will be using this resourse group for this lab.
+
 # Exercise 1: Create a knowledge base from QnA Maker Portal
 
 ## Create a knowledge base
@@ -75,7 +74,7 @@ include social media apps, chat bots, and speech-enabled desktop applications.
 
 2. Select **Create a knowledge base** from the top menu.
 
-![](images/chatbot/image--001.png)
+  ![](images/chatbot/image--001.png)
 
 3. Select Create a QnA service. You will be redirect on Azure Portal.
 
@@ -99,50 +98,43 @@ include social media apps, chat bots, and speech-enabled desktop applications.
     
     10. **Application Insights Location:** Select Central US (or nearest region)
     
-    5.  ![](images/chatbot/image--002.png)
+        ![](images/chatbot/image--002.png)
     
-    6. Click Create to deploy the service. This step might take a few moments.
+6. Click Create to deploy the service. This step might take a few moments.
     
-    7. Once the deployment is complete, return to QnA Maker portal and click Refresh
-       on step 2.
+7. Once the deployment is complete, return to QnA Maker portal and click Refresh on step 2.
      
-    8. Select your existing settings:
-    
-  ##  **Setting : Purpose**
+8. Select your existing settings:
   
-  **Microsoft Azure Directory ID** : This ID is associated with the account you use to sign into the Azure portal and the QnA Maker portal.
+      **Microsoft Azure Directory ID** : This ID is associated with the account you use to sign into the Azure portal and the QnA Maker portal.
 
-  **Azure Subscription name** : The billing account in which you created the QnA Maker resource.
+      **Azure Subscription name** : The billing account in which you created the QnA Maker resource.
 
-  **Azure QnA Service** :  Your existing QnA Maker resource.
+      **Azure QnA Service** :  Your existing QnA Maker resource.
   
   
-  9. ![](images/chatbot/image--003.png)
+   ![](images/chatbot/image--003.png)
   
-  10. Enter your knowledge base name, AI Bootcamp kb.
+9. Enter your knowledge base name, AI Bootcamp kb.
   
   ![](images/chatbot/image--004.png)
   
  
- Populate your knowledge base with the following settings:
+10. Populate your knowledge base with the following settings:
 
- 11. 
-  ## **Setting : name : Setting value Purpose**
  
- **-** **URL** **:** https://docs.microsoft.com/en-us/azure/cognitive-services/QnAMaker/troubleshooting **:** The contents of the FAQ at that URL are formatted with a question followed by an answer. QnA
-                                                                                            Maker can interpret this format to extract questions and the associated answers.
-                                                                                            
-  
- **-** **File** **:** *not used in this tutorial* **:** This uploads files for questions and answers.
- 
- **-** **Chit-chat personality** **:** None **:** This gives a friendly and casual [personality](https://github.com/hinault/Workshop-ChatBot-With-QnAMaker/blob/master/Concepts/best-practices.md#chit-chat) to common questions and answers. You can edit these questions and answers later.
+Setting | Name | Setting value Purpose
+------- | ---- | -------------------------
+URL | https://docs.microsoft.com/en-us/azure/cognitive-services/QnAMaker/troubleshooting | The contents of the FAQ at that URL are formatted with a question followed by an answer. QnA Maker can interpret this format to extract questions and the associated answers.
+File | *not used in this tutorial* | This uploads files for questions and answers.
+Chit-chat personality | None | This gives a friendly and casual [personality](https://github.com/hinault/Workshop-ChatBot-With-QnAMaker/blob/master/Concepts/best-practices.md#chit-chat) to common questions and answers. You can edit these questions and answers later.
   
   
-  12. ![](images/chatbot/image--005.png)
+  ![](images/chatbot/image--005.png)
   
-  13. Select **Create your KB** to finish the creation process.
+11.  Select **Create your KB** to finish the creation process.   
   
-  14. ![](images/chatbot/image--006.png)
+  ![](images/chatbot/image--006.png)
   
   ## Review, save, and train the knowledge base
   
