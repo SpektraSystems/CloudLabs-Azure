@@ -24,7 +24,9 @@ window
 
 ## Getting started
 
-Launch the lab and Sign-in to [Azure Portal](portal.azure.com) using the Azure credentials provided in the lab details page. Click on Resource groups in the Dashboard to see the Resourse groups that you have access to. You can see a resource group named sentiment-analysis-XXXXX. You will be using this resourse group for this lab.  
+Launch the lab and Sign-in to [Azure Portal](portal.azure.com) using the Azure credentials provided in the lab details page. 
+
+Click on Resource groups in the Dashboard to see the resourse groups that you have access. You can see a resource group named *sentiment-analysis-XXXXX*. You will be using this resourse group for this lab.  
 
 ## Ingest tweets
 
