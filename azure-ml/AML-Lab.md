@@ -1,6 +1,4 @@
-  # AZURE MACHINE LEARNING WORKSHOP
-
-
+# AZURE MACHINE LEARNING WORKSHOP
 
 ## **AGENDA**
 
@@ -15,7 +13,6 @@
 5. Automatic Machine Learning
 
 6. Azure Machine Learning Designer
-
 
 
 ### Introduction to Azure Machine Learning
@@ -46,16 +43,19 @@ modules in the designer.
 workflow pipelines.](https://www.kubeflow.org/docs/azure/)
 
 
-
 A [taxonomy](https://docs.microsoft.com/en-us/azure/machine-learning/concept-workspace) of the workspace is illustrated in the following diagram:
 
 
 ![](images/aml/image--000.png)
 
 
-### Azure Machine Learning Workspace
+## Getting started
 
-• Sign in to the [Azure portal](https://login.microsoftonline.com/organizations/oauth2/v2.0/authorize?client_id=c44b4083-3bb0-49c1-b47d-974e53cbdf3c&response_type=code%20id_token&scope=https%3A%2F%2Fmanagement.core.windows.net%2F%2Fuser_impersonation%20openid%20email%20profile&state=OpenIdConnect.AuthenticationProperties%3DUULv7qzDUolL0CPOdOXS3jlcfyppRiZGSHD8ecDo0LpZxiDoI4Jgp_k3iLWlqLdAoXAxTbTLAWmV9b2VjNdENlr9PbjHlDgBNz9LreS0svPpYxLf8Mb8WTd1J14ckf3tg9VWZdcd8EQvWCWpjoLjBt8e5Oiuue4XU9S69qW4-WmSukWyLI8Lj7YWOgWSdUxfw6xm6q4pugxkxQ85Fb47oeL9ntbssyiUo10ea4Tofm0COwoebJHQvgJbPRwpv7n-OPiyCKGnaG3oEPHsrKutTZfy3KGtCB09GwOUR034_JZhvM6iSFeTz0zP9917fuAje7jcW5PNi0-9f1hFkwJzR1yIYnna9fVSINWWtkg7FjRFsSdHaX2V1Qv84kjUqA0v&response_mode=form_post&nonce=637367864425554973.MTZmYWMxM2UtZWVhNS00ZjI2LWE0NzItYzJhMzI2NGZkODk5ZTQwNzU2MmYtNzU4ZC00NDdiLTk0YTItNjM5OGMwYjVmMzNh&redirect_uri=https%3A%2F%2Fportal.azure.com%2Fsignin%2Findex%2F&site_id=501430&client-request-id=779c199b-1cd0-4069-9e44-b5675cc5074e&x-client-SKU=ID_NET45&x-client-ver=5.3.0.0) by using the credentials for your Azure subscription.
+Launch the lab and Sign-in to [Azure Portal](portal.azure.com) using the Azure credentials provided in the lab details page.
+
+Click on Resource groups in the Dashboard to see the resourse groups that you have access. You can see a resource group named *aml-XXXXX*. You will be using this resourse group for this lab.
+
+### Azure Machine Learning Workspace
 
 • In the upper-left corner of Azure portal, select **+ Create a resource**.
 
@@ -71,23 +71,13 @@ A [taxonomy](https://docs.microsoft.com/en-us/azure/machine-learning/concept-wor
 
 • Provide the following information to configure your new workspace.
 
-   ## **Field** :                                    **Description**
-
-**Workspace name** :    Enter a unique name that identifies your workspace. Names must be unique across
-                    the resource group. Use a name that is easy to recall and to differentiate from
-                    workspaces created by others. The workspace name is case-insensitive.
-                    
-**Subscription**   :    Select the Azure subscription that you want to use.
-
-**Resource group** : Use an existing resource group in your subscription or enter a name to create a
-                     new resource group. A resource group holds related resources for an Azure
-                     solution.
-
-**Location**.      : Select the location closest to your users and the data resources to create your
-                     workspace.
-                     
-**Workspace edition**  :  Select Enterprise. This workspace edition determines the features to which you'll
-                          have access and pricing. Learn more about [Basic and Enterprise edition offerings](https://docs.microsoft.com/en-us/azure/machine-learning/overview-what-                           is-azure-ml#sku).
+Field | Description
+----- | ---------------
+Workspace name | Enter a unique name that identifies your workspace. Names must be unique across the resource group. Use a name that is easy to recall and to differentiate from workspaces created by others. The workspace name is case-insensitive.
+Subscription | Select the Azure subscription that you want to use.
+Resource group | Use an existing resource group in your subscription or enter a name to create a new resource group. A resource group holds related resources for an Azure solution.
+Location | Select the location closest to your users and the data resources to create your workspace.                     
+Workspace edition** | Select Enterprise. This workspace edition determines the features to which you'll have access and pricing. Learn more about [Basic and Enterprise edition offerings](https://docs.microsoft.com/en-us/azure/machine-learning/overview-what-is-azure-ml#sku).
                           
                           
 ![](images/aml/image--003.png)
@@ -162,7 +152,7 @@ TensorBoard, Bokeh, Shiny or other apps used during the development work of a Da
    • Choose some sufficiently unique name, keep the default VM type (STANDARD_DS3_V2 - a fairly
      inexpensive machine type costing).
      
-     ![](images/aml/image--009.png)
+   ![](images/aml/image--009.png)
      
    • Click Create.
    
@@ -248,37 +238,24 @@ metadata. To create a dataset in the studio:
      you can also review their statistical moments and estimated quantiles.
      
      
-  ## **Statistic** :                                    **Description**
-  
- **Feature** : Name of the column that is being summarized.
-  
- **Profile** :  In-line visualization based on the type inferred. For example, strings, booleans, and dates will have value counts, while decimals (numerics) have approximated                    histograms. This allows you to gain a quick understanding of the distribution of the data.
+Statistic | Description
+--------- | -----------------
+Feature | Name of the column that is being summarized.
+Profile | In-line visualization based on the type inferred. For example, strings, booleans, and dates will have value counts, while decimals (numerics) have approximated    histograms. This allows you to gain a quick understanding of the distribution of the data.
+Type distribution | In-line value count of types within a column. Nulls are their own type, so this visualization is useful for detecting odd or missing values.
+Type | Inferred type of the column. Possible values include: strings, booleans, dates, and decimals.
+Min | Minimum value of the column. Blank entries appear for features whose type does not have an inherent ordering (e.g. booleans).
+Max | Maximum value of the column.
+Count | Total number of missing and non-missing entries in the column.
+Not missing count | Number of entries in the column that are not missing. Empty strings and errors are treated as values, so they will not contribute to the "not missing   count".
+Quantiles | Approximated values at each quantile to provide a sense of the distribution of the data.
+Mean | Arithmetic mean or average of the column.
+Standard deviation | Measure of the amount of dispersion or variation of this column's data.
+Variance | Measure of how far spread out this column's data is from its average value.
+Skewness | Measure of how different this column's data is from a normal distribution.
+Kurtosis | Measure of how heavily tailed this column's data is compared to a normal distribution.
 
-**Type distribution** : In-line value count of types within a column. Nulls are their own type, so this visualization is useful for detecting odd or missing values.
-
-**Type** : Inferred type of the column. Possible values include: strings, booleans, dates, and decimals.
-
-**Min** :  Minimum value of the column. Blank entries appear for features whose type does not have an inherent ordering (e.g. booleans).
-
-**Max** :  Maximum value of the column.
-
-**Count** :  Total number of missing and non-missing entries in the column.
-
-**Not missing count** : Number of entries in the column that are not missing. Empty strings and errors are treated as values, so they will not contribute to the "not missing                               count."
-
-**Quantiles** :  Approximated values at each quantile to provide a sense of the distribution of the data.
-
-**Mean** : Arithmetic mean or average of the column.
-
-**Standard deviation** : Measure of the amount of dispersion or variation of this column's data.
-
-**Variance** :  Measure of how far spread out this column's data is from its average value.
-
-**Skewness** :  Measure of how different this column's data is from a normal distribution.
-
-**Kurtosis** :  Measure of how heavily tailed this column's data is compared to a normal distribution.
-
-![](images/aml/image--019.png)
+  ![](images/aml/image--019.png)
 
    • Now, click on the newly created dataset and click Explore. Here you can see the fields of the
      Tabular dataset.
@@ -295,7 +272,7 @@ metadata. To create a dataset in the studio:
      
    ![](images/aml/image--022.png)
    
-   • For more information on datasets, see the [how-to for more information on creating and using Datasets](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-create-      register-datasets).
+   • For more information on datasets, see the [how-to for more information on creating and using Datasets](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-create-register-datasets).
    
   
   
@@ -363,7 +340,7 @@ Follow the [instructions](https://docs.microsoft.com/en-us/azure/machine-learnin
    • Open Postman and create a new HTTP Post for that Rest Endpoint and send following HTTP Body
    
    ![](images/aml/image--031.png)
-   
+ ``` 
    {
 "data": [{
 "Age": 41,
@@ -402,6 +379,7 @@ Follow the [instructions](https://docs.microsoft.com/en-us/azure/machine-learnin
 "YearsWithCurrManager": 5
 }]
 }
+```
 
 To learn more about automated ML, see documentation [here](https://docs.microsoft.com/en-us/azure/machine-learning/concept-automated-ml).
 

@@ -4,17 +4,6 @@ The purpose of this lab is to show how you can apply in real-time a machine lear
 model on streaming data. This use case will apply sentiment analysis on an incoming
 stream of Twitter tweets.
 
-## Prerequisites
-
-To execute this lab successfully, you need the following:
-
-• An Azure subscription. You can create a free one over [here](https://azure.microsoft.com/en-us/free/).
-
-• An Azure Machine Learning Studio workspace. you can create a free one
-over [here](https://studio.azureml.net/)
-
-• A Power BI pro subscription. You can create a 60-day trial over [here](https://signup.microsoft.com/signup?sku=a403ebcc-fae0-4ca2-8c8c-7a907fd6c235&email&ru=https%3A%2F%2Fapp.powerbi.com%3Fpbi_source%3Dweb%26redirectedFromSignup%3D1%26noSignUpCheck%3D1).
-
 ## Solution design
 
 The high level solution design of this lab looks like this.
@@ -32,6 +21,12 @@ Learning web service
 window
 
 • The results are outputted to Power BI, where they can be easily visualized
+
+## Getting started
+
+Launch the lab and Sign-in to [Azure Portal](portal.azure.com) using the Azure credentials provided in the lab details page. 
+
+Click on Resource groups in the Dashboard to see the resourse groups that you have access. You can see a resource group named *sentiment-analysis-XXXXX*. You will be using this resourse group for this lab.  
 
 ## Ingest tweets
 
@@ -57,9 +52,7 @@ ingestion pipeline.
 
 • Provide the following information to configure your new eventhub.
 
-## Field : Description
-
-**Resource group** : Use an existing resource group in your subscription or enter a name to create a new resource group. A resource group holds related resources for an Azure solution.
+**Resource group** : Use an existing resource group (sentiment-analysis-XXXXX) in your subscription. A resource group holds related resources for an Azure solution.
 
 **Namespace** : Enter a unique name that identifies your event hub namespace. Names must be unique across the resource group. *{prefix}-sentiment-analysis-ingestion*
 
@@ -408,7 +401,7 @@ been automatically created by Azure Stream Analytics.
 
 • In the *Actions* of your data set, choose *Create report*.
 
-![]images/sentimentanalysis/image--051.png)
+![](images/sentimentanalysis/image--051.png)
 
 • Select the *Line chart* as the chart type. Take time as the *Axis*, *hashtag* as
 the *Legend* and *score* as the *Values*.

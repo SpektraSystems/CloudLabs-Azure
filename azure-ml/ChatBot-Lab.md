@@ -38,12 +38,6 @@ In this hands-on lab, you will learn how to:
 
 • Add Chit-chat personality at your knowledge base
 
-## Prerequisites
-
-The following are required to complete this hands-on lab:
-
-• Azure Pass or subscription - [Try it for Free](https://azure.microsoft.com/en-gb/)
-
 # Case description
 
 A bot is an autonomous program that interacts with people or computer systems in a
@@ -67,6 +61,11 @@ A client application for QnA Maker is any conversational application that commun
 with a user in natural language to answer a question. Examples of client applications
 include social media apps, chat bots, and speech-enabled desktop applications.
 
+## Getting started
+Launch the lab and Sign-in to Azure Portal using the Azure credentials provided in the lab details page.
+
+Click on Resource groups in the Dashboard to see the resourse groups that you have access. You can see a resource group named *chat-bot-XXXXX*. You will be using this resourse group for this lab.
+
 # Exercise 1: Create a knowledge base from QnA Maker Portal
 
 ## Create a knowledge base
@@ -75,7 +74,7 @@ include social media apps, chat bots, and speech-enabled desktop applications.
 
 2. Select **Create a knowledge base** from the top menu.
 
-![](images/chatbot/image--001.png)
+  ![](images/chatbot/image--001.png)
 
 3. Select Create a QnA service. You will be redirect on Azure Portal.
 
@@ -99,67 +98,59 @@ include social media apps, chat bots, and speech-enabled desktop applications.
     
     10. **Application Insights Location:** Select Central US (or nearest region)
     
-    5.  ![](images/chatbot/image--002.png)
+        ![](images/chatbot/image--002.png)
     
-    6. Click Create to deploy the service. This step might take a few moments.
+5. Click Create to deploy the service. This step might take a few moments.
     
-    7. Once the deployment is complete, return to QnA Maker portal and click Refresh
-       on step 2.
+6. Once the deployment is complete, return to QnA Maker portal and click Refresh on step 2.
      
-    8. Select your existing settings:
-    
-  ##  **Setting : Purpose**
+7. Select your existing settings:
   
-  **Microsoft Azure Directory ID** : This ID is associated with the account you use to sign into the Azure portal and the QnA Maker portal.
+      **Microsoft Azure Directory ID** : This ID is associated with the account you use to sign into the Azure portal and the QnA Maker portal.
 
-  **Azure Subscription name** : The billing account in which you created the QnA Maker resource.
+      **Azure Subscription name** : The billing account in which you created the QnA Maker resource.
 
-  **Azure QnA Service** :  Your existing QnA Maker resource.
+      **Azure QnA Service** :  Your existing QnA Maker resource.
   
   
-  9. ![](images/chatbot/image--003.png)
+    ![](images/chatbot/image--003.png)
   
-  10. Enter your knowledge base name, AI Bootcamp kb.
+8. Enter your knowledge base name, AI Bootcamp kb.
   
-  ![](images/chatbot/image--004.png)
+    ![](images/chatbot/image--004.png)
   
- 
- Populate your knowledge base with the following settings:
+9. Populate your knowledge base with the following settings:
 
- 11. 
-  ## **Setting : name : Setting value Purpose**
  
- **-** **URL** **:** https://docs.microsoft.com/en-us/azure/cognitive-services/QnAMaker/troubleshooting **:** The contents of the FAQ at that URL are formatted with a question followed by an answer. QnA
-                                                                                            Maker can interpret this format to extract questions and the associated answers.
-                                                                                            
-  
- **-** **File** **:** *not used in this tutorial* **:** This uploads files for questions and answers.
- 
- **-** **Chit-chat personality** **:** None **:** This gives a friendly and casual [personality](https://github.com/hinault/Workshop-ChatBot-With-QnAMaker/blob/master/Concepts/best-practices.md#chit-chat) to common questions and answers. You can edit these questions and answers later.
+Setting | Name | Setting value Purpose
+------- | ---- | -------------------------
+URL | https://docs.microsoft.com/en-us/azure/cognitive-services/QnAMaker/troubleshooting | The contents of the FAQ at that URL are formatted with a question followed by an answer. QnA Maker can interpret this format to extract questions and the associated answers.
+File | *not used in this tutorial* | This uploads files for questions and answers.
+Chit-chat personality | None | This gives a friendly and casual [personality](https://github.com/hinault/Workshop-ChatBot-With-QnAMaker/blob/master/Concepts/best-practices.md#chit-chat) to common questions and answers. You can edit these questions and answers later.
   
   
-  12. ![](images/chatbot/image--005.png)
+   ![](images/chatbot/image--005.png)
   
-  13. Select **Create your KB** to finish the creation process.
+10. Select **Create your KB** to finish the creation process.   
   
-  14. ![](images/chatbot/image--006.png)
+    ![](images/chatbot/image--006.png)
   
   ## Review, save, and train the knowledge base
   
   1. Review the questions and answers.
   
-  2. ![](images/chatbot/image--007.png)
+     ![](images/chatbot/image--007.png)
   
-  3. Select **Test** in the top menu bar.
+  2. Select **Test** in the top menu bar.
   
-  4. Type **how large** on the text box.
+  3. Type **how large** on the text box.
   
-  5. Select Inspect. You can add alternative phrasing for this Answer or new answer
+  4. Select Inspect. You can add alternative phrasing for this Answer or new answer
      for this question, if you think the answer is wrong
      
-  6. ![](images/chatbot/image--008.png)
+      ![](images/chatbot/image--008.png)
   
-  7. Select **Save and train** in the top menu bar.
+  5. Select **Save and train** in the top menu bar.
   
   ## Publish to get knowledge base endpoints
   
@@ -192,9 +183,9 @@ questions are the same.
   3. Run the cURL command and receive the JSON response, including the score and
 answer.
 
-  4. ![](images/chatbot/image--012.png)
+  ![](images/chatbot/image--012.png)
   
-  5. QnA Maker is somewhat confident with the score of 35.92%.
+  4. QnA Maker is somewhat confident with the score of 35.92%.
   
   ## Use cURL to query for the default answer
   
@@ -206,9 +197,9 @@ answer is configured in the Azure portal.
   2. Run the cURL command and receive the JSON response, including the score and
 answer
 
-  3. ![](images/chatbot/image--013.png)
+  ![](images/chatbot/image--013.png)
     
-  4. QnA Maker returned a score of 0, which means no confidence. It also returned
+  3. QnA Maker returned a score of 0, which means no confidence. It also returned
 the default answer
 
 ## Create a QnA Bot
@@ -218,46 +209,31 @@ Create a bot as a client application for the knowledge base.
   1. In the QnA Maker portal, go to the **Publish** page, and publish your knowledge
 base. Select **Create Bot**.
 
-1. ![](images/chatbot/image--014.png)
+  ![](images/chatbot/image--014.png)
 
   2. The Azure portal opens with the bot creation configuration.
     
   3. Enter the settings to create the bot:
     
     
-  ##  Setting : Value : Purpose
-  
-  **Bot name** : aibootcampqna-bot : This is the Azure resource name for the bot.
-  
-  **Subscription** : See purpose. : Select the same subscription as you used to create the QnA Maker resources.
-  
-  **Resource group** : lab-rg-bot : The resource group used for all the botrelated Azure resources.
-  
-  **Location** : Canada East : The bot's Azure resource location.
-  
-  **Pricing tier** : F0 : The free tier for the Azure bot service.
-  
-  
- ## Setting : Value : Purpose
- 
-**App name** : :aibootcampqna-bot-app: This is a web app to support your bot only. This should not be the same app name as your QnA Maker service is already using. Sharing QnA Maker's web app with any other
- resource is not supported.
+Setting | Value | Purpose
+------- | ----- | ---------  
+Bot name | aibootcampqna-bot | This is the Azure resource name for the bot.
+Subscription | See purpose.| Select the same subscription as you used to create the QnA Maker resources.
+Resource group | lab-rg-bot | The resource group used for all the botrelated Azure resources.
+Location | Canada East | The bot's Azure resource location.
+Pricing tier | F0 | The free tier for the Azure bot service.
+App name | aibootcampqna-bot-app | This is a web app to support your bot only. This should not be the same app name as your QnA Maker service is already using. Sharing QnA Maker's web app with any other resource is not supported.
+SDK Language | C# | This is the underlying programming language used by the bot framework SDK. Your choices are [C#](https://github.com/Microsoft/botbuilder-dotnet) or [Node.js](https://github.com/Microsoft/botbuilder-js).
+QnA Auth Key | Do not change | This value is filled in for you.
+App service plan/Location | Do not change | For this tutorial, the location is not important.
+Azure Storage | Do not change | Conversation data is stored in Azure Storage tables.
+Application Insights | Do not change | Logging is sent to Application Insights.
+Microsoft App ID | Do not change | Active directory user and password isrequired.
 
-**SDK Language** : C# : This is the underlying programming language used by the bot framework SDK. Your choices are [C#](https://github.com/Microsoft/botbuilder-dotnet) or [Node.js](https://github.com/Microsoft/botbuilder-js).
+ ![](images/chatbot/image--015.png)
 
-**QnA Auth Key** : **Do not change** : This value is filled in for you.
-
-**App service plan/Location** : **Do not change** : For this tutorial, the location is not important.
-
-**Azure Storage** : **Do not change** : Conversation data is stored in Azure Storage tables.
-
-**Application Insights** : **Do not change** : Logging is sent to Application Insights.
-
-**Microsoft App ID** : **Do not change** : Active directory user and password isrequired.
-
-4. ![](images/chatbot/image--015.png)
-
-5. Wait a couple of minutes until the bot creation process notification reports
+4. Wait a couple of minutes until the bot creation process notification reports
 success.
 
 ## Chat with the Bot
@@ -295,17 +271,13 @@ personality [datasets](https://github.com/Microsoft/BotBuilder-PersonalityChat/t
 
 For the user query of When is your birthday?, each personality has a styled response:
 
-## Personality : Example
-
-**Professional** : Age doesn't really apply to me.
-
-**Friendly** : I don't really have an age.
- 
-**Witty** : I'm age-free.
-
-**Caring** : I don't have an age.
-
-**Enthusiastic** : I'm a bot, so I don't have an age.
+Personality | Example
+----------- | ----------
+Professional | Age doesn't really apply to me.
+Friendly | I don't really have an age.
+Witty | I'm age-free.
+Caring | I don't have an age.
+Enthusiastic | I'm a bot, so I don't have an age.
 
 ## Add Chit-Chat in your KB
 
@@ -336,74 +308,46 @@ user.
 
  ![](images/chatbot/image--019.png)
 
-1. Select the **Publish** button from the top menu. On the publish page,
+5. Select the **Publish** button from the top menu. On the publish page,
 select **Publish**.
 
 ### *Use cURL to query for a Chit-chat answer*
 
 1. In the cURL-enabled terminal, replace How large can my KB be? with a bot
-conversation-ending statement from the user, such as Thank you.
-
+   conversation-ending statement from the user, such as Thank you.
 2. Run the cURL command and receive the JSON response, including the score and
-answer.
+   answer.
 
-3. % Total % Received % Xferd Average Speed Time Time Time Current
-
-4. Dload Upload Total Spent Left Speed
-
-5. 100 525 100 501 100 24 525 25 --:--:-- --:--:-- --:--:-- 550{
-
-6. "answers": [
-
-7. {
-
-8. "questions": [
-
-9. "Thank you",
-
-10. "Thanks",
-
-11. "Thnx",
-
-12. "Kthx",
-
-13. "I appreciate it",
-
-14. "Thank you so much",
-
-15. "I thank you",
-
-16. "My sincere thank"
-
-17. ],
-
-18. "answer": "You're very welcome.",
-
-19. "score": 100.0,
-
-20. "id": 109,
-
-21. "source": "qna_chitchat_the_friend.tsv",
-
-22. "metadata": [
-
-23. {
-
-24. "name": "editorial",
-
-25. "value": "chitchat"
-
-26. }
-
-27. ]
-
-28. }
-
-29. ]
-
-30. }
-
-31.
+```
+% Total % Received % Xferd Average Speed Time Time Time Current
+            Dload Upload Total Spent Left Speed
+100 525 100 501 100 24 525 25 --:--:-- --:--:-- --:--:-- 550{
+"answers": [
+{
+"questions": [
+"Thank you",
+"Thanks",
+"Thnx",
+"Kthx",
+"I appreciate it",
+"Thank you so much",
+"I thank you",
+"My sincere thank"
+],
+"answer": "You're very welcome.",
+"score": 100.0,
+"id": 109,
+"source": "qna_chitchat_the_friend.tsv",
+"metadata": [
+{
+"name": "editorial",
+"value": "chitchat"
+}
+]
+}
+]
+}
+```
 
 Because the question of Thank you exactly matched a Chit-chat question, QnA
 Maker is completely confident with the score of 100. QnA Maker also returned all
