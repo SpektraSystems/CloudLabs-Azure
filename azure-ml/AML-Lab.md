@@ -164,7 +164,8 @@ TensorBoard, Bokeh, Shiny or other apps used during the development work of a Da
    
    
 ### Create Dataset
-   
+Let's download the Dataset file in to the local system. Click [here](https://cloudlabsstore.blob.core.windows.net/wiv/HR-Employee-Attrition.csv) to download the Dataset.
+
 With Azure Machine Learning datasets, you can:
    • Keep a single copy of data in your storage, referenced by datasets.
 
