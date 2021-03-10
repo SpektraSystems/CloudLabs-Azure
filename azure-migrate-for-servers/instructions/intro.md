@@ -6,11 +6,12 @@ In this lab we will look at migrating your on-premises Hyper-V virtual machines 
 
 In this lab we are going to look at the process involved to migrate a system we've previously assessed and determined is a good candidate to move to Azure. We will cover the following topics:
 
-  * Setting up the source environment for migration to Azure
-  * Setting up the Azure Migrate Assessment
-  * Creating and enabling replication
-  * Doing a Test Migration
-  * Reviewing our migrated server
+  * Set up the source environment for migration to Azure
+  * Register the Azure Migrate appliance and start continuous discovery
+  * Create an Azure Migrate assessment
+  * Start replicating servers to Azure
+  * Run a test migration
+  * Review the migrated server
 
 
 
