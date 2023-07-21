@@ -1,0 +1,24 @@
+[
+  {
+    "Name": "Discover Assess and Migrate Servers with Azure Migrate",
+    "Language": "English",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/migrate/azure-migrate-for-servers/instructions/0.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/migrate/azure-migrate-for-servers/instructions/1.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/migrate/azure-migrate-for-servers/instructions/2.md",
+        "Order": 3
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/migrate/azure-migrate-for-servers/instructions/3.md",
+        "Order": 4
+      }
+    ]
+  }
+]
