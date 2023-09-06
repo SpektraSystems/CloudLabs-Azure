@@ -2,7 +2,7 @@
 
 You have completed the Virtual Machines &amp; Compute lab. The following foundational elements were reviewed, briefly explained, and used to successfully deploy an Azure-based windows virtual machine, install a basic webpage, and monitor VM performance. 
 
-- [Resource Groups](https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-windows-infrastructure-resource-groups-guidelines)
+- [Resource Groups](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal)
 - [Virtual Networks](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview)
 - [Availability Sets](https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-windows-manage-availability)
 - [Backup](https://docs.microsoft.com/en-us/azure/backup/)
