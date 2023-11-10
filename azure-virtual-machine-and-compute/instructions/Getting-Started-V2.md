@@ -59,6 +59,60 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
 **Note**: Ensure to perform all the lab steps in the RG named **azvmrg-<inject key="Deployment ID" enableCopy="false"/>**
 
+## **Scenario 1 - Building a Virtual Network**
+An **Azure virtual network** (VNet) is a representation of your own **network**  in the cloud. It is a logical isolation of the **Azure** cloud dedicated to your subscription. You can fully control the IP address blocks, DNS settings, security policies and route tables within this **network.** [Learn more](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview).
+
+### **Building a Virtual Network**
+
+1. Click on **+ Create a resource**.
+
+    ![](https://github.com/SpektraSystems/CloudLabs-Azure/blob/master/azure-virtual-machine-and-compute/instructions/images/create%20a%20resource.png?raw=true)
+    
+2. In the search box, type **Virtual Network** and select to open it.
+
+     ![Create Resource](https://github.com/SpektraSystems/CloudLabs-Azure/blob/master/azure-virtual-machine-and-compute/instructions/images/vnet.png?raw=true)
+     
+3. Click on the **Create** button.
+
+      ![create vnet](https://github.com/SpektraSystems/CloudLabs-Azure/blob/master/azure-virtual-machine-and-compute/instructions/images/vnet-create.png?raw=true)
+      
+4. On the **Create virtual network** blade, enter the following information:
+    
+    -  Subscription: **Select your subscription (1)**.
+    
+    -  Resource group: Select the exisiting resource group named **azvmrg-<inject key="Deployment ID" enableCopy="false"/> (2)**
+    
+    -  Name: **DemoLabVnet1 (3)**
+    
+    > **Note:** If the portal advises the name is not unique, simply adjust the name. Once you create a unique name that is available, you will see a check mark at the end of the **Name** field.
+
+    -  Region: Select the region you are using to perform the lab **(4)**.
+
+    -  Click on **Next (5)**
+
+   ![](images/VMC-E1-S4.png)
+    
+5. Click on **Next**. Now on the **Create virtual network - Security** tab leave the default option for **Azure BastionHost** ,**Azure Firewall** and **Azure DDoS Network Protection** , then click on **Next**.
+
+    ![](images/VMC-E1-S5.png)
+
+6. On the **Create virtual network - IP Addresses** tab, click on **Add IPv4 address space (1),** enter **10.2.0.0** and select **/24(256 addresses) (2)** from the drop down. Then, select **Add subnet (3)**.
+ 
+   ![](images/VMC-E1-S6.png)
+
+7.  On **Add subnet** tab enter the following details and click **Add (3)**.
+   
+      - Name: **demolabsubnet (1)**
+      
+      - Subnet address range: **10.2.0.0 (2)**
+      
+      - Subnet size : Select **/26(64 addresses) (3)** from the drop down.
+      
+      - Click on **Add Subnet**. 
+
+     ![](images/S1-St7.png)
+
+8. Click on **Review + Create**.
    
 7. Click "Next" from the bottom right corner to embark on your Lab journey!
 
