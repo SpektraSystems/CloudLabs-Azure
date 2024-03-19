@@ -4,7 +4,7 @@ You have completed the Virtual Machines &amp; Compute lab. The following foundat
 
 - [Resource Groups](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal)
 - [Virtual Networks](https://docs.microsoft.com/en-us/azure/virtual-network/virtual-networks-overview)
-- [Availability Sets](https://docs.microsoft.com/en-us/azure/virtual-machines/virtual-machines-windows-manage-availability)
+- [Availability Sets](https://learn.microsoft.com/en-us/azure/virtual-machines/availability-set-overview)
 - [Backup](https://docs.microsoft.com/en-us/azure/backup/)
 - [Azure Cloud Shell](https://docs.microsoft.com/en-gb/azure/cloud-shell/features)
 - [Azure Monitor](https://docs.microsoft.com/en-gb/azure/azure-monitor/)
