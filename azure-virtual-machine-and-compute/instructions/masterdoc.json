@@ -40,10 +40,6 @@
       {
         "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/6.md",
         "Order": 9
-      },
-      {
-        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/conclusion.md",
-        "Order": 10
       }
       ]
     }
