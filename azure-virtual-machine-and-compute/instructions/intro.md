@@ -1,12 +1,15 @@
 # Azure Virtual Machine and Compute
 
-### Overall Estimated Duration: 240 minutes
+### Overall Estimated Duration: 4 hours
 
 ## Overview
 
 Microsoft Azure is one of the leading enterprise cloud platforms. Azure launched in 2010 and has quickly matured as many new services are continually being added. One of the first and most popular services offered in Azure is **Virtual Machines**, an IaaS solution.
 
 This lab will walk you through the steps to create and deploy a Windows Server 2019 Datacenter virtual machine. We will also configure a backup of the virtual machine that will be user-accessible for recovery. You will also be able to load a web application in the VM you have just provisioned in Azure.
+
+
+## Objective
 
 The lab will include the following exercises:
 
@@ -24,15 +27,6 @@ The lab will include the following exercises:
 
 1. **Azure Monitor:** Monitor and analyze the performance, health, and usage of Azure resources and applications for optimization and troubleshooting.
 
-## Objective
-
-Participants in these labs will gain practical experience in Azure cloud infrastructure management. 
-
-- Build secure virtual networks, ensure high availability with Azure Availability Sets, and deploy customized virtual machines supporting various workloads.
-- Hands-on activities include implementing robust backup strategies, managing data disks for optimized storage performance, and connecting to VMs to install and configure IIS for web hosting.
-- Monitor and optimize Azure resources using Azure Monitor, enhancing performance, availability, and security through metrics, alerts, and diagnostic tools.
-- These labs collectively equip participants with essential skills in network configuration, VM deployment, data management, application hosting, and cloud monitoring within the Azure ecosystem.
-
 ## Prerequisites 
 
 Participants should have: Basic knowledge and understanding of the following
@@ -45,6 +39,14 @@ Participants should have: Basic knowledge and understanding of the following
 
 ## Architecture
 
+These labs cover essential aspects of Azure infrastructure and operations. Participants begin by establishing a secure Virtual Network (VNet) and configuring Azure Availability Sets for high availability of virtual machines (VMs). They then deploy VMs with specific configurations, implement backup and recovery strategies using Azure Backup Services, and manage VM data disks for optimized storage performance. Connecting to VMs, participants install Internet Information Services (IIS) for web hosting and utilize Azure Monitor for comprehensive monitoring, alerting, and performance optimization across Azure resources and applications. These labs collectively equip participants with foundational skills in Azure networking, VM deployment, data management, application hosting, and cloud monitoring.
+
+## Architecture Diagram
+
+![](../instructions/images/azure-vm-arch-diagram.png)
+
+## Explaination of Componenets
+
 The architecture for this lab involves several key components:
 
 - **Virtual Network:** A logically isolated network in Azure that enables Azure resources to securely communicate with each other, the internet, and on-premises networks.
@@ -54,10 +56,6 @@ The architecture for this lab involves several key components:
 - **Virtual Machine Data Disk:** Additional storage attached to Azure VMs for data persistence, offering flexibility in storage type (Standard HDD, Standard SSD, Premium SSD).
 - **Connect to the VM and Install IIS:** Access Azure VMs via Remote Desktop Protocol (RDP) or Secure Shell (SSH) and install Internet Information Services (IIS) for hosting web applications.
 - **Azure Monitor:** Comprehensive monitoring service that collects and analyzes telemetry data from Azure resources, providing insights into performance, health, and diagnostics.
-
-## Architecture Diagram
-
-![](../instructions/images/azure-vm-arch-diagram.png)
 
 ## **Getting Started**
 
