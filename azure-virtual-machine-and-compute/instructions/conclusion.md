@@ -1,4 +1,4 @@
-﻿## **Conclusion:** 
+﻿# Conclusion 
 
 You have completed the Virtual Machines &amp; Compute lab. The following foundational elements were reviewed, briefly explained, and used to successfully deploy an Azure-based windows virtual machine, install a basic webpage, and monitor VM performance. 
 
