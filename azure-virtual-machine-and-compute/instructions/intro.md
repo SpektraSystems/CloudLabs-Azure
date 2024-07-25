@@ -11,7 +11,7 @@ This lab will walk you through the steps to create and deploy a Windows Server 2
 
 ## Objective
 
-The lab will include the following exercises:
+This lab is designed to equip participants with hands-on experience in creating Azure virtual machine, compute and related resources. By completing this lab, participants will learn to:
 
 1. **Building a Virtual Network:** Create a secure and isolated network in Azure to connect and manage cloud resources.
 
