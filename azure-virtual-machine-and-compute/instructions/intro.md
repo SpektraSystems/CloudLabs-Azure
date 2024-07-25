@@ -33,7 +33,7 @@ Participants in these labs will gain practical experience in Azure cloud infrast
 - Monitor and optimize Azure resources using Azure Monitor, enhancing performance, availability, and security through metrics, alerts, and diagnostic tools.
 - These labs collectively equip participants with essential skills in network configuration, VM deployment, data management, application hosting, and cloud monitoring within the Azure ecosystem.
 
-# Prerequisites 
+## Prerequisites 
 
 Participants should have: Basic knowledge and understanding of the following
 
@@ -42,5 +42,24 @@ Participants should have: Basic knowledge and understanding of the following
 - Virtualization Awareness: Familiarity with virtual machines (VMs), including deployment, management, and basic troubleshooting.
 - Operating System Proficiency: Competence in using Windows and Linux operating systems for VM configuration and management.
 - Networking Basics: Knowledge of networking principles such as TCP/IP, DNS, and firewall rules, which are essential for configuring virtual networks and connectivity in Azure.
+
+## Architecture
+
+The architecture for this lab involves several key components:
+
+- **Virtual Network:** A logically isolated network in Azure that enables Azure resources to securely communicate with each other, the internet, and on-premises networks.
+- **Azure Availability Set:** Ensures high availability of applications by grouping virtual machines (VMs) within a datacenter across fault domains and update domains.
+- **Virtual Machine:** Provides computing resources in Azure, allowing users to deploy and manage Windows or Linux VMs in the cloud.
+- **Backup and Recovery (Recovery Services Vault):** Provides backup, disaster recovery, and data retention policies for Azure VMs and on-premises computers through centralized management.
+- **Virtual Machine Data Disk:** Additional storage attached to Azure VMs for data persistence, offering flexibility in storage type (Standard HDD, Standard SSD, Premium SSD).
+- **Connect to the VM and Install IIS:** Access Azure VMs via Remote Desktop Protocol (RDP) or Secure Shell (SSH) and install Internet Information Services (IIS) for hosting web applications.
+- **Azure Monitor:** Comprehensive monitoring service that collects and analyzes telemetry data from Azure resources, providing insights into performance, health, and diagnostics.
+
+## Architecture Diagram
+
+![](../instructions/images/azure-vm-arch-diagram.png)
+
+
+
 
 
