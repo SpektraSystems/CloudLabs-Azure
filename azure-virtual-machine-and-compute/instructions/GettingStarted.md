@@ -18,4 +18,4 @@
 
    >**Note**: Ensure to perform all the lab steps in the RG named **azvmrg-<inject key="Deployment ID" enableCopy="false"/>**
 
-1. Click the Cancel **X** button located at the top right corner of the page to exit from the resource group blade."
+1. Click the Cancel **X** button located at the top right corner of the page to exit from the resource group blade.
