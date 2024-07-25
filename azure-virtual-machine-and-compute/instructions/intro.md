@@ -45,7 +45,7 @@ These labs cover essential aspects of Azure infrastructure and operations. Parti
 
 ![](../instructions/images/azure-vm-arch-diagram.png)
 
-## Explaination of Componenets
+## Explanation of Components
 
 The architecture for this lab involves several key components:
 
