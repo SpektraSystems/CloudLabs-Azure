@@ -33,5 +33,14 @@ Participants in these labs will gain practical experience in Azure cloud infrast
 - Monitor and optimize Azure resources using Azure Monitor, enhancing performance, availability, and security through metrics, alerts, and diagnostic tools.
 - These labs collectively equip participants with essential skills in network configuration, VM deployment, data management, application hosting, and cloud monitoring within the Azure ecosystem.
 
+# Prerequisites 
+
+Participants should have: Basic knowledge and understanding of the following
+
+- Azure Subscription: Access to an active Azure subscription to create and manage resources.
+- Fundamental Azure Knowledge: Understanding of Azure basics like resource groups, Azure portal navigation, and basic networking concepts.
+- Virtualization Awareness: Familiarity with virtual machines (VMs), including deployment, management, and basic troubleshooting.
+- Operating System Proficiency: Competence in using Windows and Linux operating systems for VM configuration and management.
+- Networking Basics: Knowledge of networking principles such as TCP/IP, DNS, and firewall rules, which are essential for configuring virtual networks and connectivity in Azure.
 
 
