@@ -57,6 +57,27 @@ The architecture for this lab involves several key components:
 - **Connect to the VM and Install IIS:** Access Azure VMs via Remote Desktop Protocol (RDP) or Secure Shell (SSH) and install Internet Information Services (IIS) for hosting web applications.
 - **Azure Monitor:** Comprehensive monitoring service that collects and analyzes telemetry data from Azure resources, providing insights into performance, health, and diagnostics.
 
+## Getting Started with the Lab
+
+1. In the virtual machine (VM) on the left, click on the Azure portal desktop icon or navigate to https://portal.azure.com/ from **Microsoft edge**.
+
+    ![](https://github.com/SpektraSystems/CloudLabs-Azure/blob/master/azure-virtual-machine-and-compute/instructions/images/azure%20portal.png?raw=true)
+
+1. On the **Sign in to Microsoft Azure** window, you will see the login screen, enter the following username **<inject key="AzureAdUserEmail" />** and Password **<inject key="AzureAdUserPassword" />** and Click on **Sign in**
+
+1. If you see the pop-up  **Stay Signed in?**, click **No**
+
+1. If you see the pop-up **You have free Azure Advisor recommendations!** , close the window to continue the lab. 
+
+1. If a **Welcome to Microsoft Azure** popup window appears, click **Maybe Later** to skip the tour.
+
+1. Now you can see Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
+
+    ![](../instructions/images/image1.png)
+
+   >**Note**: Ensure to perform all the lab steps in the RG named **azvmrg-<inject key="Deployment ID" enableCopy="false"/>**
+
+1. Click the Cancel **X** button located at the top right corner of the page to exit from the resource group blade.
 
 These labs collectively introduce participants to key aspects of Azure infrastructure and operations. They begin with establishing foundational elements like virtual networks and availability sets to ensure scalability and resilience. Participants then deploy virtual machines tailored to specific requirements, learn to safeguard their data and configurations through backup and recovery solutions, and optimize performance with managed data disks. Connecting to these virtual machines allows for hands-on practice in setting up web hosting environments with IIS. Finally, participants gain insights into monitoring Azure resources and applications using Azure Monitor, enabling proactive management and troubleshooting to ensure efficient operation in cloud environments.
 
