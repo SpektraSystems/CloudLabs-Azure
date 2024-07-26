@@ -13,19 +13,19 @@ This lab will walk you through the steps to create and deploy a Windows Server 2
 
 This lab is designed to equip participants with hands-on experience in creating Azure virtual machine, compute and related resources. By completing this lab, participants will learn to:
 
-1. **Building a Virtual Network:** Create a secure and isolated network in Azure to connect and manage cloud resources.
+1. **Building a Virtual Network:** Create a secure and isolated network in Azure to connect and manage cloud resources. Participants will create a secure and isolated Azure Virtual Network for resource connectivity and management.
 
-1. **Create an Azure Availability Set:** Configure multiple virtual machines in Azure to ensure high availability and resilience against failures.
+1. **Create an Azure Availability Set:** Configure multiple virtual machines in Azure to ensure high availability and resilience against failures. Participants will configure an Availability Set to ensure high availability and fault tolerance for Azure VMs.
 
-1. **Deploy a Virtual Machine:** Provision a virtual machine in Azure with selected operating system and configuration settings.
+1. **Deploy a Virtual Machine:** Provision a virtual machine in Azure with selected operating system and configuration settings. Participants will deploy a fully operational virtual machine in Azure, configured with appropriate settings and networking.
 
-1. **Backup and Recovery:** Set up backup policies and procedures to protect data and applications in Azure, ensuring business continuity.
+1. **Backup and Recovery:** Set up backup policies and procedures to protect data and applications in Azure, ensuring business continuity. Participants will establish backup and recovery procedures for Azure VMs, ensuring data protection and disaster recovery capabilities.
 
-1. **Virtual Machine Data Disk and Overview:** Manage and utilize data disks for Azure virtual machines to enhance storage capacity and performance.
+1. **Virtual Machine Data Disk and Overview:** Manage and utilize data disks for Azure virtual machines to enhance storage capacity and performance. Participants will manage and optimize data disks attached to Azure VMs for enhanced storage performance and flexibility.
 
-1. **Connect to the VM and Install IIS:** Access an Azure virtual machine and install Internet Information Services (IIS) for hosting web applications.
+1. **Connect to the VM and Install IIS:** Access an Azure virtual machine and install Internet Information Services (IIS) for hosting web applications. Participants will connect to an Azure VM and installed Internet Information Services (IIS) for web hosting.
 
-1. **Azure Monitor:** Monitor and analyze the performance, health, and usage of Azure resources and applications for optimization and troubleshooting.
+1. **Azure Monitor:** Monitor and analyze the performance, health, and usage of Azure resources and applications for optimization and troubleshooting. Participants will implemente Azure Monitor to track and analyze the performance and health of Azure resources and applications.
 
 ## Prerequisites 
 
