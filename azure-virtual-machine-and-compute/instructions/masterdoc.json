@@ -9,37 +9,32 @@
 
       },
       {
-        "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/GettingStarted.md",
-        "Order": 2
-
-      },
-      {
         "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/0.md",
-        "Order": 3
+        "Order": 2
       },
       {
         "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/1.md",
-        "Order": 4
+        "Order": 3
       },
       {
         "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/2.md",
-        "Order": 5
+        "Order": 4
       },
       {
         "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/3.md",
-        "Order": 6
+        "Order": 5
       },
       {
         "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/4.md",
-        "Order": 7
+        "Order": 6
       },
       {
         "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/5.md",
-        "Order": 8
+        "Order": 7
       },
       {
         "RawFilePath": "https://raw.githubusercontent.com/SpektraSystems/CloudLabs-Azure/master/azure-virtual-machine-and-compute/instructions/6.md",
-        "Order": 9
+        "Order": 8
       }
       ]
     }
