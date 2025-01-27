@@ -58,26 +58,93 @@ The architecture for this lab involves several key components:
 - **Azure Monitor:** Comprehensive monitoring service that collects and analyzes telemetry data from Azure resources, providing insights into performance, health, and diagnostics.
 
 ## Getting Started with the Lab
+ 
+## Accessing Your Lab Environment
+ 
+Once you're ready to dive in, your virtual machine and **Lab guide** will be right at your fingertips within your web browser.
 
-1. In the virtual machine (VM) on the left, click on the Azure portal desktop icon or navigate to https://portal.azure.com/ from **Microsoft edge**.
+   ![](../instructions/images/avm1.png)
 
-    ![](https://github.com/SpektraSystems/CloudLabs-Azure/blob/master/azure-virtual-machine-and-compute/instructions/images/azure%20portal.png?raw=true)
+## Lab Guide Zoom In/Zoom Out
 
-1. On the **Sign in to Microsoft Azure** window, you will see the login screen, enter the following username **<inject key="AzureAdUserEmail" />** and Password **<inject key="AzureAdUserPassword" />** and Click on **Sign in**
+1. To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-1. If you see the pop-up  **Stay Signed in?**, click **No**
+   ![](../instructions/images/avm2.png)
 
-1. If you see the pop-up **You have free Azure Advisor recommendations!** , close the window to continue the lab. 
+## Virtual Machine & Lab Guide
+ 
+Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
 
-1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
+## Exploring Your Lab Resources
+ 
+To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
+ 
+   ![](../instructions/images/avm3.png)
 
-1. Now you can see Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
+## Utilizing the Split Window Feature
+ 
+For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
+ 
+ ![Use the Split Window Feature](../instructions/images/avm4.png)
+ 
+## Managing Your Virtual Machine
+ 
+Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
+ 
+![Manage Your Virtual Machine](../instructions/images/avm5.png)   
 
-    ![](../instructions/images/image1.png)
+## Lab Validation
 
-   >**Note**: Ensure to perform all the lab steps in the RG named **azvmrg-<inject key="Deployment ID" enableCopy="false"/>**
+1. After completing the task, hit the **Validate** button under Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
-1. Click the Cancel **X** button located at the top right corner of the page to exit from the resource group blade.
+   ![Inline Validation](../instructions/images/avm6.png)
+
+1. If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com
+
+## Lab Duration Extension
+
+1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
+
+    ![Manage Your Virtual Machine](../instructions/images/avm12.png)
+
+    >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
+
+2. Click **OK** to extend your lab duration.
+ 
+   ![Manage Your Virtual Machine](../instructions/images/avm13.png)
+
+3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed. 
+
+## Let's Get Started with Azure Portal
+
+1. On your virtual machine, click on the Azure Portal icon as shown below:
+
+   ![Launch Azure Portal](../instructions/images/avm14.png)
+   
+1. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
+ 
+   - **Email/Username:** **<inject key="AzureAdUserEmail" />**
+ 
+       ![Enter Your Username](../instructions/images/avm15.png)
+ 
+1. Next, provide your password:
+ 
+   - **Password:** **<inject key="AzureAdUserPassword" />**
+ 
+       ![Enter Your Password](../instructions/images/avm16.png)
+
+1. If **Action required** pop-up window appears, click on **Ask later**.
+
+   ![Ask Later](../instructions/images/avm17.png)
+    
+1. If prompted to stay signed in, you can click **No**.
+ 
+1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
+
+1. Click **Next** from the bottom right corner to embark on your Lab journey!
+
+   ![Launch Azure Portal](../instructions/images/avm-18.png)
+
 
 These labs collectively introduce participants to key aspects of Azure infrastructure and operations. They begin with establishing foundational elements like virtual networks and availability sets to ensure scalability and resilience. Participants then deploy virtual machines tailored to specific requirements, learn to safeguard their data and configurations through backup and recovery solutions, and optimize performance with managed data disks. Connecting to these virtual machines allows for hands-on practice in setting up web hosting environments with IIS. Finally, participants gain insights into monitoring Azure resources and applications using Azure Monitor, enabling proactive management and troubleshooting to ensure efficient operation in cloud environments.
 
