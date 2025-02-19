@@ -58,6 +58,8 @@ The architecture for this lab involves several key components:
 - **Azure Monitor:** Comprehensive monitoring service that collects and analyzes telemetry data from Azure resources, providing insights into performance, health, and diagnostics.
 
 ## Getting Started with the Lab
+
+Welcome to the Azure Virtual Machine and Compute Lab! In this lab, you’ll deploy and manage VMs, configure compute resources, and optimize performance for workloads. Let’s get hands-on with Azure compute services!
  
 ## Accessing Your Lab Environment
  
@@ -73,7 +75,9 @@ Once you're ready to dive in, your virtual machine and **Lab guide** will be rig
 
 ## Virtual Machine & Lab Guide
  
-Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
+In the integrated environment, the lab VM serves as the designated workspace, while the lab guide is accessible on the right side of the screen.
+
+**Note:** Kindly ensure that you are following the instructions carefully to ensure the lab runs smoothly and provides an optimal user experience.
 
 ## Exploring Your Lab Resources
  
