@@ -63,15 +63,15 @@ Welcome to the Azure Virtual Machine and Compute Lab! In this lab, you’ll depl
  
 ## Accessing Your Lab Environment
  
-Once you're ready to dive in, your virtual machine and **Lab guide** will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
-   ![](../instructions/images/avm1.png)
+   ![](../instructions/images/Intro-00.png)
 
 ## Lab Guide Zoom In/Zoom Out
 
 1. To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-   ![](../instructions/images/avm2.png)
+   ![](../instructions/images/Intro-01.png)
 
 ## Virtual Machine & Lab Guide
  
@@ -83,25 +83,25 @@ In the integrated environment, the lab VM serves as the designated workspace, wh
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-   ![](../instructions/images/avm3.png)
+   ![](../instructions/images/Intro-02.png)
 
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
- ![Use the Split Window Feature](../instructions/images/avm4.png)
+ ![Use the Split Window Feature](../instructions/images/Intro-03.png)
  
 ## Managing Your Virtual Machine
  
 Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../instructions/images/avm5.png)   
+![Manage Your Virtual Machine](../instructions/images/Intro-04.png)   
 
 ## Lab Validation
 
-1. After completing the task, hit the **Validate** button under Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
+1. After completing the task, hit the **Validate** button under Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the guide.
 
-   ![Inline Validation](../instructions/images/avm6.png)
+   ![Inline Validation](../instructions/images/Intro-05.png)
 
 1. If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com
 
@@ -121,19 +121,19 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
 
 ## Let's Get Started with Azure Portal
 
-1. On your virtual machine, click on the Azure Portal icon as shown below:
+1. On your virtual machine, click on the **Azure Portal** icon as shown below:
 
-   ![Launch Azure Portal](../instructions/images/avm14.png)
+   ![Launch Azure Portal](../instructions/images/Intro-06.png)
    
 1. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
  
-   - **Email/Username:** **<inject key="AzureAdUserEmail" />**
+   - **Email/Username:** **<inject key="AzureAdUserEmail" />** and click on **Next**.
  
        ![Enter Your Username](../instructions/images/avm15.png)
  
 1. Next, provide your password:
  
-   - **Password:** **<inject key="AzureAdUserPassword" />**
+   - **Password:** **<inject key="AzureAdUserPassword" />** and click on **Sign in**
  
        ![Enter Your Password](../instructions/images/avm16.png)
 
@@ -142,7 +142,9 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
    ![Ask Later](../instructions/images/avm17.png)
     
 1. If prompted to stay signed in, you can click **No**.
- 
+
+   ![Stay Signed in](../instructions/images/intro-07.png)
+   
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
 
 1. Click **Next** from the bottom right corner to embark on your Lab journey!
