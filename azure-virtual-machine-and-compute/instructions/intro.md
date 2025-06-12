@@ -1,31 +1,30 @@
 # Azure Virtual Machine and Compute
 
-### Overall Estimated Duration: 4 hours
+### Overall Estimated Duration: 4 Hours
 
 ## Overview
 
-Microsoft Azure is one of the leading enterprise cloud platforms. Azure launched in 2010 and has quickly matured as many new services are continually being added. One of the first and most popular services offered in Azure is **Virtual Machines**, an IaaS solution.
+Microsoft Azure is one of the leading enterprise cloud platforms. Azure launched in 2010 and has quickly matured as many new services are being added continually. One of the first and most popular services offered in Azure is **Virtual Machines**, an IaaS solution.
 
 This lab will walk you through the steps to create and deploy a Windows Server 2019 Datacenter virtual machine. We will also configure a backup of the virtual machine that will be user-accessible for recovery. You will also be able to load a web application in the VM you have just provisioned in Azure.
 
-
 ## Objective
 
-This lab is designed to equip participants with hands-on experience in creating Azure virtual machine, compute and related resources. By completing this lab, participants will learn to:
+This lab is designed to equip participants with hands-on experience in creating an Azure virtual machine, compute and related resources. By completing this lab, participants will learn to:
 
 1. **Building a Virtual Network:** Create a secure and isolated network in Azure to connect and manage cloud resources. Participants will create a secure and isolated Azure Virtual Network for resource connectivity and management.
 
 1. **Create an Azure Availability Set:** Configure multiple virtual machines in Azure to ensure high availability and resilience against failures. Participants will configure an Availability Set to ensure high availability and fault tolerance for Azure VMs.
 
-1. **Deploy a Virtual Machine:** Provision a virtual machine in Azure with selected operating system and configuration settings. Participants will deploy a fully operational virtual machine in Azure, configured with appropriate settings and networking.
+1. **Deploy a Virtual Machine:** Provision a virtual machine in Azure with the selected operating system and configuration settings. Participants will deploy a fully operational virtual machine in Azure, configured with appropriate settings and networking.
 
 1. **Backup and Recovery:** Set up backup policies and procedures to protect data and applications in Azure, ensuring business continuity. Participants will establish backup and recovery procedures for Azure VMs, ensuring data protection and disaster recovery capabilities.
 
 1. **Virtual Machine Data Disk and Overview:** Manage and utilize data disks for Azure virtual machines to enhance storage capacity and performance. Participants will manage and optimize data disks attached to Azure VMs for enhanced storage performance and flexibility.
 
-1. **Connect to the VM and Install IIS:** Access an Azure virtual machine and install Internet Information Services (IIS) for hosting web applications. Participants will connect to an Azure VM and installed Internet Information Services (IIS) for web hosting.
+1. **Connect to the VM and Install IIS:** Access an Azure virtual machine and install Internet Information Services (IIS) for hosting web applications. Participants will connect to an Azure VM and install Internet Information Services (IIS) for web hosting.
 
-1. **Azure Monitor:** This hands-on lab aims to monitor and analyze the performance, health, and usage of Azure resources and applications for optimization and troubleshooting. Participants will implemente Azure Monitor to track and analyze the performance and health of Azure resources and applications.
+1. **Azure Monitor:** This hands-on lab aims to monitor and analyze the performance, health, and usage of Azure resources and applications for optimization and troubleshooting. Participants will implement Azure Monitor to track and analyze the performance and health of Azure resources and applications.
 
 ## Prerequisites 
 
@@ -67,12 +66,6 @@ Once you're ready to dive in, your virtual machine and **Guide** will be right a
 
    ![](../instructions/images/Intro-00.png)
 
-## Lab Guide Zoom In/Zoom Out
-
-1. To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
-
-   ![](../instructions/images/Intro-01.png)
-
 ## Virtual Machine & Lab Guide
  
 In the integrated environment, the lab VM serves as the designated workspace, while the lab guide is accessible on the right side of the screen.
@@ -95,7 +88,13 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
 Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../instructions/images/Intro-04.png)   
+![Manage Your Virtual Machine](../instructions/images/Intro-04.png)
+
+## Lab Guide Zoom In/Zoom Out
+
+To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+
+   ![](../instructions/images/Intro-01.png)
 
 ## Lab Validation
 
@@ -104,20 +103,6 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
    ![Inline Validation](../instructions/images/Intro-05.png)
 
 1. If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com
-
-## Lab Duration Extension
-
-1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
-
-    ![Manage Your Virtual Machine](../instructions/images/avm12.png)
-
-    >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
-
-2. Click **OK** to extend your lab duration.
- 
-   ![Manage Your Virtual Machine](../instructions/images/avm13.png)
-
-3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed. 
 
 ## Let's Get Started with Azure Portal
 
@@ -147,13 +132,6 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
    
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
 
-1. Click **Next** from the bottom right corner to embark on your Lab journey!
-
-   ![Launch Azure Portal](../instructions/images/avm-18.png)
-
-
-These labs collectively introduce participants to key aspects of Azure infrastructure and operations. They begin with establishing foundational elements like virtual networks and availability sets to ensure scalability and resilience. Participants then deploy virtual machines tailored to specific requirements, learn to safeguard their data and configurations through backup and recovery solutions, and optimize performance with managed data disks. Connecting to these virtual machines allows for hands-on practice in setting up web hosting environments with IIS. Finally, participants gain insights into monitoring Azure resources and applications using Azure Monitor, enabling proactive management and troubleshooting to ensure efficient operation in cloud environments.
-
 ## Support Contact
  
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
@@ -162,7 +140,8 @@ Learner Support Contacts:
 - Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
-Now, click on **Next** from the lower right corner to move on to the next page.
+Click **Next** from the bottom right corner to embark on your Lab journey!
+
+   ![Launch Azure Portal](../instructions/images/avm-18.png)
 
 ### Happy Learning!!
-
