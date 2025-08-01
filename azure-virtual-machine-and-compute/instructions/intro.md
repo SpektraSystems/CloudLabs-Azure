@@ -28,7 +28,7 @@ This lab is designed to equip participants with hands-on experience in creating 
 
 ## Prerequisites 
 
-Participants should have: Basic knowledge and understanding of the following
+Participants should have: Basic knowledge and understanding of the following:
 
 - **Azure Subscription:** Access to an active Azure subscription to create and manage resources.
 - **Fundamental Azure Knowledge:** Understanding of Azure basics like resource groups, Azure portal navigation, and basic networking concepts.
@@ -130,11 +130,6 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
    ![Stay Signed in](../instructions/images/intro-07.png)
 
-1. If an **Action required** pop-up window appears, click on **Ask later**.
-
-   ![Ask Later](images/afg9.png)
-    
-1. If prompted to stay signed in, you can click **No**.
  
 ### Steps to Proceed with MFA Setup if the "Ask Later" Option is Not Visible
 
@@ -142,13 +137,13 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 1. If **Action required** pop-up window appears, click on **Next**.
    
-   ![](images/dpg11.png)
+   ![](images/intro-7.png)
 
 1. On **Start by getting the app** page, click on **Next**.
 1. Click on **Next** twice.
 1. In **android**, go to the play store and Search for **Microsoft Authenticator** and Tap on **Install**.
 
-   ![Install](images/dpg12.png)
+   ![Install](images/intro-8.png)
 
    > Note: For iOS, open the App Store and repeat the steps.
 
@@ -158,13 +153,13 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
 1. Scan the QR code visible on the screen **(1)** and click on **Next (2)**.
 
-   ![QR code](images/dpg13.png)
+   ![QR code](images/Intro-0.png)
 
 1. Enter the digit displayed on the Screen in the Authenticator app on your mobile and tap on **Yes**.
 
 1. Once the notification is approved, click on **Next**.
 
-   ![Approved](images/dpg14.png)
+   ![Approved](images/intro-9.png)
 
 1. Click on **Done**.
 
