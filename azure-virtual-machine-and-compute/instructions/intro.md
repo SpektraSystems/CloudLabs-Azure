@@ -133,8 +133,6 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
  
 ### Steps to Proceed with MFA Setup if the "Ask Later" Option is Not Visible
 
-1. If you see the pop-up **Stay Signed in?**, click **No**.
-
 1. If **Action required** pop-up window appears, click on **Next**.
    
    ![](images/intro-7.png)
