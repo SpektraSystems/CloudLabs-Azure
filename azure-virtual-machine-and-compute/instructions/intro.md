@@ -82,20 +82,19 @@ In the integrated environment, the lab VM serves as the designated workspace, wh
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-   ![](../instructions/images/Intro-10.png)
+   ![](../instructions/images/avmg9.png)
 
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
- ![Use the Split Window Feature](../instructions/images/Intro-11.png)
+ ![Use the Split Window Feature](../instructions/images/avmg10.png)
  
 ## Managing Your Virtual Machine
  
-Feel free to **start, restart, or stop (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
+Feel free to **Start, Restart, or Stop (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../instructions/images/Intro-04.png)
-
+![Manage Your Virtual Machine](../instructions/images/avmg11.png)
 
 
 ## Lab Validation
