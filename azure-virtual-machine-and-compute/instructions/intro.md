@@ -64,7 +64,13 @@ Welcome to the Azure Virtual Machine and Compute Lab! In this lab, you’ll depl
  
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
-   ![](../instructions/images/Intro-00.png)
+   ![](../instructions/images/avmg7.png)
+
+## Lab Guide Zoom In/Zoom Out
+
+To adjust the zoom level for the environment page, click the **A↕** icon located next to the timer in the lab environment.
+
+   ![](../instructions/images/avmg8.png)
 
 ## Virtual Machine & Lab Guide
  
@@ -90,11 +96,7 @@ Feel free to **start, restart, or stop (2)** your virtual machine as needed from
  
 ![Manage Your Virtual Machine](../instructions/images/Intro-04.png)
 
-## Lab Guide Zoom In/Zoom Out
 
-To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
-
-   ![](../instructions/images/Intro-01.png)
 
 ## Lab Validation
 
