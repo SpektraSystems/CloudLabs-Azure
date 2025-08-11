@@ -141,7 +141,9 @@ To adjust the zoom level for the environment page, click the **A↕ : 100%** ico
 
    ![](images/avmg1.png)
 
-1. Click on **Next** twice.
+1. Click on **Next** again.
+
+   ![](images/avmg2.png)
 
 1. In **android**, go to the play store and Search for **Microsoft Authenticator** and Tap on **Install**.
 
