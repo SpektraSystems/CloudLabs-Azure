@@ -186,7 +186,7 @@ Learner Support Contacts:
 - Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
-### Click on **Next** from the page navigation bar at the end of the lab guide page to proceed to the next page
+#### Click on **Next** from the page navigation bar at the end of the lab guide page to proceed to the next page
 
    ![Launch Azure Portal](../instructions/images/avm-18.png)
 
