@@ -26,7 +26,7 @@ This lab is designed to equip participants with hands-on experience in creating 
 
 1. **Azure Monitor:** This hands-on lab aims to monitor and analyze the performance, health, and usage of Azure resources and applications for optimization and troubleshooting. Participants will implement Azure Monitor to track and analyze the performance and health of Azure resources and applications.
 
-## Prerequisites 
+## Pre-requisites 
 
 Participants should have: Basic knowledge and understanding of the following:
 
@@ -58,81 +58,75 @@ The architecture for this lab involves several key components:
 
 ## Getting Started with the Lab
 
-Welcome to the Azure Virtual Machine and Compute Lab! In this lab, you’ll deploy and manage VMs, configure compute resources, and optimize performance for workloads. Let’s get hands-on with Azure compute services!
+Welcome to the **Azure Virtual Machine and Compute** Lab! In this lab, you’ll deploy and manage VMs, configure compute resources, and optimize performance for workloads. Let’s get hands-on with Azure compute services!
  
 ## Accessing Your Lab Environment
  
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
-   ![](../instructions/images/avmg7.png)
-
-## Lab Guide Zoom In/Zoom Out
-
-To adjust the zoom level for the environment page, click the **A↕** icon located next to the timer in the lab environment.
-
-   ![](../instructions/images/avmg8.png)
+  ![](../instructions/images2/labvm.png)
 
 ## Virtual Machine & Lab Guide
- 
-In the integrated environment, the lab VM serves as the designated workspace, while the lab guide is accessible on the right side of the screen.
 
->**Note:** Kindly ensure that you are following the instructions carefully to ensure the lab runs smoothly and provides an optimal user experience.
+Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
 
 ## Exploring Your Lab Resources
  
-To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
+To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab. Here, you will find the Azure credentials. Click on the **Environment** option to verify the credentials.
  
-   ![](../instructions/images/avmg9.png)
+  ![](../instructions/images/avmg9.png)
 
 ## Utilizing the Split Window Feature
  
-For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
+For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
- ![Use the Split Window Feature](../instructions/images/avmg10.png)
+  ![Use the Split Window Feature](../instructions/images/avmg10.png)
  
 ## Managing Your Virtual Machine
  
-Feel free to **Start, Restart, or Stop (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
+Feel free to **Start, Stop**, or **Restart** your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](../instructions/images/avmg11.png)
+  ![Manage Your Virtual Machine](../instructions/images2/res.png)
 
+## Lab Guide Zoom In/Zoom Out
+ 
+To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+
+  ![](../instructions/images/avmg8.png)
 
 ## Lab Validation
 
-1. After completing the task, hit the **Validate** button under Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the guide.
+After completing the task, hit the Validate button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task; if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
-   ![Inline Validation](../instructions/images/Intro-05.png)
-
-1. If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com
+   ![Inline Validation](../instructions/images2/valid.png)
 
 ## Let's Get Started with Azure Portal
 
-1. On your virtual machine, click on the **Azure Portal** icon as shown below:
+1. On the Lab VM, click the **Azure Portal** icon to launch the browser.
 
    ![Launch Azure Portal](../instructions/images/Intro-06.png)
    
-1. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
+1. On the **Sign in** tab, you will see the login screen. Enter the following email/username, and click on **Next (2)**. 
+
+   * **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)**
+
+       ![Enter Your Username](../instructions/images2/signin.png)
  
-   - **Email/Username:** **<inject key="AzureAdUserEmail" />** and click on **Next**.
- 
-       ![Enter Your Username](../instructions/images/avm15.png)
- 
-1. Next, provide your password:
- 
-   - **Password:** **<inject key="AzureAdUserPassword" />** and click on **Sign in**
- 
-       ![Enter Your Password](../instructions/images/avm16.png)
+1. Now enter the following password and click on **Sign in (2)**.
+   
+   * **Password:** <inject key="AzureAdUserPassword"></inject> **(1)**
+
+       ![Enter Your Password](../instructions/images2/pass.png)
 
 1. If **Action required** pop-up window appears, click on **Ask later**.
 
    ![Ask Later](../instructions/images/avm17.png)
     
-1. If prompted to stay signed in, you can click **No**.
+1. If prompted to **Stay signed in?**, click **No**.
 
-   ![Stay Signed in](../instructions/images/intro-07.png)
+   ![Stay Signed in](../instructions/images2/stay.png)
 
- 
-### Steps to Proceed with MFA Setup if the "Ask Later" Option is Not Visible
+## Steps to Proceed with MFA Setup if the "Ask Later" Option is Not Visible
 
 1. If **Action required** pop-up window appears, click on **Next**.
    
@@ -179,15 +173,16 @@ Feel free to **Start, Restart, or Stop (2)** your virtual machine as needed from
 1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.   
 
 ## Support Contact
- 
+
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
 
 Learner Support Contacts:
+
 - Email Support: cloudlabs-support@spektrasystems.com
 - Live Chat Support: https://cloudlabs.ai/labs-support
 
-#### Click on **Next** from the page navigation bar at the end of the lab guide page to proceed to the next page
+Now, click on **Next >>** from the lower right corner to move on to the next page.
+   
+![Launch Azure Portal](../instructions/images2/next.png)
 
-   ![Launch Azure Portal](../instructions/images/avm-18.png)
-
-### Happy Learning!!
+## Happy Learning!!
