@@ -116,7 +116,7 @@ After completing the task, hit the Validate button under the Validation tab inte
    
    * **Password:** <inject key="AzureAdUserPassword"></inject> **(1)**
 
-       ![Enter Your Password](../instructions/images2/pass.png)
+       ![Enter Your Password](../instructions/images2/oct-azure-vm-compute-lab1-4.png)
 
 1. If **Action required** pop-up window appears, click on **Ask later**.
 
