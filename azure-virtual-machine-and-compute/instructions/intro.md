@@ -1,6 +1,6 @@
 # Azure Virtual Machine and Compute
 
-### Overall Estimated Duration: 4 Hours
+## Overall Estimated Duration: 4 Hours
 
 ## Overview
 
@@ -64,7 +64,7 @@ Welcome to the **Azure Virtual Machine and Compute** Lab! In this lab, you’ll 
  
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
-  ![](../instructions/images2/labvm.png)
+  ![](../instructions/images2/oct-azure-vm-compute-lab1-1.png)
 
 ## Virtual Machine & Lab Guide
 
