@@ -117,56 +117,10 @@ After completing the task, hit the Validate button under the Validation tab inte
    * **Password:** <inject key="AzureAdUserPassword"></inject> **(1)**
 
        ![Enter Your Password](../instructions/images2/oct-azure-vm-compute-lab1-4.png)
-
-1. If **Action required** pop-up window appears, click on **Ask later**.
-
-   ![Ask Later](../instructions/images/avm17.png)
-    
+  
 1. If prompted to **Stay signed in?**, click **No**.
 
    ![Stay Signed in](../instructions/images2/stay.png)
-
-## Steps to Proceed with MFA Setup if the "Ask Later" Option is Not Visible
-
-1. If **Action required** pop-up window appears, click on **Next**.
-   
-   ![](images/intro-7.png)
-
-1. On **Start by getting the app** page, click on **Next**.
-
-   ![](images/avmg1.png)
-
-1. Click on **Next** again.
-
-   ![](images/avmg2.png)
-
-1. In **android**, go to the play store and Search for **Microsoft Authenticator** and Tap on **Install**.
-
-   ![Install](images/intro-8.png)
-
-   > Note: For iOS, open the App Store and repeat the steps.
-
-   > Note: Skip if already installed.
-
-1. Open the app and tap on **Scan a QR code**.
-
-1. Scan the QR code visible on the screen **(1)** and click on **Next (2)**.
-
-   ![QR code](images/Intro-0.png)
-
-1. Enter the digit displayed on the Screen in the Authenticator app on your mobile and tap on **Yes**.
-
-1. Once the notification is approved, click on **Next**.
-
-   ![Approved](images/intro-9.png)
-
-1. Click on **Done**.
-
-1. If prompted to stay signed in, you can click **"No"**.
-
-1. Tap on **Finish** in the Mobile Device.
-
-   > NOTE: While logging in again, enter the digits displayed on the screen in the **Authenticator app** and click on Yes.
 
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **"Cancel"** to skip the tour.
 
