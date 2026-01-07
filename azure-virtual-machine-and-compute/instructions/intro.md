@@ -64,7 +64,7 @@ Welcome to the **Azure Virtual Machine and Compute** Lab! In this lab, you’ll 
  
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
-  ![](../instructions/images2/oct-azure-vm-compute-lab1-1.png)
+  ![](../instructions/images2/guide1.png)
 
 ## Virtual Machine & Lab Guide
 
@@ -84,9 +84,9 @@ For convenience, you can open the lab guide in a separate window by selecting th
  
 ## Managing Your Virtual Machine
  
-Feel free to **Start, Stop**, or **Restart** your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+Feel free to **Start, Stop, or Restart (1)** your virtual machine as needed from the **Resources (2)** tab. Your experience is in your hands!
  
-  ![Manage Your Virtual Machine](../instructions/images2/res.png)
+  ![Manage Your Virtual Machine](../instructions/images2/resources.png)
 
 ## Lab Guide Zoom In/Zoom Out
  
