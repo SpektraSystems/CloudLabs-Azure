@@ -114,7 +114,7 @@ After completing the task, hit the Validate button under the Validation tab inte
  
 1. Now enter the following password and click on **Sign in (2)**.
    
-   * **Password:** <inject key="AzureAdUserPassword"></inject> **(1)**
+   * **Temporary Access Password:** <inject key="AzureAdUserPassword"></inject> **(1)**
 
        ![Enter Your Password](../instructions/images2/oct-azure-vm-compute-lab1-4.png)
   
@@ -123,8 +123,6 @@ After completing the task, hit the Validate button under the Validation tab inte
    ![Stay Signed in](../instructions/images2/stay.png)
 
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **"Cancel"** to skip the tour.
-
-1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.   
 
 ## Support Contact
 
