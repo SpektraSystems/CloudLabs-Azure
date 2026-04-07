@@ -59,17 +59,65 @@ The architecture for this lab involves several key components:
 
 ## Getting Started with the Lab
 
-1. In the virtual machine (VM) on the left, click on the Azure portal desktop icon or navigate to https://portal.azure.com/ from **Microsoft edge**.
+## Accessing Your Lab Environment
+ 
+Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
 
-    ![](https://github.com/SpektraSystems/CloudLabs-Azure/blob/master/azure-virtual-machine-and-compute/instructions/images/azure%20portal.png?raw=true)
+  ![](../instructions/images/guide-01.png)
 
-1. On the **Sign in to Microsoft Azure** window, you will see the login screen, enter the following username **<inject key="AzureAdUserEmail" />** and Password **<inject key="AzureAdUserPassword" />** and Click on **Sign in**
+## Virtual Machine & Lab Guide
+ 
+Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
 
-1. If you see the pop-up  **Stay Signed in?**, click **No**
+## Exploring Your Lab Resources
+ 
+To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab. Here, you will find the Azure credentials. Click on the **Environment** option to verify the credentials.
 
-1. If you see the pop-up **You have free Azure Advisor recommendations!** , close the window to continue the lab. 
+  ![](../instructions/images/env.png)
+ 
+## Utilizing the Split Window Feature
+ 
+For convenience, you can open the lab guide in a separate window by selecting the Split Window button from the top right corner.
 
-1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
+  ![](../instructions/images/split.png)
+ 
+## Managing Your Virtual Machine
+ 
+Feel free to **Start, Stop**, or **restart** your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
+ 
+  ![](../instructions/images/res.png)
+
+## Lab Guide Zoom In/Zoom Out
+
+To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+
+![](../instructions/images/zoom.png)
+
+## Let's Get Started with Azure Portal
+
+1. In the **Lab VM**, click on the **Azure portal** shortcut of the Microsoft Edge browser which is created on the desktop.
+
+   ![](../instructions/images/azure1.png)
+   
+1. On the **Sign in to Microsoft Azure** tab you will see the login screen, in that enter the following email/username, and click on **Next (2)**. 
+
+   * **Email/Username**: <inject key="AzureAdUserEmail"></inject> **(1)**
+   
+      ![](../instructions/images/email.png "Enter Email")
+     
+1. Now enter the following password and click on **Sign in (2)**.
+   
+   * **Password**: <inject key="AzureAdUserPassword"></inject> **(1)**
+   
+      ![](../instructions/images/pwrd1.png "Enter Password")
+
+1. If you see the pop-up **Stay Signed in?**, select **No**.
+
+   ![](../instructions/images/stay.png)
+
+1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
+
+   ![](../instructions/images/azure2.png)
 
 1. Now you can see Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
 
